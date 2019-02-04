@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 11:15:02 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/01/21 14:11:10 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/02/04 05:25:32 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,15 @@ typedef	struct		s_list
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
+
+# define BUFF_SIZE 256
+
+# include <sys/types.h>
+# include <sys/stat.h>
+# include <fcntl.h>
+# include <limits.h>
+
+int					get_next_line(const int fd, char **line);
 
 void				ft_putchar_fd(char c, int fd);
 void				ft_putendl_fd(char const *s, int fd);

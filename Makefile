@@ -6,7 +6,7 @@
 #    By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/12 15:04:16 by ldevelle          #+#    #+#              #
-#    Updated: 2019/02/04 05:22:13 by ldevelle         ###   ########.fr        #
+#    Updated: 2019/02/06 14:32:30 by ldevelle         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,8 @@ DFLAGS = -Wall -Wextra -Werror -fsanitize=address,undefined -g3 -pedantic\
 -Wmissing-noreturn -Wformat -Wmissing-format-attribute\
 -Wno-deprecated-declarations -Wpacked -Wredundant-decls -Wnested-externs\
 -Winline -Wlong-long -Wunreachable-code
+
+#CFLAGS = $(DFLAGS)
 
 ##############################################################################
 ##############################################################################
@@ -62,7 +64,6 @@ SRC_DIR4	= malloc
 SRC_DIR5	= str
 SRC_DIR6	= write
 SRC_DIR7	= mine
-
 SRC_PATH	= ./
 MSRC_PATH	= srcs
 SRC_PATH1	= $(MSRC_PATH)/$(SRC_DIR1)
@@ -233,7 +234,7 @@ re : fclean all
 
 order : fclean
 ifneq ($(IFORDER), )
-	@mkdir	$(MSRC_PATH) $(SRC_PATH1) $(SRC_PATH2) $(SRC_PATH3)\
+	@mkdir	$(MSRC_PATH) $(SRC_PATH1) $(SRC_PATH2) $(SRC_PATH3) objs\
 			$(SRC_PATH4) $(SRC_PATH5) $(SRC_PATH6) $(SRC_PATH7) $(NHEAD_DIR)
 	@mv -f $(HEAD_DIR)$(FT_H) $(NHEAD_DIR)
 	@mv -f $(patsubst %, ft_%.c, $(SRCS1)) $(SRC_PATH1)
@@ -249,7 +250,7 @@ endif
 push : fclean
 ifneq ($(IFPUSH), )
 		@mv -f $(A_SRC) $(HEAD_DIR)/$(FT_H) $(SRC_PATH)
-		@rm -rf $(MSRC_PATH) $(HEAD_DIR)
+		@rm -rf $(MSRC_PATH) $(HEAD_DIR) objs
 		@echo \$(GREEN) $(NAME) \$(END) Now in \$(MAGENTA)$@ mode \$(END)
 endif
 

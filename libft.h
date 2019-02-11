@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 11:15:02 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/02/04 05:25:32 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/02/11 20:40:33 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,5 +122,6 @@ int					ft_round(float i);
 char				*ft_pstrnstr(const char *m, const char *a, size_t len);
 int					ft_patoi(const char *str);
 int					ft_nb_char_to_int(char c);
+int					place_cursor(size_t line, size_t column);
 
 #endif

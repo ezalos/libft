@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 11:15:02 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/02/11 20:40:33 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/02/12 21:10:49 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -123,5 +123,7 @@ char				*ft_pstrnstr(const char *m, const char *a, size_t len);
 int					ft_patoi(const char *str);
 int					ft_nb_char_to_int(char c);
 int					place_cursor(size_t line, size_t column);
+int					ft_random(intmax_t min, intmax_t max, intmax_t rando);
+void				ft_swap(void *one, void *two, size_t size);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 11:15:02 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/02/12 21:10:49 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/02/14 16:29:11 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,10 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include <sys/types.h>
+# include <sys/stat.h>
+# include <fcntl.h>
+# include <limits.h>
 
 typedef	struct		s_list
 {
@@ -24,11 +28,6 @@ typedef	struct		s_list
 }					t_list;
 
 # define BUFF_SIZE 256
-
-# include <sys/types.h>
-# include <sys/stat.h>
-# include <fcntl.h>
-# include <limits.h>
 
 int					get_next_line(const int fd, char **line);
 
@@ -114,7 +113,7 @@ int					ft_match(char *s1, char *s2);
 int					ft_nb_char_to_int(char	c);
 int					ft_nmatch(char *s1, char *s2);
 int					*ft_nprime(int limite);
-int					ft_power(int nb, int power);
+intmax_t			ft_power(int nb, int power);
 void				ft_puttab(const char *s, int separation);
 void				ft_puttab_nb(int length, int separation);
 int					ft_round_upper(float i);
@@ -123,7 +122,15 @@ char				*ft_pstrnstr(const char *m, const char *a, size_t len);
 int					ft_patoi(const char *str);
 int					ft_nb_char_to_int(char c);
 int					place_cursor(size_t line, size_t column);
-int					ft_random(intmax_t min, intmax_t max, intmax_t rando);
+intmax_t			ft_random(intmax_t min, intmax_t max, intmax_t rando,
+					size_t len);
 void				ft_swap(void *one, void *two, size_t size);
+size_t				ft_strnlen(const char *s, size_t size);
+char				*ft_u_nb_to_a(uintmax_t n, size_t base);
+char				*ft_nb_to_a(intmax_t n, size_t base);
+size_t				ft_nb_len(intmax_t n, size_t base);
+size_t				ft_u_nb_len(uintmax_t nb, size_t base);
+void				ft_putbnbr_str(int i, uintmax_t n, char *nb, size_t base);
+
 
 #endif

@@ -1,30 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_power.c                                         :+:      :+:    :+:   */
+/*   ft_strnlen.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/07 14:30:26 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/02/14 13:41:50 by ldevelle         ###   ########.fr       */
+/*   Created: 2019/02/14 13:47:45 by ldevelle          #+#    #+#             */
+/*   Updated: 2019/02/14 13:48:42 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
 #include "libft.h"
 
-intmax_t		ft_power(int nb, int power)
+size_t		ft_strnlen(const char *s, size_t size)
 {
-	intmax_t x;
+	size_t i;
 
-	x = 1;
-	if (power == 0)
-		return (1);
-	if (power < 0)
-		return (0);
-	while (power > 0)
-	{
-		x = x * nb;
-		power--;
-	}
-	return (x);
+	i = 0;
+	while (s[i] && i < size)
+		i++;
+	return (i);
 }

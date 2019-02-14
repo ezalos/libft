@@ -6,7 +6,7 @@
 #    By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/12 15:04:16 by ldevelle          #+#    #+#              #
-#    Updated: 2019/02/12 21:09:34 by ldevelle         ###   ########.fr        #
+#    Updated: 2019/02/14 16:30:46 by ldevelle         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,7 +56,8 @@ SRCS6 = putchar putendl putnbr putstr putstr_rnull putstr_r0
 SRCS7 = char_srch count_lst del factorial fibonacci find_lsth fsqrt intlen\
 		lstcutone nprime power puttab_nb round_upper round nmatch match\
 		pstrnstr patoi nb_char_to_int puttab get_next_line place_cursor\
-		random swap
+		random swap strnlen\
+		u_nb_to_a nb_to_a u_nb_len nb_len putbnbr_str
 
 SRC_DIR1	= file
 SRC_DIR2	= int

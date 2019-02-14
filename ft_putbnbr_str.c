@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_power.c                                         :+:      :+:    :+:   */
+/*   ft_putbnbr_str.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/07 14:30:26 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/02/14 13:41:50 by ldevelle         ###   ########.fr       */
+/*   Created: 2019/02/14 16:23:02 by ldevelle          #+#    #+#             */
+/*   Updated: 2019/02/14 16:29:24 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-intmax_t		ft_power(int nb, int power)
+void			ft_putbnbr_str(int i, uintmax_t n, char *nb, size_t base)
 {
-	intmax_t x;
+	char	*base_smbl;
 
-	x = 1;
-	if (power == 0)
-		return (1);
-	if (power < 0)
-		return (0);
-	while (power > 0)
+	base_smbl = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOQRSTUVWXYZ";
+	if (base > 62)
+		base = 62;
+	while (i >= 0 && nb[i] != '-')
 	{
-		x = x * nb;
-		power--;
+		nb[i] = base_smbl[n % base];
+		n /= base;
+		i--;
 	}
-	return (x);
 }

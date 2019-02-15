@@ -1,30 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_find_lsth.c                                     :+:      :+:    :+:   */
+/*   ft_putnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/04 14:37:06 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/02/15 17:10:16 by ldevelle         ###   ########.fr       */
+/*   Created: 2019/02/15 15:57:59 by ldevelle          #+#    #+#             */
+/*   Updated: 2019/02/15 16:01:33 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_find_lsth(t_list *lst, size_t umpteenth)
+void	ft_putnstr(char const *s, size_t n)
 {
-	t_list	*tmp;
-	size_t	i;
-
-	tmp = lst;
-	i = 0;
-	while (i < umpteenth)
-	{
-		if (!tmp->next)
-			return (NULL);
-		tmp = tmp->next;
-		i++;
-	}
-	return (tmp);
+	if (s == NULL)
+		return ;
+	if (n == 0)
+		n = ft_strlen(s);
+	write(1, s, n);
 }

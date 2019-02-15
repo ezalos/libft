@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_find_lsth.c                                     :+:      :+:    :+:   */
+/*   ft_puttab_len.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/04 14:37:06 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/02/15 17:10:16 by ldevelle         ###   ########.fr       */
+/*   Created: 2019/01/07 15:03:37 by ldevelle          #+#    #+#             */
+/*   Updated: 2019/02/15 16:09:36 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_find_lsth(t_list *lst, size_t umpteenth)
+size_t	ft_puttab_len(size_t length, size_t separation, size_t n)
 {
-	t_list	*tmp;
-	size_t	i;
+	size_t		tab;
 
-	tmp = lst;
-	i = 0;
-	while (i < umpteenth)
+	if (n == 0)
+		n = 1;
+	tab = 0;
+	while (tab + length < separation * n)
 	{
-		if (!tmp->next)
-			return (NULL);
-		tmp = tmp->next;
-		i++;
+		write(1, " ", n);
+		tab += n;
 	}
-	return (tmp);
+	return (tab);
 }

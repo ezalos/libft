@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 11:15:02 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/02/15 13:43:44 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/02/15 16:41:14 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -132,8 +132,8 @@ int					ft_nb_char_to_int(char	c);
 int					ft_nmatch(char *s1, char *s2);
 int					*ft_nprime(int limite);
 intmax_t			ft_power(int nb, int power);
-void				ft_puttab(const char *s, int separation);
-void				ft_puttab_nb(int length, int separation);
+size_t				ft_puttab(const char *s, size_t separation);
+size_t				ft_puttab_len(size_t length, size_t separation, size_t n);
 int					ft_round_upper(float i);
 int					ft_round(float i);
 char				*ft_pstrnstr(const char *m, const char *a, size_t len);
@@ -149,6 +149,8 @@ char				*ft_nb_to_a(intmax_t n, size_t base);
 size_t				ft_nb_len(intmax_t n, size_t base);
 size_t				ft_u_nb_len(uintmax_t nb, size_t base);
 void				ft_putbnbr_str(int i, uintmax_t n, char *nb, size_t base);
+void				ft_putnstr(char const *s, size_t n);
+t_list				*ft_lstnew_ptr(void const *content, size_t content_size);
 
 
 #endif

@@ -1,29 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_puttab_nb.c                                     :+:      :+:    :+:   */
+/*   ft_lstnew_ptr.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/07 15:03:37 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/01/21 17:00:24 by ldevelle         ###   ########.fr       */
+/*   Created: 2018/11/12 17:15:19 by ldevelle          #+#    #+#             */
+/*   Updated: 2019/02/15 17:00:46 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_puttab_nb(int length, int separation)
+t_list	*ft_lstnew_ptr(void const *content, size_t content_size)
 {
-	int		n;
-	int		tab;
-	char	space;
+	t_list	*new;
 
-	n = 4;
-	tab = 0;
-	space = ' ';
-	while (tab + length < separation * n)
+	if (!(new = malloc(sizeof(t_list))))
+		return (NULL);
+	if (content == NULL)
 	{
-		write(1, &space, 1);
-		tab++;
+		new->content = NULL;
+		new->content_size = 0;
 	}
+	else
+	{
+		new->content_size = content_size;
+
+		if (!(new->content = malloc(content_size)))
+			return (NULL);
+		ft_memmove(new->content, (void *)content, content_size);
+	}
+	new->next = NULL;
+	return (new);
 }

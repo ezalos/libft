@@ -1,29 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_start.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/12 17:23:04 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/02/16 14:09:38 by ldevelle         ###   ########.fr       */
+/*   Created: 2019/02/16 13:52:31 by ldevelle          #+#    #+#             */
+/*   Updated: 2019/02/16 13:52:37 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void				ft_lstadd(t_list **alst, t_list *new, int position)
+void	ft_lstadd_start(t_list **alst, t_list *new)
 {
-	t_list		*tmp;
-
-	if (alst != NULL && *alst != NULL && new != NULL)
+	if (alst != NULL)
 	{
-		if (position < 0)
-			ft_lstadd_start(alst, new);
-		else
-		{
-			tmp = ft_find_lsth(*alst, position);
-			ft_lstadd_here(tmp, new);
-		}
+		new->next = *alst;
+		*alst = new;
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/04 14:37:06 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/02/15 17:10:16 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/02/16 14:07:48 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ t_list	*ft_find_lsth(t_list *lst, size_t umpteenth)
 	i = 0;
 	while (i < umpteenth)
 	{
-		if (!tmp->next)
-			return (NULL);
+		if (!tmp)
+			return (tmp);
 		tmp = tmp->next;
 		i++;
 	}

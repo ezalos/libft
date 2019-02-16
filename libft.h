@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 11:15:02 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/02/15 16:41:14 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/02/16 14:09:27 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,6 @@ void				ft_putstr_fd(char const *s, int fd);
 int					ft_atoi(const char *src);
 char				*ft_itoa(int n);
 
-void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
@@ -151,6 +150,11 @@ size_t				ft_u_nb_len(uintmax_t nb, size_t base);
 void				ft_putbnbr_str(int i, uintmax_t n, char *nb, size_t base);
 void				ft_putnstr(char const *s, size_t n);
 t_list				*ft_lstnew_ptr(void const *content, size_t content_size);
+void				ft_lstadd_here(t_list *alst, t_list *new);
+t_list				*ft_lst_reach_end(t_list *alst);
+void				ft_lstadd_end(t_list *alst, t_list *new);
+void				ft_lstadd(t_list **alst, t_list *new, int position);
+void				ft_lstadd_start(t_list **alst, t_list *new);
 
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/11 20:52:12 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/02/14 15:19:57 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/02/16 23:46:20 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,7 +93,7 @@ intmax_t			ft_random(intmax_t min, intmax_t max, intmax_t rando,
 	if (min > max)
 		ft_swap(&min, &max, sizeof(min));
 	max++;
-	if (-1 == (fd = open("/dev/random", O_RDONLY)))
+	if ((rando && len) || -1 == (fd = open("/dev/random", O_RDONLY)))
 		ft_if_random(min, max, &rando, &len);
 	else
 	{

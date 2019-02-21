@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 11:15:02 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/02/16 14:09:27 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/02/20 12:32:09 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@
 # include <sys/stat.h>
 # include <fcntl.h>
 # include <limits.h>
+# include <stdint.h>
+# include <stdarg.h>
 
 typedef	struct		s_list
 {
@@ -28,6 +30,20 @@ typedef	struct		s_list
 }					t_list;
 
 # define BUFF_SIZE 256
+
+
+//# define LINUX
+
+
+# ifndef OPEN_MAX
+#  define OPEN_MAX 100
+# endif
+
+
+# ifdef LINUX
+#  define intmax_t long long
+#  define uintmax_t unsigned long long
+# endif
 
 #  define C_RED			write(1, "\x1b[31m", 5);
 #  define C_GREEN		write(1, "\x1b[32m", 5);
@@ -155,6 +171,9 @@ t_list				*ft_lst_reach_end(t_list *alst);
 void				ft_lstadd_end(t_list *alst, t_list *new);
 void				ft_lstadd(t_list **alst, t_list *new, int position);
 void				ft_lstadd_start(t_list **alst, t_list *new);
+int					ft_rgb_color(int red, int green, int blue);
+char				*ft_strjoin_multi(size_t nb, ...);
+void				ft_putstr_color(char const *s, int r, int g, int b);
 
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/11 18:27:47 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/02/11 20:49:51 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/02/19 15:01:11 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,6 @@ int			place_cursor(size_t line, size_t column)
 		return (0);
 	ft_strdel(&string);
 	write(1, tmp, ft_strlen(tmp));
+	ft_strdel(&tmp);
 	return (1);
 }

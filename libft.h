@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 11:15:02 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/02/20 12:32:09 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/02/22 22:30:28 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,16 @@ typedef	struct		s_list
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
+
+
+
+
+/*
+**	dir[0] : up;
+**	dir[1] : right;
+**	dir[2] : down;
+**	dir[3] : left;
+*/
 
 # define BUFF_SIZE 256
 
@@ -134,11 +144,11 @@ void				*ft_putstr_rnull(char const *s);
 int					ft_putstr_r0(char const *s);
 
 int					ft_char_srch(const char src, const char *dlt);
-size_t				ft_count_lst(t_list *lst, size_t i);
+size_t				ft_lst_count(t_list *lst, size_t i);
 void				ft_del(void *content, size_t size);
 int					ft_factorial(int nb);
 int					ft_fibonacci(int index);
-t_list				*ft_find_lsth(t_list *lst, size_t umpteenth);
+t_list				*ft_lstfind_th(t_list *lst, size_t umpteenth);
 float				ft_fsqrt(int nb, int limite);
 int					ft_intlen(int n);
 void				ft_lstcutone(t_list **alst, void (*del)(void *, size_t));
@@ -173,7 +183,8 @@ void				ft_lstadd(t_list **alst, t_list *new, int position);
 void				ft_lstadd_start(t_list **alst, t_list *new);
 int					ft_rgb_color(int red, int green, int blue);
 char				*ft_strjoin_multi(size_t nb, ...);
+void				ft_strdel_multi(size_t nb, ...);
 void				ft_putstr_color(char const *s, int r, int g, int b);
-
+int					ft_rgb_bcolor(int red, int green, int blue);
 
 #endif

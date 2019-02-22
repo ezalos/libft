@@ -1,29 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_count_lst.c                                     :+:      :+:    :+:   */
+/*   ft_strdel_multi.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/04 14:44:37 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/01/21 16:59:36 by ldevelle         ###   ########.fr       */
+/*   Created: 2019/02/19 14:14:54 by ldevelle          #+#    #+#             */
+/*   Updated: 2019/02/22 19:10:24 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_count_lst(t_list *lst, size_t i)
+void	ft_strdel_multi(size_t nb, ...)
 {
-	t_list	*tmp;
+	va_list 	ap;
+	int			i;
+	char		**as;
 
-	if (!lst->next)
-		return (1);
-	tmp = lst->next;
-	i = 2;
-	while (tmp->next)
+	if (nb != 0)
 	{
-		i++;
-		tmp = tmp->next;
+		va_start(ap, nb);
+		i = -1;
+		while (++i < (int)nb)
+		{
+			as = va_arg(ap, char**);
+			if (as != NULL)
+				if (*as != NULL)
+				{
+					free(as);
+					as = NULL;
+				}
+		}
+		va_end(ap);
 	}
-	return (i);
 }

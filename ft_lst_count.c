@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd.c                                        :+:      :+:    :+:   */
+/*   ft_lst_count.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/12 17:23:04 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/02/22 19:15:24 by ldevelle         ###   ########.fr       */
+/*   Created: 2019/02/22 19:12:56 by ldevelle          #+#    #+#             */
+/*   Updated: 2019/02/22 19:12:57 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void				ft_lstadd(t_list **alst, t_list *new, int position)
+size_t	ft_lst_count(t_list *lst, size_t i)
 {
-	t_list		*tmp;
+	t_list	*tmp;
 
-	if (alst != NULL && *alst != NULL && new != NULL)
+	if (!lst->next)
+		return (1);
+	tmp = lst->next;
+	i = 2;
+	while (tmp->next)
 	{
-		if (position < 0)
-			ft_lstadd_start(alst, new);
-		else
-		{
-			tmp = ft_lstfind_th(*alst, position);
-			ft_lstadd_here(tmp, new);
-		}
+		i++;
+		tmp = tmp->next;
 	}
+	return (i);
 }

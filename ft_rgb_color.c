@@ -6,11 +6,12 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/19 14:13:14 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/02/19 18:30:18 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/02/23 19:06:14 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+//#include <stdio.h>
 #include <time.h>
 
 int			ft_rgb_color(int red, int green, int blue)
@@ -34,6 +35,8 @@ int			ft_rgb_color(int red, int green, int blue)
 		return (-1);
 	if (!(color = ft_strjoin_multi(7, "\x1b[38;2;", s_red, ";", s_green, ";", s_blue, "m")))
 		return (-1);
+	//printf("%s\n", color + 1);
+	//fflush(stdout);
 	write(1, color, ft_strlen(color));
 	ft_strdel(&s_green);
 	ft_strdel(&s_blue);

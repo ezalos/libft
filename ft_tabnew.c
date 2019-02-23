@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/22 19:15:50 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/02/22 23:38:23 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/02/23 19:14:45 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,47 +39,76 @@ typedef	struct		s_tab
 **	dir[3] : left;
 */
 
+int		ft_tab_print_fourdir(t_tab *tmp, size_t lin, size_t col, int structh)
+{
+	char				*complete;
+	size_t				addr;
+	unsigned char		color;
 
-int		ft_tab_print_dir(t_tab *tab, size_t dir)
+	//ft_putnbr(col);
+	addr = 12;
+	complete = "         ";
+	place_cursor(lin, col);
+	ft_putnbr(structh);
+	place_cursor(lin, col + addr);
+	color = (unsigned char)tmp->dir[0];//	UP
+
+	ft_putstr_color(ft_nb_to_a((intmax_t)tmp->dir[0], 16), ft_random(0, 255, color, 1), ft_random(0, 255, color / 2, 1), ft_random(0, 255, color + 3, 1));
+	if (!tmp->dir[0])
+		ft_putstr(complete);
+
+
+	place_cursor(lin + 1, col);
+	color = (unsigned char)tmp->dir[3];//	LEFT
+	ft_putstr_color(ft_nb_to_a((intmax_t)tmp->dir[3], 16), color, color / 2, color / 3);
+	if (!tmp->dir[3])
+		ft_putstr(complete);
+	ft_putstr_color("|", 255, 255, 255);
+
+	color = (unsigned char)tmp;//			HERE
+	ft_putstr_color(ft_nb_to_a((intmax_t)tmp, 16), color, color, color);
+	if (!tmp)
+		ft_putstr(complete);
+	ft_putstr_color("|", 255, 255, 255);
+
+	color = (unsigned char)tmp->dir[1];//	RIGHT
+	ft_putstr_color(ft_nb_to_a((intmax_t)tmp->dir[1], 16), color, color, color);
+	if (!tmp->dir[1])
+		ft_putstr(complete);
+
+
+	place_cursor(lin + 2, col + addr);
+	color = (unsigned char)tmp->dir[2];//	DOWN
+	ft_putstr_color(ft_nb_to_a((intmax_t)tmp->dir[2], 16), color, color, color);
+	if (!tmp->dir[2])
+		ft_putstr(complete);
+	return (0);
+}
+
+int		ft_tab_print_dir(t_tab *tab, size_t dir, int lin)
 {
 	t_tab	*tmp;
-	int		rot;
 	int		structh;
+	int		col;
 
 	if (!tab || dir > 3)
 		return (-1);
-		printf("HELLO WORLD\n");
+	//	printf("HELLO WORLD\n");
 	tmp = tab;
 	structh = 0;
+	col = 3;
 	//ft_rgb_bcolor((int) tab % 255, (int) tab % 255 , 0);
+	//CURSOR_SAVE
 	while (tmp)
 	{
-		rot = -1;
-		//ft_rgb_color(0, (int)tmp % 255, (int)tmp % 255);
-		ft_putnbr(structh);
-		ft_putstr("\t\tHERE: ");
-		ft_putstr_color(ft_nb_to_a((intmax_t)tmp, 16), (int)tmp % 255, (int)tmp % 255, (int)tmp % 255);
-		ft_putstr("\n");
-		while (++rot < 4)
-		{
-			ft_putstr("|");
-			if (rot == 0)
-				ft_putstr("up");
-			else if (rot == 1)
-				ft_putstr("right");
-			else if (rot == 2)
-				ft_putstr("down");
-			else if (rot == 3)
-				ft_putstr("left");
-			ft_putstr(": ");
-			ft_putstr_color(ft_nb_to_a((intmax_t)tmp->dir[rot], 16), (int)tmp->dir[rot] % 255, (int)tmp->dir[rot] % 255, (int)tmp->dir[rot] % 255);
-			ft_putstr("|");
-		}
+		ft_tab_print_fourdir(tmp, lin, col, structh);
 		tmp = tmp->dir[dir];
 		structh++;
-		ft_putstr("\n");
+		col += (12 * 3) + 2;
 	}
-	C_RESET
+	//C_RESET
+	//CURSOR_LOAD
+	ft_putstr("\n\n\n");
 	return (1);
 }
 
@@ -171,7 +200,7 @@ t_tab		*ft_tabnew_dir(size_t len, size_t dir)
 		col->dir[dir]->dir[ft_tab_dir_reverse(dir)] = col;
 		col = col->dir[dir];
 	}
-	ft_tab_print_dir(head, dir);
+//	ft_tab_print_dir(head, dir);
 	return (head);
 }
 
@@ -211,10 +240,10 @@ t_tab	*ft_tab_square_it(t_tab *tab, size_t dir)
 	tmp_old = NULL;
 	len = ft_tab_lendir(tab, dir);
 	perp_dir = ft_tab_dir_rclock(dir);
-	int i = 0;
+	//int i = 0;
 	while (tmp->dir[dir])
 	{
-		printf("%d - len %zu\n", i++, len);
+		//printf("%d - len %zu\n", i++, len);
 		tmp->dir[perp_dir] = ft_tabnew_dir(len, perp_dir);
 		tmp->dir[perp_dir]->dir[ft_tab_dir_reverse(perp_dir)] = tmp;
 		if (tmp_old)
@@ -227,22 +256,25 @@ t_tab	*ft_tab_square_it(t_tab *tab, size_t dir)
 	return (tab);
 }
 
-void	ft_tabiter(t_tab *tab, size_t dir, int(*f)(t_tab *, size_t), size_t dirf)
+void	ft_tabiter(t_tab *tab, size_t dir, int(*f)(t_tab *, size_t, int), size_t dirf)
 {
 	t_tab	*ptr;
-	int i;
+	int 	i;
+	int		lin;
 
 	if (tab != NULL && f != NULL)
 	{
-		ft_putstr("1\n");
+		//ft_putstr("1\n");
 		ptr = tab;
+		lin = 3;
 		while (ptr->dir[dir] != NULL)
 		{
-			ft_putstr("|\n");
-			i = (*f)(ptr, dirf);
+			//ft_putstr("|\n");
+			i = (*f)(ptr, dirf, lin);
 			ptr = ptr->dir[dir];
+			lin += 4;
 		}
-		f(ptr, dirf);
+		f(ptr, dirf, lin);
 	}
 }
 
@@ -250,12 +282,14 @@ int		main(void)
 {
 	t_tab	*tab;
 
-	ft_putstr("1\n");
+	//ft_putstr("1\n");
 	tab = ft_tabnew_dir(10, 2);
-	ft_putstr("2\n");
+	//ft_putstr("2\n");
 	ft_tab_square_it(tab, 2);
-	ft_putstr("3\n");
-	printf("\n\n\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n\n\n");
-	ft_tabiter(tab, 2, &ft_tab_print_dir, 3);
+	//ft_putstr("3\n");
+	//printf("\n\n\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n\n\n");
+	//CLEAR_SCREEN
+	ft_rgb_bcolor(20, 20, 20);
+	ft_tabiter(tab, 2, &ft_tab_print_dir, 1);
 	return (0);
 }

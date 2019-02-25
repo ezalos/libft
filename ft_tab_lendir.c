@@ -1,25 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tabnew.c                                        :+:      :+:    :+:   */
+/*   ft_tab_lendir.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/22 19:15:50 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/02/25 22:12:14 by ldevelle         ###   ########.fr       */
+/*   Created: 2019/02/25 22:04:25 by ldevelle          #+#    #+#             */
+/*   Updated: 2019/02/25 22:04:30 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-int		main(int ac, char **av)
-{
-	t_tab	*tab;
 
-	if (ac < 2)
+size_t		ft_tab_lendir(t_tab *tab, size_t dir)
+{
+	t_tab	*tmp;
+	size_t	i;
+
+	if (!tab || dir > 3)
 		return (0);
-	tab = ft_tabnew_dir(ft_atoi(av[1]), 2);
-	ft_tab_square_it(tab, 2);
-	ft_rgb_bcolor(20, 20, 20);
-	ft_tabiter(tab, 2, &ft_tab_print_dir, 1);
-	return (0);
+	tmp = tab;
+	i = 0;
+	while (tmp)
+	{
+		tmp = tmp->dir[dir];
+		i++;
+	}
+	return (i);
 }

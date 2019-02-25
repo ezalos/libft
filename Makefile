@@ -6,7 +6,7 @@
 #    By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/12 15:04:16 by ldevelle          #+#    #+#              #
-#    Updated: 2019/02/22 22:30:40 by ldevelle         ###   ########.fr        #
+#    Updated: 2019/02/25 22:13:13 by ldevelle         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,10 +56,13 @@ SRCS6 = putchar putendl putnbr putstr putstr_rnull putstr_r0
 SRCS7 = char_srch lst_count del factorial fibonacci lstfind_th fsqrt intlen\
 		lstcutone nprime power puttab_len round_upper round nmatch match\
 		pstrnstr patoi nb_char_to_int puttab get_next_line place_cursor\
-		random swap strnlen\
+		random swap strnlen print_address_color\
 		u_nb_to_a nb_to_a u_nb_len nb_len putbnbr_str putnstr\
 		lstnew_ptr lstadd_here lst_reach_end lstadd_end lstadd_start\
-		rgb_color strjoin_multi strdel_multi putstr_color rgb_bcolor
+		rgb_color strjoin_multi strdel_multi putstr_color rgb_bcolor wait_pls\
+		tab_print_one_elmnt tab_print_dir tabiter tabnew_ptr tab_lendir\
+		tab_dirth tab_dir_clock tab_dir_rclock tab_dir_reverse tabnew_dir\
+		tab_connect_dir tab_square_it
 
 SRC_DIR1	= file
 SRC_DIR2	= int

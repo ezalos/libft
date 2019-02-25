@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 11:15:02 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/02/22 22:30:28 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/02/25 22:12:22 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,12 @@ typedef	struct		s_list
 
 
 
+typedef	struct		s_tab
+{
+	struct s_tab	*dir[4];
+	void			*content;
+	size_t			content_size;
+}					t_tab;
 
 /*
 **	dir[0] : up;
@@ -186,5 +192,19 @@ char				*ft_strjoin_multi(size_t nb, ...);
 void				ft_strdel_multi(size_t nb, ...);
 void				ft_putstr_color(char const *s, int r, int g, int b);
 int					ft_rgb_bcolor(int red, int green, int blue);
+void				ft_wait_pls(uintmax_t wait);
+void				ft_print_address_color(intmax_t nb);
+int					ft_tab_print_one_elmnt(t_tab *tmp, size_t lin, size_t col, int structh);
+int					ft_tab_print_dir(t_tab *tab, size_t dir, int lin);
+void				ft_tabiter(t_tab *tab, size_t dir, int(*f)(t_tab *, size_t, int), size_t dirf);
+t_tab				*ft_tabnew_ptr(void const *content, size_t content_size);
+size_t				ft_tab_lendir(t_tab *tab, size_t dir);
+t_tab				*ft_tab_dirth(t_tab *tab, size_t dir, size_t umpteenth);
+size_t				ft_tab_dir_clock(size_t dir, size_t move);
+size_t				ft_tab_dir_rclock(size_t dir);
+size_t				ft_tab_dir_reverse(size_t dir);
+t_tab				*ft_tabnew_dir(size_t len, size_t dir);
+int					ft_tab_connect_dir(size_t dir_line, t_tab *line_one, t_tab *line_two, size_t dir_connec);
+t_tab				*ft_tab_square_it(t_tab *tab, size_t dir);
 
 #endif

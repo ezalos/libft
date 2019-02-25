@@ -1,25 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tabnew.c                                        :+:      :+:    :+:   */
+/*   ft_tabnew_dir.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/22 19:15:50 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/02/25 22:12:14 by ldevelle         ###   ########.fr       */
+/*   Created: 2019/02/25 22:09:32 by ldevelle          #+#    #+#             */
+/*   Updated: 2019/02/25 22:09:40 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-int		main(int ac, char **av)
-{
-	t_tab	*tab;
 
-	if (ac < 2)
-		return (0);
-	tab = ft_tabnew_dir(ft_atoi(av[1]), 2);
-	ft_tab_square_it(tab, 2);
-	ft_rgb_bcolor(20, 20, 20);
-	ft_tabiter(tab, 2, &ft_tab_print_dir, 1);
-	return (0);
+t_tab		*ft_tabnew_dir(size_t len, size_t dir)
+{
+	t_tab	*head;
+	t_tab	*segment;
+	int		i;
+
+	if (!len || dir > 3 || !(head = ft_tabnew_ptr(NULL, 0)))
+		return (NULL);
+	segment = head;
+	i = 0;
+	while (++i < (int)len)
+	{
+		if (!(segment->dir[dir] = ft_tabnew_ptr(NULL, 0)))
+			return (NULL);
+		segment->dir[dir]->dir[ft_tab_dir_reverse(dir)] = segment;
+		segment = segment->dir[dir];
+	}
+	return (head);
 }

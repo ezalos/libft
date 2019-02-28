@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/11 20:52:12 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/02/16 23:46:20 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/02/28 20:13:32 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ static intmax_t		ft_end_random(intmax_t min, intmax_t max, intmax_t rando,
 					size_t len)
 {
 	while ((int)--len > 0)
-		rando = (ft_10digits_prime(len * rando) * rando)
+		rando = (ft_10digits_prime(len * rando) * (rando % 100000))
 				+ ft_10digits_prime((len + rando) * (rando % len));
 	rando = (ft_10digits_prime(rando / 7) * rando)
 			+ ft_10digits_prime((rando / 3) * (rando));
@@ -70,7 +70,7 @@ static intmax_t		ft_end_random(intmax_t min, intmax_t max, intmax_t rando,
 static intmax_t		ft_end_n_random(intmax_t rando, size_t len)
 {
 	while ((int)--len > 0)
-		rando = (ft_10digits_prime(len * rando) * rando)
+		rando = (ft_10digits_prime(len * rando) * (rando % 100000))
 				+ ft_10digits_prime((len + rando) * (rando % len));
 	rando = (ft_10digits_prime(rando / 7) * rando)
 			+ ft_10digits_prime((rando / 3) * (rando));
@@ -93,7 +93,9 @@ intmax_t			ft_random(intmax_t min, intmax_t max, intmax_t rando,
 	if (min > max)
 		ft_swap(&min, &max, sizeof(min));
 	max++;
-	if ((rando && len) || -1 == (fd = open("/dev/random", O_RDONLY)))
+	if (rando && len)
+		ft_if_random(min, max, &rando, &len);
+	else if (-1 == (fd = open("/dev/random", O_RDONLY)))
 		ft_if_random(min, max, &rando, &len);
 	else
 	{

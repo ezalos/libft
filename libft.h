@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 11:15:02 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/02/25 22:12:22 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/03/01 17:54:31 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -200,7 +200,8 @@ void				ft_tabiter(t_tab *tab, size_t dir, int(*f)(t_tab *, size_t, int), size_t
 t_tab				*ft_tabnew_ptr(void const *content, size_t content_size);
 size_t				ft_tab_lendir(t_tab *tab, size_t dir);
 t_tab				*ft_tab_dirth(t_tab *tab, size_t dir, size_t umpteenth);
-size_t				ft_tab_dir_clock(size_t dir, size_t move);
+size_t				ft_tab_dir_clock(size_t dir);
+size_t				ft_tab_dir_nclock(size_t dir, size_t move);
 size_t				ft_tab_dir_rclock(size_t dir);
 size_t				ft_tab_dir_reverse(size_t dir);
 t_tab				*ft_tabnew_dir(size_t len, size_t dir);

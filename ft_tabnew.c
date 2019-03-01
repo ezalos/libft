@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/22 19:15:50 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/02/27 16:36:15 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/03/01 17:59:26 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,18 +19,97 @@
 */
 
 #include "libft.h"
-/*
-t_tab	*ft_tab_access(t_tab *tab, int dir_zer, int dir_one, int dir_two, int dir_thr)
+
+void		ft_tab_connect_structs(t_tab *tab_one, t_tab *tab_two, size_t dir_one)
+{
+	size_t	dir_two;
+
+	dir_two = ft_tab_dir_reverse(dir_one);
+	tab_one->dir[dir_one] = tab_two;
+	tab_two->dir[dir_two] = tab_one;
+}
+
+size_t			ft_tab_delete_row(t_tab *tab, size_t dir)
 {
 	t_tab	*tmp;
+	t_tab	*next;
+	size_t	i;
 
-	if (dir_zer < 0 || dir_one < 0 || dir_two < 0 || dir_thr < 0)
+	tmp = tab;
+	i = 0;
+	ft_tab_connect_dir(dir, tab->dir[ft_tab_dir_clock(dir)], tab->dir[ft_tab_dir_rclock(dir)], ft_tab_dir_clock(dir));
+	while (tmp)
 	{
+		tmp->dir[ft_tab_dir_reverse(dir)] = NULL;
+		next = tmp->dir[dir];
+		ft_memdel((void**)&tmp);
+		tmp = next;
+		i++;
+	}
+	return (i);
+}
 
+size_t			ft_tab_delete_row_len(t_tab *tab, size_t dir, size_t len)
+{
+	t_tab	*tmp;
+	t_tab	*next;
+	size_t	i;
+
+	tmp = tab;
+	i = 0;
+	if (!len)
+		return (ft_tab_delete_row(tab, dir));
+	while (tmp && i < len)
+	{
+		tmp->dir[ft_tab_dir_reverse(dir)] = NULL;
+		ft_tab_connect_structs(tmp->dir[ft_tab_dir_clock(dir)], tmp->dir[ft_tab_dir_rclock(dir)], ft_tab_dir_rclock(dir));
+		next = tmp->dir[dir];
+		ft_memdel((void**)&tmp);
+		tmp = next;
+		i++;
+	}
+	return (i);
+}
+
+static void	ft_tab_access_setup(size_t *down, size_t *right, int *dir_y, int *dir_x)
+{
+	if (*dir_x < 0)
+	{
+		*dir_x = -*dir_x;
+		*right = ft_tab_dir_reverse(*right);
+	}
+	if (*dir_y < 0)
+	{
+		*dir_y = -*dir_y;
+		*down = ft_tab_dir_reverse(*down);
+	}
+}
+
+t_tab	*ft_tab_access(t_tab *tab, int dir_y, int dir_x, int rot)
+{
+	t_tab	*tmp;
+	size_t	down;
+	size_t	right;
+
+	down = 2;
+	right = 1;
+	ft_tab_access_setup(&down, &right, &dir_y, &dir_x);
+	if (rot)
+	{
+		right = ft_tab_dir_nclock(right, rot);
+		down = ft_tab_dir_nclock(down, rot);
+	}
+	tmp = tab;
+	while (tmp)
+	{
+		while (dir_y--)
+			tmp = tmp->dir[down];
+		while (dir_x--)
+			tmp = tmp->dir[right];
 	}
 	return (tmp);
 }
-*/
+
 t_tab	*ft_tabnew_rectangle(size_t x_axis, size_t y_axis, size_t x_dir)
 {
 	t_tab	*tab;
@@ -49,7 +128,7 @@ t_tab	*ft_tabnew_rectangle(size_t x_axis, size_t y_axis, size_t x_dir)
 	{
 		if(!(tmp->dir[ft_tab_dir_rclock(x_dir)] = ft_tabnew_dir(x_axis - 1, ft_tab_dir_rclock(x_dir))))
 			return (NULL);
-		tmp->dir[ft_tab_dir_rclock(x_dir)]->dir[ft_tab_dir_clock(x_dir, 1)] = tmp;
+		tmp->dir[ft_tab_dir_rclock(x_dir)]->dir[ft_tab_dir_clock(x_dir)] = tmp;
 		if (tmp_old && tmp)
 			ft_tab_connect_dir(ft_tab_dir_rclock(x_dir), tmp_old, tmp, x_dir);
 

@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/25 22:12:01 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/02/27 16:25:01 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/03/03 22:49:35 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ t_tab	*ft_tab_square_it(t_tab *tab, size_t dir)
 	t_tab		*tmp_old;
 	size_t		len;
 	size_t		perp_dir;
-	int			i;
 
 	if (!tab || dir > 3)
 		return (NULL);
@@ -27,7 +26,6 @@ t_tab	*ft_tab_square_it(t_tab *tab, size_t dir)
 	len = ft_tab_lendir(tab, dir);
 	//ft_putnbr(len);
 	perp_dir = ft_tab_dir_rclock(dir);
-	i = 0;
 	while (tmp && len > 1)
 	{
 		tmp->dir[perp_dir] = ft_tabnew_dir(len - 1, perp_dir);

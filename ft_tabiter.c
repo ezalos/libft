@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/25 22:01:34 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/02/25 22:01:41 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/03/03 22:48:29 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 void	ft_tabiter(t_tab *tab, size_t dir, int(*f)(t_tab *, size_t, int), size_t dirf)
 {
 	t_tab	*ptr;
-	int 	i;
 	int		lin;
 
 	if (tab != NULL && f != NULL)
@@ -24,7 +23,7 @@ void	ft_tabiter(t_tab *tab, size_t dir, int(*f)(t_tab *, size_t, int), size_t di
 		lin = 3;
 		while (ptr->dir[dir] != NULL)
 		{
-			i = (*f)(ptr, dirf, lin);
+			(*f)(ptr, dirf, lin);
 			ptr = ptr->dir[dir];
 			lin += 4;
 		}

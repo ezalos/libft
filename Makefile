@@ -6,7 +6,7 @@
 #    By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/12 15:04:16 by ldevelle          #+#    #+#              #
-#    Updated: 2019/02/25 22:13:13 by ldevelle         ###   ########.fr        #
+#    Updated: 2019/03/03 22:52:24 by ldevelle         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -62,7 +62,7 @@ SRCS7 = char_srch lst_count del factorial fibonacci lstfind_th fsqrt intlen\
 		rgb_color strjoin_multi strdel_multi putstr_color rgb_bcolor wait_pls\
 		tab_print_one_elmnt tab_print_dir tabiter tabnew_ptr tab_lendir\
 		tab_dirth tab_dir_clock tab_dir_rclock tab_dir_reverse tabnew_dir\
-		tab_connect_dir tab_square_it
+		tab_connect_dir tab_square_it tab_dir_nclock
 
 SRC_DIR1	= file
 SRC_DIR2	= int

@@ -6,11 +6,11 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/18 17:21:35 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/03/03 23:33:13 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/03/04 22:23:19 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/head.h"
+#include "libft.h"
 
 void		print_menu_new_network(void)
 {
@@ -29,14 +29,14 @@ void		print_menu_new_network(void)
 	C_RESET
 }
 
-int		parsing_create_vertice(t_god *god)
+int		parsing_create_vertice(t_tab *god, int fd)
 {
 	char *instruction;
 
 	C_ORANGE
 	printf("Please name your new vetice\n");
 	C_CYAN
-	if (0 >= get_next_line(0, &instruction))
+	if (0 >= get_next_line(fd, &instruction))
 	return (-1);
 	C_RESET
 	while (instruction[0] != '\0')
@@ -44,12 +44,12 @@ int		parsing_create_vertice(t_god *god)
 		C_MAGENTA
 		//printf("Here's the string: %s\n", instruction);
 		C_RESET
-		create_vertice(god, instruction);
+		ft_tabnew_ptr(instruction, sizeof(instruction));
 		ft_strdel(&instruction);
 		C_ORANGE
 		printf("Please name your new vetice\n");
 		C_CYAN
-		if (0 >= get_next_line(0, &instruction))
+		if (0 >= get_next_line(fd, &instruction))
 			return (-1);
 		C_RESET
 	}
@@ -132,13 +132,14 @@ int		parsing_link_vertice(t_god *god, int choice)
 	return (0);
 }
 
-int		parsing_new_network(t_god *god)
+int		parsing_new_network(t_tab *god, int fd)
 {
 	char *instructions;
 	int choice;
+
 	print_menu_new_network();
 	C_CYAN
-	if (-1 == get_next_line(0, &instructions))
+	if (-1 == get_next_line(fd, &instructions))
 		return (-1);
 	C_RESET
 	while (instructions)
@@ -165,7 +166,7 @@ int		parsing_new_network(t_god *god)
 		ft_strdel(&instructions);
 		print_menu_new_network();
 		C_CYAN
-		if (-1 == get_next_line(0, &instructions))
+		if (-1 == get_next_line(fd, &instructions))
 		return (-1);
 			C_RESET
 	}
@@ -213,7 +214,7 @@ int		ft_tab_parser(t_tab **god, int fd)
 	print_welcome();
 	print_menu();
 	C_CYAN
-	if (-1 == get_next_line(0, &instructions))
+	if (-1 == get_next_line(fd, &instructions))
 		return (-1);
 	C_RESET
 	while (instructions)
@@ -224,15 +225,22 @@ int		ft_tab_parser(t_tab **god, int fd)
 			ft_putstr_color("This functionality hasn't been coded yet\n", 255, 0, 0);
 		}
 		else if (choice == 1)
-			parsing_new_network(god);
+			parsing_new_network(*god, fd);
 		else if (choice == 2)
 			return (1);
 		ft_strdel(&instructions);
 		print_menu();
 		C_CYAN
-		if (-1 == get_next_line(0, &instructions))
+		if (-1 == get_next_line(fd, &instructions))
 			return (-1);
 		C_RESET
 	}
 	return (1);
 }
+
+typedef struct		s_parser
+{
+	char			**instruction;
+	int				(*f)(t_tab *, size_t, char*);
+	int				fd;
+}					t_parser;

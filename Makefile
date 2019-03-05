@@ -6,7 +6,7 @@
 #    By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/12 15:04:16 by ldevelle          #+#    #+#              #
-#    Updated: 2019/03/04 20:28:07 by ldevelle         ###   ########.fr        #
+#    Updated: 2019/03/05 19:39:46 by ldevelle         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,7 +64,8 @@ SRCS7 = char_srch lst_count del factorial fibonacci lstfind_th fsqrt intlen\
 		tab_dirth tab_dir_clock tab_dir_rclock tab_dir_reverse tabnew_dir\
 		tab_connect_dir tab_square_it tab_dir_nclock tab_connect_structs\
 		tab_delete_row tab_delete_row_len tab_access tabnew_rectangle\
-		tab_reach_end tabadd_start tabadd_end tabadd_here tabadd\
+		tab_reach_end tabadd_start tabadd_end tabadd_here tabadd tab_cutone\
+		tabloop_lendir tabloop_it\
 		cnalloc nalloc clean_garbage lst_free garbage_collector
 
 SRC_DIR1	= file

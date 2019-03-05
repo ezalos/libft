@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 11:15:02 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/03/04 22:47:09 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/03/05 19:39:35 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -222,5 +222,8 @@ t_tab				*ft_tab_access(t_tab *tab, int dir_y, int dir_x, int rot);
 size_t				ft_tab_delete_row_len(t_tab *tab, size_t dir, size_t len);
 size_t				ft_tab_delete_row(t_tab *tab, size_t dir);
 void				ft_tab_connect_structs(t_tab *tab_one, t_tab *tab_two, size_t dir_one);
+t_tab				*ft_tab_cutone(t_tab *to_cut);
+size_t				ft_tabloop_lendir(t_tab *tab, size_t dir);
+size_t				ft_tabloop_it(t_tab *tab, size_t dir);
 
 #endif

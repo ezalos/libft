@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tabadd_end.c                                    :+:      :+:    :+:   */
+/*   ft_tabloop_it.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/04 20:33:22 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/03/05 20:26:51 by ldevelle         ###   ########.fr       */
+/*   Created: 2019/03/05 18:01:43 by ldevelle          #+#    #+#             */
+/*   Updated: 2019/03/05 19:39:16 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_tabadd_end(t_tab *alst, t_tab *new, size_t dir)
+size_t		ft_tabloop_it(t_tab *tab, size_t dir)
 {
-	if (alst && new)
-	{
-		ft_tab_connect_structs(ft_tab_reach_end(alst, dir), new, dir);
-//		ft_tab_reach_end(alst, dir)->dir[dir] = new;
-//		new->dir[ft_tab_dir_reverse(dir)] = ft_tab_reach_end(alst, dir);
-	}
+	t_tab	*tmp;
+	size_t	i;
+
+	i = ft_tabloop_lendir(tab, dir);
+	tmp = ft_tab_reach_end(tab, dir);
+	ft_tab_connect_structs(tab, tmp, ft_tab_dir_reverse(dir));
+	return (i);
 }

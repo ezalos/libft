@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/04 20:32:24 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/03/05 18:20:28 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/03/06 13:33:01 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,6 @@ void	ft_tabadd_start(t_tab **alst, t_tab *new, size_t dir)
 			*alst = new;
 		}
 		else
-			alst = &new;
+			*alst = new;
 	}
 }

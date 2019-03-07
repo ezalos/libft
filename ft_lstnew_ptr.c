@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 17:15:19 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/02/16 21:15:21 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/03/07 17:07:38 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,10 @@ t_list	*ft_lstnew_ptr(void const *content, size_t content_size)
 	{
 		new->content_size = content_size;
 		if (!content_size || !(new->content = malloc(content_size)))
+		{
+			ft_memdel((void**)&new);
 			return (NULL);
+		}
 		ft_memmove(new->content, (void*)content, content_size);
 	}
 	new->next = NULL;

@@ -6,11 +6,12 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/11 20:52:12 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/02/28 20:13:32 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/03/07 22:19:04 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <time.h>
 
 static void			ft_if_random(intmax_t min, intmax_t max, intmax_t *rando,
 					size_t *len)
@@ -95,6 +96,11 @@ intmax_t			ft_random(intmax_t min, intmax_t max, intmax_t rando,
 	max++;
 	if (rando && len)
 		ft_if_random(min, max, &rando, &len);
+	else if (!rando || !len)
+	{
+		rando = clock();
+		len = clock() % 50000;
+	}
 	else if (-1 == (fd = open("/dev/random", O_RDONLY)))
 		ft_if_random(min, max, &rando, &len);
 	else

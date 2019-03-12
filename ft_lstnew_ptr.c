@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 17:15:19 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/03/07 17:07:38 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/03/08 20:34:41 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_list	*ft_lstnew_ptr(void const *content, size_t content_size)
 {
 	t_list	*new;
 
-	if (!(new = malloc(sizeof(t_list))))
+	if (!(new = P_MALLOC(sizeof(t_list))))
 		return (NULL);
 	if (content == NULL)
 	{
@@ -26,7 +26,7 @@ t_list	*ft_lstnew_ptr(void const *content, size_t content_size)
 	else
 	{
 		new->content_size = content_size;
-		if (!content_size || !(new->content = malloc(content_size)))
+		if (!content_size || !(new->content = P_MALLOC(content_size)))
 		{
 			ft_memdel((void**)&new);
 			return (NULL);

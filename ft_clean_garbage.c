@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/04 20:21:44 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/03/04 20:52:16 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/03/08 23:02:44 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,4 @@ void			ft_clean_garbage(void)
 
 	garbage = *ft_garbage_collector();
 	ft_lst_free(&garbage);
-	ft_putstr_fd("Error\n", 2);
-	exit (0);
 }

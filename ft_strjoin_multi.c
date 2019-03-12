@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/19 14:14:54 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/03/07 17:18:17 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/03/08 20:37:36 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strjoin_multi(size_t nb, ...)
 
 	if (nb < 2)
 		return (NULL);
-	if (!(srcs = (char**)malloc(sizeof(char*) * nb)))
+	if (!(srcs = (char**)P_MALLOC(sizeof(char*) * nb)))
 		return (NULL);
 	va_start(ap, nb);
 	i = -1;

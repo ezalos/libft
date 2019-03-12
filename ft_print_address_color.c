@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/25 21:56:23 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/02/25 21:56:53 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/03/09 23:02:46 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void		ft_print_address_color(intmax_t nb)
 	unsigned char		color;
 
 	color = (unsigned char)nb;
+	if (!color)
+		color++;
 	ft_putstr_color("|", 255, 255, 255);
 	if (!nb)
 		ft_putstr_color("    0x0     ", 255, 255, 255);

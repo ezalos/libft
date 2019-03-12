@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 11:15:02 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/03/05 19:39:35 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/03/09 02:05:34 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,9 @@ typedef	struct		s_tab
 
 # define BUFF_SIZE 256
 
+# ifndef P_MALLOC
+#  define P_MALLOC malloc
+# endif
 
 //# define LINUX
 
@@ -210,6 +213,7 @@ t_tab				*ft_tab_square_it(t_tab *tab, size_t dir);
 void				*nalloc(size_t size_content);
 void				*cnalloc(const void *content, size_t size_content);
 void				ft_clean_garbage(void);
+void				ft_burn_garbage(char *str);
 size_t				ft_lst_free(t_list **delete_me);
 t_list				**ft_garbage_collector(void);
 void				ft_tabadd(t_tab	**tab, t_tab *new, size_t dir, int umpteenth);

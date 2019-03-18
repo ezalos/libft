@@ -1,36 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lst_free.c                                      :+:      :+:    :+:   */
+/*   ft_tab_cut_loop.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/04 20:22:07 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/03/14 15:45:29 by ldevelle         ###   ########.fr       */
+/*   Created: 2019/03/18 14:07:52 by ldevelle          #+#    #+#             */
+/*   Updated: 2019/03/18 14:08:01 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t			ft_lst_free(t_list **delete_me)
+int		ft_tab_cut_loop(t_tab *tab, size_t dir)
 {
-	t_list	*tmp;
-	t_list	*next;
-	t_list	*leaks;
-	size_t	i;
+	size_t	len;
 
-	if (!delete_me)
-		return (0);
-	tmp = *delete_me;
-	i = 0;
-	while (tmp)
-	{
-		next = tmp->next;
-		leaks = tmp->content;
-		ft_strdel((char**)&leaks);
-		ft_strdel((char**)&tmp);
-		i++;
-		tmp = next;
-	}
-	return (i);
+	len = ft_tabloop_lendir(tab, 0);
+	ft_tab_dirth(tab, 0, len)->dir[dir] = NULL;
+	tab->dir[ft_tab_dir_reverse(dir)] = NULL;
+	return (len);
 }

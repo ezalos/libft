@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/04 20:33:22 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/03/05 20:26:51 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/03/18 14:18:53 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,19 @@
 
 void	ft_tabadd_end(t_tab *alst, t_tab *new, size_t dir)
 {
+	size_t		loop1;
+	size_t		loop2;
+
 	if (alst && new)
 	{
+		if (loop1 = ft_tabloop_itis(alst, dir))
+			ft_tab_cut_loop(alst, dir);
+		if (loop2 = ft_tabloop_itis(new, dir))
+			ft_tab_cut_loop(new, dir);
 		ft_tab_connect_structs(ft_tab_reach_end(alst, dir), new, dir);
-//		ft_tab_reach_end(alst, dir)->dir[dir] = new;
-//		new->dir[ft_tab_dir_reverse(dir)] = ft_tab_reach_end(alst, dir);
+		if (loop1)
+			ft_tabloop_it(alst, dir);
+		if (loop2)
+			ft_tabloop_it(new, dir);
 	}
 }

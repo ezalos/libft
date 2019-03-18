@@ -6,7 +6,7 @@
 #    By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/12 15:04:16 by ldevelle          #+#    #+#              #
-#    Updated: 2019/03/08 22:29:25 by ldevelle         ###   ########.fr        #
+#    Updated: 2019/03/18 14:11:44 by ldevelle         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,7 @@ NAME = libft.a
 CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror
+CFLAGS =
 
 DFLAGS = -Wall -Wextra -Werror -fsanitize=address,undefined -g3 -pedantic\
 -ansi -O2 -Wchar-subscripts -Wcomment -Wformat=2 -Wimplicit-int\
@@ -65,7 +66,7 @@ SRCS7 = char_srch lst_count del factorial fibonacci lstfind_th fsqrt intlen\
 		tab_connect_dir tab_square_it tab_dir_nclock tab_connect_structs\
 		tab_delete_row tab_delete_row_len tab_access tabnew_rectangle\
 		tab_reach_end tabadd_start tabadd_end tabadd_here tabadd tab_cutone\
-		tabloop_lendir tabloop_it\
+		tabloop_lendir tabloop_it tabloop_itis tab_cut_loop\
 		cnalloc nalloc clean_garbage burn_garbage lst_free garbage_collector
 
 SRC_DIR1	= file
@@ -210,7 +211,7 @@ endef
 
 all :	$(NAME)
 
-$(NAME):	$(OBJS) $(FT_HE)
+$(NAME):	$(OBJS) $(FT_HE) Makefile
 			@$(call run_and_test, ar -rcs $(NAME) $(OBJS))
 
 ifneq ("$(IFORDER)","")

@@ -6,21 +6,38 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/04 20:32:58 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/03/07 12:27:24 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/03/18 14:15:44 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 void	ft_tabadd_here(t_tab *alst, t_tab *new, size_t dir)
 {
 	t_tab		*tmp;
+	size_t		loop1;
+	size_t		loop2;
 
+//	ft_putendl(__func__);
 	if (alst && new)
 	{
-		tmp = alst->dir[dir];
-		alst->dir[dir] = new;
-		ft_tab_reach_end(new, dir)->dir[dir] = tmp;
-		tmp->dir[ft_tab_dir_reverse(dir)] = new;
+		if (loop1 = ft_tabloop_itis(alst, dir))
+			ft_tab_cut_loop(alst, dir);
+		if (loop2 = ft_tabloop_itis(new, dir))
+			ft_tab_cut_loop(new, dir);
+		if (!alst->dir[dir])
+			ft_tab_connect_structs(alst, new, dir);
+		else
+		{
+			tmp = alst->dir[dir];
+			alst->dir[dir] = new;
+			ft_tab_reach_end(new, dir)->dir[dir] = tmp;
+			tmp->dir[ft_tab_dir_reverse(dir)] = new;
+		}
+		if (loop1)
+			ft_tabloop_it(alst, dir);
+		if (loop2)
+			ft_tabloop_it(new, dir);
 	}
 }

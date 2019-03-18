@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/25 22:04:25 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/02/25 22:04:30 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/03/18 13:45:21 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ size_t		ft_tab_lendir(t_tab *tab, size_t dir)
 	if (!tab || dir > 3)
 		return (0);
 	tmp = tab;
-	i = 0;
-	while (tmp)
+	i = 1;
+	while (tmp->dir[dir])
 	{
 		tmp = tmp->dir[dir];
 		i++;

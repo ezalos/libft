@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/05 18:01:43 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/03/05 19:39:16 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/03/18 19:08:56 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 size_t		ft_tabloop_it(t_tab *tab, size_t dir)
 {
 	t_tab	*tmp;
-	size_t	i;
 
-	i = ft_tabloop_lendir(tab, dir);
+	if (ft_tabloop_itis(tab, dir))
+		return (0);
 	tmp = ft_tab_reach_end(tab, dir);
-	ft_tab_connect_structs(tab, tmp, ft_tab_dir_reverse(dir));
-	return (i);
+	ft_tab_connect_structs(tmp, tab, dir);
+	return (1);
 }

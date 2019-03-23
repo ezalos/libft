@@ -1,4 +1,4 @@
-DIR_terminal = 	ft_putstr_color.c \
+SRC += 	ft_putstr_color.c \
 	ft_str_rgbcolor.c \
 	ft_place_cursor.c \
 	ft_rgb_bcolor.c \

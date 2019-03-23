@@ -1,4 +1,4 @@
-PAT_maths = 	srcs/maths/suites/ \
+DIR += 	srcs/maths/suites/ \
 	srcs/maths/suites/ \
 	srcs/maths/round/ \
 	srcs/maths/round/ \

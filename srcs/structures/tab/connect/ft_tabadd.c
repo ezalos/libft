@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/04 20:33:54 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/03/22 18:40:00 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/03/23 16:41:49 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ static int	ft_tabadd_else(t_tab **tab, t_tab *new, size_t *dir, int umpteenth)
 	umpteenth--;
 	tmp = ft_tab_dirth(*tab, *dir, umpteenth);
 	ft_tabadd_here(tmp, new, *dir);
+	return (1);
 }
 
 void		ft_tabadd(t_tab **tab, t_tab *new, size_t dir, int umpteenth)

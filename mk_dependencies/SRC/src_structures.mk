@@ -1,4 +1,4 @@
-DIR_structures = 	ft_tab_reach_end.c \
+SRC += 	ft_tab_reach_end.c \
 	ft_tab_dirth.c \
 	ft_tab_lendir.c \
 	ft_tabloop_itis.c \
@@ -27,17 +27,17 @@ DIR_structures = 	ft_tab_reach_end.c \
 	ft_tabadd_here.c \
 	ft_lst_free.c \
 	ft_lstnew.c \
-	ft_tab_connect_structs.c \
 	ft_tab_access.c \
 	ft_tab_delete_row.c \
 	ft_tab_delete_row_len.c \
-	ft_tab_connect_dir.c \
 	ft_tab_cutone.c \
-	ft_tabadd.c \
 	ft_tabadd_start.c \
 	ft_tab_square_it.c \
 	ft_tabloop_lendir.c \
 	ft_tab_print_dir.c \
 	ft_tab_print_one_elmnt.c \
 	ft_tabnew_rectangle.c \
-	ft_tabiter.c 
+	ft_tabadd.c \
+	ft_tabiter.c \
+	ft_tab_connect_structs.c \
+	ft_tab_connect_dir.c 

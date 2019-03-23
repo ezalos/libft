@@ -1,4 +1,4 @@
-PAT_mem = 	srcs/mem/transform/ \
+DIR += 	srcs/mem/transform/ \
 	srcs/mem/transform/ \
 	srcs/mem/transform/ \
 	srcs/mem/search/ \

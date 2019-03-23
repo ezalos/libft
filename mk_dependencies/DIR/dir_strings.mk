@@ -1,4 +1,4 @@
-PAT_strings = 	srcs/strings/transform/ \
+DIR += 	srcs/strings/transform/ \
 	srcs/strings/transform/ \
 	srcs/strings/transform/ \
 	srcs/strings/transform/ \

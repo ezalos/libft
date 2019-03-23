@@ -6,7 +6,7 @@
 #    By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/12 15:04:16 by ldevelle          #+#    #+#              #
-#    Updated: 2019/03/23 00:27:45 by ldevelle         ###   ########.fr        #
+#    Updated: 2019/03/23 19:25:12 by ldevelle         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,29 +39,19 @@ DFLAGS = -Wall -Wextra -Werror -fsanitize=address,undefined -g3 -pedantic\
 ##############################################################################
 ##############################################################################
 
+MASTER		= srcs/
 
-MAIN_FOLD = inout maths mem strings structures terminal
+MAIN_FOLD = inout maths mem strings structures terminal big
 
-FT_H = libft.h
+HEAD_DIR = ./includes/
 
-HEAD_DIR = ./includes
+HEADERS	=	$(AUTO_HEAD)\
+			auto.h\
+			ft_printf.h\
+			libft.h\
+			time_exe.h
 
 DIR_OBJ = ./objs/
-
-update_head		=	$(MAIN_FOLD:%=sh scripts/get_protos.sh % srcs/;)
-update_dep		=	$(MAIN_FOLD:%=sh scripts/get_mk_srcs.sh % srcs/;)
-include_asrc	= 	$(MAIN_FOLD:%=./mk_dependencies/asrc_%.mk)
-include_pat	=	$(MAIN_FOLD:%=./mk_dependencies/pat_%.mk)
-include_src	=	$(MAIN_FOLD:%=./mk_dependencies/src_%.mk)
-
-include_dep	= $(include_asrc) $(include_pat) $(include_src)
-
-include $(include_dep)
-
-SRC = $(SRC_in_out) $(SRC_maths) $(SRC_mem) $(SRC_strings) $(SRC_structures) $(SRC_terminal)
-PAT = $(PAT_in_out) $(PAT_maths) $(PAT_mem) $(PAT_strings) $(PAT_structures) $(PAT_terminal)
-DIR = $(DIR_in_out) $(DIR_maths) $(DIR_mem) $(DIR_strings) $(DIR_structures) $(DIR_terminal)
-OBJS = $(SRC:%.c=%.o)
 
 ##########################
 ##						##
@@ -69,7 +59,36 @@ OBJS = $(SRC:%.c=%.o)
 ##						##
 ##########################
 
+AUTO_HEAD	= $(MAIN_FOLD:%=auto/auto_%.h)
 
+
+HEADERS		=	$(HEADS:%=$(HEAD_DIR)%)
+
+update_head	=	$(MAIN_FOLD:%=sh scripts/get_protos.sh % $(MASTER);)
+update_dep	=	$(MAIN_FOLD:%=sh scripts/get_mk_srcs.sh % $(MASTER);)
+
+mk			=	./mk_dependencies
+
+mk_d		= 	$(mk)/DIR/
+mk_s		= 	$(mk)/SRC/
+mk_p		= 	$(mk)/PAT/
+
+include_dir	=	$(MAIN_FOLD:%=$(mk_d)dir_%.mk)
+include_pat	=	$(MAIN_FOLD:%=$(mk_p)pat_%.mk)
+include_src	=	$(MAIN_FOLD:%=$(mk_s)src_%.mk)
+
+include_dep	= $(include_src) $(include_pat) $(include_dir)
+
+SRC =
+PAT =
+DIR =
+
+include $(include_dep)
+
+OBJ = $(PAT:%.c=%.o)
+OBJS = $(PAT:$(MASTER)%.c=$(DIR_OBJ)%.o)
+
+MSG ?= Makefile automated push
 ##########################
 ##						##
 ##		 COLORS			##
@@ -128,37 +147,23 @@ endef
 ##						##
 ##########################
 
-all :	$(NAME)
-	@echo $(HEAD_DIR)
-	@echo $@
-	@echo $<
+all :		$(NAME)
 
-$(NAME):	$(OBJS) Makefile
-	@echo $(HEAD_DIR)
-	@echo $@
-	@echo $<
-			@$(call run_and_test, ar -rcs $(NAME) $(OBJS) -I$(HEAD_DIR))
+$(NAME):	Makefile $(HEAD) $(OBJS)
+			@$(call run_and_test, ar -rcs $(NAME) $(OBJS))
 
-$(DIR_OBJ)%.o:$(PAT)%.c
-	@echo $(HEAD_DIR)
-	@echo $@
-	@echo $<
+$(DIR_OBJ)%.o:$(MASTER)%.c
 			@$(call run_and_test, $(CC) $(CFLAGS) -I$(HEAD_DIR) -o $@ -c $<)
 
 clean :
-	@rm -f $(OBJS) libft.h.gch
-	@echo "\$(YELLOW)lib_objs \$(END)\\thas been \$(GREEN)\\t\\t\\t  $@\$(END)"
+	@rm -f $(OBJS)
+	@echo "\$(YELLOW)$(NAME) objs \$(END)\\thas been \$(GREEN)\\t\\t\\t  $@\$(END)"
 
 fclean : clean
 	@rm -f $(NAME)
 	@echo "\$(YELLOW)$(NAME) \$(END)\\thas been \$(GREEN)\\t\\t\\t  $@\$(END)"
 
 re : fclean all
-
-koko :
-	@echo $(HEAD_DIR)
-	#@echo $(SRCS)
-	#@echo $(OBJS)
 
 ##############################################################################
 ##############################################################################
@@ -170,40 +175,31 @@ koko :
 ##############################################################################
 ##############################################################################
 
-order : fclean
-ifneq ($(IFORDER), )
-	@mkdir	$(MSRC_PATH) $(SRC_PATH1) $(SRC_PATH2) $(SRC_PATH3) objs\
-			$(SRC_PATH4) $(SRC_PATH5) $(SRC_PATH6) $(SRC_PATH7) $(NHEAD_DIR)
-	@mv -f $(HEAD_DIR)$(FT_H) $(NHEAD_DIR)
-	@mv -f $(patsubst %, ft_%.c, $(SRCS1)) $(SRC_PATH1)
-	@mv -f $(patsubst %, ft_%.c, $(SRCS2)) $(SRC_PATH2)
-	@mv -f $(patsubst %, ft_%.c, $(SRCS3)) $(SRC_PATH3)
-	@mv -f $(patsubst %, ft_%.c, $(SRCS4)) $(SRC_PATH4)
-	@mv -f $(patsubst %, ft_%.c, $(SRCS5)) $(SRC_PATH5)
-	@mv -f $(patsubst %, ft_%.c, $(SRCS6)) $(SRC_PATH6)
-	@mv -f $(patsubst %, ft_%.c, $(SRCS7)) $(SRC_PATH7)
-	@echo \$(GREEN) $(NAME) \$(END) Now in \$(MAGENTA)$@ mode \$(END)
-endif
-
-push : fclean
-ifneq ($(IFPUSH), )
-		@mv -f $(A_SRC) $(HEAD_DIR)/$(FT_H) $(SRC_PATH)
-		@rm -rf $(MSRC_PATH) $(HEAD_DIR) objs
-		@echo \$(GREEN) $(NAME) \$(END) Now in \$(MAGENTA)$@ mode \$(END)
-endif
-
 git :
 		@git add -A
 		@git status
-		@git commit -am "Makefile automated push"
+		git commit -am "$(MSG)"
 		@git push
 
-file :
+
+file :	object_ready
+		@rm -rf $(mk_d) $(mk_s) $(mk_p)
+		@mkdir $(mk_d) $(mk_s) $(mk_p)
 		@$(update_head)
 		@$(update_dep)
+		@sh scripts/get_master_head.sh $(HEAD_DIR)
+
+
+object_ready :
+				@rm -rf $(DIR_OBJ)/*
+				@find $(MASTER) -type d -exec mkdir objs/{} \;
+				@mv -f $(DIR_OBJ)$(MASTER)/* $(DIR_OBJ)
+				@rm -rf $(DIR_OBJ)$(MASTER)
 
 check :
 		bash /Users/ldevelle/42/TESTS/42FileChecker/42FileChecker.sh
+
+FORCE:
 
 ##########################
 ##						##
@@ -211,4 +207,4 @@ check :
 ##						##
 ##########################
 
-.PHONY : clean fclean re all a aclean afclean are f d order push git check
+.PHONY : all clean fclean re git file object_ready check FORCE

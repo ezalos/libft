@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_random.c                                        :+:      :+:    :+:   */
+/*   ft_simple_random.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/11 20:52:12 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/03/20 14:42:15 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/03/23 18:36:45 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,8 +77,7 @@ static intmax_t		ft_end_n_random(intmax_t rando, size_t len)
 	return (rando);
 }
 
-intmax_t			ft_random(intmax_t min, intmax_t max, intmax_t rando,
-					size_t len)
+intmax_t			ft_simple_random(intmax_t min, intmax_t max, intmax_t rando, size_t len)
 {
 	int			mod;
 

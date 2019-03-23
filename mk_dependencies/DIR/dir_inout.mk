@@ -1,4 +1,4 @@
-PAT_inout = 	srcs/inout/write/string/ \
+DIR += 	srcs/inout/write/string/ \
 	srcs/inout/write/string/ \
 	srcs/inout/write/string/ \
 	srcs/inout/write/spacing/ \
@@ -20,5 +20,5 @@ PAT_inout = 	srcs/inout/write/string/ \
 	srcs/inout/converters/ \
 	srcs/inout/converters/ \
 	srcs/inout/converters/ \
-	srcs/inout/converters/ \
-	srcs/inout/read/ 
+	srcs/inout/read/ \
+	srcs/inout/converters/ 

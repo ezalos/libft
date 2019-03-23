@@ -1,4 +1,4 @@
-PAT_terminal = 	srcs/terminal/color/ \
+DIR += 	srcs/terminal/color/ \
 	srcs/terminal/color/ \
 	srcs/terminal/cursor/ \
 	srcs/terminal/color/ \

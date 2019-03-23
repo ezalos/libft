@@ -1,4 +1,4 @@
-SRC_mem = 	srcs/mem/transform/ft_swap.c \
+PAT += 	srcs/mem/transform/ft_swap.c \
 	srcs/mem/transform/ft_memset.c \
 	srcs/mem/transform/ft_bzero.c \
 	srcs/mem/search/ft_memcmp.c \

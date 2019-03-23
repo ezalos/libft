@@ -1,4 +1,4 @@
-PAT_structures = 	srcs/structures/tab/move/ \
+DIR += 	srcs/structures/tab/move/ \
 	srcs/structures/tab/move/ \
 	srcs/structures/tab/len/ \
 	srcs/structures/tab/ \
@@ -27,12 +27,9 @@ PAT_structures = 	srcs/structures/tab/move/ \
 	srcs/structures/tab/connect/ \
 	srcs/structures/list/del/ \
 	srcs/structures/list/create/ \
-	srcs/structures/tab/connect/ \
 	srcs/structures/tab/move/ \
 	srcs/structures/tab/del/ \
 	srcs/structures/tab/del/ \
-	srcs/structures/tab/connect/ \
-	srcs/structures/tab/connect/ \
 	srcs/structures/tab/connect/ \
 	srcs/structures/tab/connect/ \
 	srcs/structures/tab/create/ \
@@ -40,4 +37,7 @@ PAT_structures = 	srcs/structures/tab/move/ \
 	srcs/structures/tab/print/ \
 	srcs/structures/tab/print/ \
 	srcs/structures/tab/create/ \
-	srcs/structures/tab/transform/ 
+	srcs/structures/tab/connect/ \
+	srcs/structures/tab/transform/ \
+	srcs/structures/tab/connect/ \
+	srcs/structures/tab/connect/ 

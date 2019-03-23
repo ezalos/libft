@@ -6,14 +6,13 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/25 22:10:43 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/03/22 18:26:52 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/03/23 18:19:26 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			ft_tab_connect_dir(size_t dir_line, t_tab *line_one,
-	t_tab *line_two, size_t dir_connec)
+int			ft_tab_connect_dir(size_t dir_line, t_tab *line_one, t_tab *line_two, size_t dir_connec)
 {
 	t_tab	*tmp_one;
 	t_tab	*tmp_two;

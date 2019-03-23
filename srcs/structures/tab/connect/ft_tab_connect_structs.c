@@ -6,14 +6,13 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/04 20:29:22 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/03/22 18:25:29 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/03/23 18:19:21 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		ft_tab_connect_structs(t_tab *tab_one, t_tab *tab_two,
-	size_t dir_one)
+void		ft_tab_connect_structs(t_tab *tab_one, t_tab *tab_two, size_t dir_one)
 {
 	size_t	dir_two;
 

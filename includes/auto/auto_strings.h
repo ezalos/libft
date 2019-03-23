@@ -1,5 +1,5 @@
-#ifndef AUTO_AUTO_STRINGS_H
-# define AUTO_AUTO_STRINGS_H
+#ifndef AUTO_STRINGS_H
+# define AUTO_STRINGS_H
 
 char		**ft_strsplit(char const *s, char c);
 char		*ft_pstrnstr(const char *m, const char *a, size_t len);

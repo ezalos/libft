@@ -1,4 +1,4 @@
-SRC_strings = 	srcs/strings/transform/ft_strmapi.c \
+PAT += 	srcs/strings/transform/ft_strmapi.c \
 	srcs/strings/transform/ft_strmap.c \
 	srcs/strings/transform/ft_striteri.c \
 	srcs/strings/transform/ft_striter.c \

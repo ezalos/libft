@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/19 12:52:19 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/01/09 04:28:07 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/03/23 18:54:19 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,31 +25,6 @@ void 	print_time_struct(t_time *g)
 	ft_puttab(g->name, 4);
 	printf(_CYAN "Time: %f s.\n" _RESET, ((double)g->t));
  	printf("\t\tNEXT:\t\t%p\n\n" _RESET, (void*)g->next);
-}
-
-void	ft_puttab_nb(int length, int separation)
-{
-	int n = 4; //is equal to 8 for windows
-	int tab = 0;
-	while (tab + length < separation * n)
-	{
-		printf(" ");
-		tab++;
-	}
-}
-
-void	ft_puttab(const char *s, int separation)
-{
-	int n = 4; //is equal to 8 for windows
-	int tab = 0;
-	int length = ft_strlen(s);
-	int bb = 0;
-
-	while (tab + length < separation * n)
-	{
-		printf(" ");
-		tab++;
-	}
 }
 
 t_time	*list_exchange(t_time **timee)
@@ -111,7 +86,7 @@ void	print_elements(t_time *tmp, double total, int tab)
 		ft_puttab(tmp->name, tab);
 		printf(_MAGENTA "%f s\n" _RESET, ((double)tmp->t));
 		printf(_GREEN "\t%dn" _RESET, tmp->nb_call);
-		ft_puttab_nb(ft_intlen(tmp->nb_call), tab);
+		ft_puttab_len(ft_intlen(tmp->nb_call), tab, 1);
 		printf(_CYAN "Rt:\t%f s/n\n" _RESET, (double)(tmp->t/tmp->nb_call));
 		printf("\t________________________________________________________\n");
 		tmp = tmp->next;
@@ -149,7 +124,7 @@ void	print_time(t_time *timee)
 	while (tmp)
 	{
 		total += tmp->t;
-		if (max_length < ft_strlen(tmp->name))
+		if (max_length < (int)ft_strlen(tmp->name))
 			max_length = (ft_strlen(tmp->name) / 4);
 		tmp = tmp->next;
 	}

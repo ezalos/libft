@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/19 12:51:05 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/03/22 19:04:15 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/03/23 18:50:21 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ void	print_time(t_time *time);
 
 //others
 static t_time	*time_link_creation(const char* s, double t);
-void			ft_puttab(const char *s, int separation);
 
 
 //libft

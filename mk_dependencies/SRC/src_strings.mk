@@ -1,4 +1,4 @@
-DIR_strings = 	ft_strmapi.c \
+SRC += 	ft_strmapi.c \
 	ft_strmap.c \
 	ft_striteri.c \
 	ft_striter.c \

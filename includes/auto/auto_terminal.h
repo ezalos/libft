@@ -1,5 +1,5 @@
-#ifndef AUTO_AUTO_TERMINAL_H
-# define AUTO_AUTO_TERMINAL_H
+#ifndef AUTO_TERMINAL_H
+# define AUTO_TERMINAL_H
 
 char		*ft_str_rgbcolor(char background, int red, int green, int blue);
 int			ft_place_cursor(size_t line, size_t column);

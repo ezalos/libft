@@ -6,7 +6,7 @@
 #    By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/22 19:02:24 by ldevelle          #+#    #+#              #
-#    Updated: 2019/03/22 23:09:48 by ldevelle         ###   ########.fr        #
+#    Updated: 2019/03/23 19:11:45 by ldevelle         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,15 +26,17 @@ extension=.h
 name=$path$prefix$1$extension
 spe=$prefix$1$suffix
 
-echo "#ifndef AUTO_\c" > $name
+rm -rf $name
+
+echo "#ifndef \c" > $name
 printf $spe | awk '{ print toupper($1) }' >> $name
-echo "# define AUTO_\c" >> $name
+echo "# define \c" >> $name
 printf $spe | awk '{ print toupper($1) }' >> $name
 echo "" >> $name
 
 find $3$2$1 -type f -exec cat {} \+ |
 grep -e int -e char -e void -e size_t -e t_list |
-grep ft_ |
+grep -e ft_ -e nalloc -e get_next_line |
 grep -v -e ":+:" -e static -e while -e if -e ";" -e "#include " -e "=" -e "->" |
 tr -s '\t' '\t\t' |
 sort >> $name
@@ -45,4 +47,4 @@ sed -i '' "s~intmax_t	~intmax_t~g" $name
 
 echo "\n#endif" >> $name
 
-echo "includes/auto_$1.h created"
+echo "includes/auto_$1.h\t\tcreated"

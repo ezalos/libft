@@ -1,4 +1,4 @@
-DIR_mem = 	ft_swap.c \
+SRC += 	ft_swap.c \
 	ft_memset.c \
 	ft_bzero.c \
 	ft_memcmp.c \

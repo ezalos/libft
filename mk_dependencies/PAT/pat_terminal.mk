@@ -1,4 +1,4 @@
-SRC_terminal = 	srcs/terminal/color/ft_putstr_color.c \
+PAT += 	srcs/terminal/color/ft_putstr_color.c \
 	srcs/terminal/color/ft_str_rgbcolor.c \
 	srcs/terminal/cursor/ft_place_cursor.c \
 	srcs/terminal/color/ft_rgb_bcolor.c \

@@ -6,7 +6,7 @@
 #    By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/22 19:03:06 by ldevelle          #+#    #+#              #
-#    Updated: 2019/03/23 18:32:41 by ldevelle         ###   ########.fr        #
+#    Updated: 2019/03/24 16:18:14 by ldevelle         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ touch $name $name1 $name2
 
 
 # Creation .mk with full path to the file
-find $3$2$1 -type f -exec ls -lrt -d -1 {} \+ > $name
+find $3$2$1 -type f -exec ls -lrt -d -1 {} \+ | grep -v '\.c' > $name
 
 sed -i '' 's/$/ \\/' $name
 sed -i '' 's/^/	/' $name

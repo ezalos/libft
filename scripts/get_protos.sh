@@ -6,7 +6,7 @@
 #    By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/22 19:02:24 by ldevelle          #+#    #+#              #
-#    Updated: 2019/03/24 16:17:34 by ldevelle         ###   ########.fr        #
+#    Updated: 2019/03/27 14:38:09 by ldevelle         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,9 +35,9 @@ printf $spe | awk '{ print toupper($1) }' >> $name
 echo "" >> $name
 
 find $3$2$1 -type f -exec cat {} \+ |
-grep -e int -e char -e void -e size_t -e t_list |
+grep -e int -e char -e void -e size_t -e t_list -e "t_tab " -e "\.\.\."|
 grep -e ft_ -e nalloc -e get_next_line |
-grep -v -e ":+:" -e static -e while -e if -e ";" -e "#include " -e "=" -e "->" -e "\." |
+grep -v -e ":+:" -e static -e while -e if -e ";" -e "#include " -e "=" -e "->" |
 tr -s '\t' '\t\t' |
 sort >> $name
 sed -i '' "s~)$~);~g" $name

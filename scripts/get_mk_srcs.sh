@@ -6,7 +6,7 @@
 #    By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/22 19:03:06 by ldevelle          #+#    #+#              #
-#    Updated: 2019/03/24 16:18:14 by ldevelle         ###   ########.fr        #
+#    Updated: 2019/03/27 14:33:05 by ldevelle         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ touch $name $name1 $name2
 
 
 # Creation .mk with full path to the file
-find $3$2$1 -type f -exec ls -lrt -d -1 {} \+ | grep -v '\.c' > $name
+find $3$2$1 -type f -exec ls -lrt -d -1 {} \+ | grep '\.c' >> $name
 
 sed -i '' 's/$/ \\/' $name
 sed -i '' 's/^/	/' $name
@@ -41,7 +41,7 @@ sed -i '' "1s/^/PAT += /" $name
 sed -i '' '1h;1!H;$!d;g;s/\(.*\)\\/\1/' $name
 
 # Creation .mk with name of the file
-cat $name | rev | cut -d '/' -f 1 | rev | cut -d ' ' -f 1 > $name1
+cat $name | rev | cut -d '/' -f 1 | rev | cut -d ' ' -f 1 >> $name1
 
 sed -i '' 's/$/ \\/' $name1
 sed -i '' 's/^/	/' $name1
@@ -49,7 +49,7 @@ sed -i '' "1s/^/SRC += /" $name1
 sed -i '' '1h;1!H;$!d;g;s/\(.*\)\\/\1/' $name1
 
 # Creation .mk with path without file at the end
-cat $name | cut -d$'\t' -f 2 | cut -d '.' -f 1 | cut -d '_' -f 1 | sed "s~ft~~g" > $name2
+cat $name | cut -d$'\t' -f 2 | cut -d '.' -f 1 | cut -d '_' -f 1 | sed "s~ft~~g" >> $name2
 
 sed -i '' 's/$/ \\/' $name2
 sed -i '' 's/^/	/' $name2

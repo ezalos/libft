@@ -6,4 +6,6 @@ DIR += 	srcs/maths/suites/ \
 	srcs/maths/operators/ \
 	srcs/maths/operators/ \
 	srcs/maths/random/ \
-	srcs/maths/random/ 
+	srcs/maths/random/ \
+	srcs/maths/sort/ \
+	srcs/maths/sort/ 

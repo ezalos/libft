@@ -6,7 +6,7 @@
 #    By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/12 15:04:16 by ldevelle          #+#    #+#              #
-#    Updated: 2019/03/23 19:25:12 by ldevelle         ###   ########.fr        #
+#    Updated: 2019/03/27 14:30:52 by ldevelle         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -186,7 +186,7 @@ file :	object_ready
 		@rm -rf $(mk_d) $(mk_s) $(mk_p)
 		@mkdir $(mk_d) $(mk_s) $(mk_p)
 		@$(update_head)
-		@$(update_dep)
+		$(update_dep)
 		@sh scripts/get_master_head.sh $(HEAD_DIR)
 
 

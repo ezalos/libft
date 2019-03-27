@@ -14,7 +14,6 @@ PAT += 	srcs/big/ft_printf/type_string.c \
 	srcs/big/ft_printf/get_str_float.c \
 	srcs/big/ft_printf/get_str_char.c \
 	srcs/big/ft_printf/get_printf.c \
-	srcs/big/ft_printf/ft_printf.c \
 	srcs/big/ft_printf/check_arg2.c \
 	srcs/big/ft_printf/check_arg.c \
 	srcs/big/ft_printf/bonus_gestion.c \
@@ -22,4 +21,5 @@ PAT += 	srcs/big/ft_printf/type_string.c \
 	srcs/big/ft_printf/ajust_flags.c \
 	srcs/big/time/time_exe.c \
 	srcs/big/ft_printf/type_unsigned_integer.c \
-	srcs/big/ft_printf/type_integer.c 
+	srcs/big/ft_printf/type_integer.c \
+	srcs/big/ft_printf/ft_printf.c 

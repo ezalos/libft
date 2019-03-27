@@ -6,4 +6,6 @@ PAT += 	srcs/maths/suites/ft_nprime.c \
 	srcs/maths/operators/ft_fsqrt.c \
 	srcs/maths/operators/ft_factorial.c \
 	srcs/maths/random/ft_random.c \
-	srcs/maths/random/ft_simple_random.c 
+	srcs/maths/random/ft_simple_random.c \
+	srcs/maths/sort/ft_quick_sort.c \
+	srcs/maths/sort/ft_squick_sort.c 

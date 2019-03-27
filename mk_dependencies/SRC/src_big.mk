@@ -14,7 +14,6 @@ SRC += 	type_string.c \
 	get_str_float.c \
 	get_str_char.c \
 	get_printf.c \
-	ft_printf.c \
 	check_arg2.c \
 	check_arg.c \
 	bonus_gestion.c \
@@ -22,4 +21,5 @@ SRC += 	type_string.c \
 	ajust_flags.c \
 	time_exe.c \
 	type_unsigned_integer.c \
-	type_integer.c 
+	type_integer.c \
+	ft_printf.c 

@@ -6,4 +6,6 @@ SRC += 	ft_nprime.c \
 	ft_fsqrt.c \
 	ft_factorial.c \
 	ft_random.c \
-	ft_simple_random.c 
+	ft_simple_random.c \
+	ft_quick_sort.c \
+	ft_squick_sort.c 

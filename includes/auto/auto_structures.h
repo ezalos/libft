@@ -23,6 +23,7 @@ t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 t_list		*ft_lstnew(void const *content, size_t content_size);
 t_list		*ft_lstnew_ptr(void const *content, size_t content_size);
 t_tab		*ft_tab_access(t_tab *tab, int dir_y, int dir_x, int rot);
+t_tab		*ft_tab_cutone(t_tab *to_cut);
 t_tab		*ft_tab_dirth(t_tab *tab, size_t dir, size_t umpteenth);
 t_tab		*ft_tab_reach_end(t_tab *tab, size_t dir);
 t_tab		*ft_tab_square_it(t_tab *tab, size_t dir);

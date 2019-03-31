@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/27 19:38:25 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/03/27 22:04:09 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/03/29 18:14:33 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ static int		ft_qs_partition(int **array, int low, int high)
     pivot = ft_choose_pivot(array, low, high);
 	look_left = low;
 	look_right = high - 1;
-
 	while (look_left < look_right)
 	{
         if ((*array)[look_left] > pivot)

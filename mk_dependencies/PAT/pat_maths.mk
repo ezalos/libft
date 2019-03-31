@@ -5,7 +5,12 @@ PAT += 	srcs/maths/suites/ft_nprime.c \
 	srcs/maths/operators/ft_power.c \
 	srcs/maths/operators/ft_fsqrt.c \
 	srcs/maths/operators/ft_factorial.c \
-	srcs/maths/random/ft_random.c \
 	srcs/maths/random/ft_simple_random.c \
+	srcs/maths/sort/ft_squick_sort.c \
 	srcs/maths/sort/ft_quick_sort.c \
-	srcs/maths/sort/ft_squick_sort.c 
+	srcs/maths/operators/ft_nb_in_range.c \
+	srcs/maths/random/seed/ft_seed_time.c \
+	srcs/maths/operators/ft_sum_to_nb.c \
+	srcs/maths/random/seed/ft_seed_adress.c \
+	srcs/maths/random/seed/ft_seed_gnl.c \
+	srcs/maths/random/ft_random.c 

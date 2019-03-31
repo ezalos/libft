@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 11:15:02 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/03/23 18:53:42 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/03/30 16:35:06 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,11 @@ typedef	struct		s_list
 	struct s_list	*next;
 }					t_list;
 
-
+# define DIR 4
 
 typedef	struct		s_tab
 {
-	struct s_tab	*dir[4];
+	struct s_tab	*dir[DIR];
 	void			*content;
 	size_t			content_size;
 }					t_tab;

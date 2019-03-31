@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/22 19:15:50 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/03/13 17:46:49 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/03/30 16:34:02 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ int		main(int ac, char **av)
 //	ft_tab_square_it(tab, 2);
 	while (1)
 	{
-		CURSOR_RESET
+		// CURSOR_RESET
 		tab = ft_tabnew_rectangle(ft_atoi(av[1]), ft_atoi(av[2]), 2);
 		ft_rgb_bcolor(20, 20, 20);
 		ft_tabiter(tab, 2, &ft_tab_print_dir, 1);

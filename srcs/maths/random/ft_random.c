@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/11 20:52:12 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/03/22 23:10:48 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/03/29 16:21:58 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,9 +86,9 @@ intmax_t		ft_random(intmax_t min, intmax_t max, intmax_t rando, size_t len)
 	int			mod;
 
 	mod	= 1;
-	if (max == 0 && min == 0)
+	if (!max && !min)
 		mod = 0;
-	else if (max - min == 0)
+	else if (max == min)
 		max = min + 100;
 	if (min > max)
 		ft_swap(&min, &max, sizeof(min));

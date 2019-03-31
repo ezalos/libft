@@ -6,11 +6,43 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/27 19:38:25 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/03/27 22:05:01 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/03/29 15:16:15 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** static void	ft_print_qs(int **array, int pivot, int look_left, int
+**< look_right)
+** {
+** 	int		size;
+** 	int		i;
+**
+** 	size = *my_size();
+** 	i = -1;
+** 	while (++i <= size)
+** 	{
+** 		if ((*array)[i] == pivot)
+** 			C_CYAN
+** 		else if (i == look_left)
+** 			C_GREEN
+** 		else if (i == look_right)
+** 			C_RED
+** 		else if (look_left < i && i < look_right)
+** 			C_YELLOW
+** 		ft_putnbr((*array)[i]);
+** 		C_RESET
+** 		if (i < size)
+** 			ft_putstr("|");
+** 	}
+** 	ft_putendl("");
+** }
+*/
+
+/*
+** ft_print_qs(array, pivot, look_left, look_right);
+*/
 
 static int		ft_choose_pivot(int **array, int low, int high, int *count)
 {

@@ -4,4 +4,5 @@ DIR += 	srcs/terminal/color/ \
 	srcs/terminal/color/ \
 	srcs/terminal/color/ \
 	srcs/terminal/other/ \
-	srcs/terminal/color/ 
+	srcs/terminal/color/ \
+	srcs/terminal/other/ 

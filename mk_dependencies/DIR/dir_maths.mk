@@ -7,10 +7,10 @@ DIR += 	srcs/maths/suites/ \
 	srcs/maths/operators/ \
 	srcs/maths/random/ \
 	srcs/maths/sort/ \
-	srcs/maths/sort/ \
-	srcs/maths/operators/ \
 	srcs/maths/random/seed/ \
 	srcs/maths/operators/ \
+	srcs/maths/random/ \
 	srcs/maths/random/seed/ \
 	srcs/maths/random/seed/ \
-	srcs/maths/random/ 
+	srcs/maths/operators/ \
+	srcs/maths/sort/ 

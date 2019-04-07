@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/29 15:36:08 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/04/07 19:35:43 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/04/07 21:11:53 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	print_tab(char *name, int *tab, int step, int size)
 	ft_printf("Ranging from %~{155;155;255}%d%~{255;255;0} to %~{155;155;255}%d%~{255;255;0}\n", tab[0], tab[size - 1]);
 	ft_printf("Whith step of %~{155;155;255}%d%~{255;255;0}  \t", step);
 	ft_printf("Compression factor: %~{155;155;255}%d%~{255;255;0}\n", quant);
-	ft_printf("\n%~{255;150;150}%*d%~{}|\n%*s|%~{150;255;150}", len, seuil, len, " ");
+	ft_printf("\n%~{255;150;150}%*d%~{}|%~{150;255;150}", len, seuil);
 	while (i < size)
 	{
 		if (tab[i] < seuil + step)
@@ -40,15 +40,15 @@ void	print_tab(char *name, int *tab, int step, int size)
 			ft_printf("%0*d", x / quant, 0);
 			x = 0;
 			seuil += step;
-			ft_printf("\n%~{255;150;150}%*d%~{}|\n%*s|%~{150;255;150}", len, seuil, len, " ");
+			ft_printf("\n%~{255;150;150}%*d%~{}|%~{150;255;150}", len, seuil);
 			i--;
 		}
 		i++;
 	}
 	seuil += step;
-	ft_printf("%0*d", x / quant, 0);
+	ft_printf("%0*d\n", x / quant, 0);
 	x = 0;
-	ft_printf("\n%~{255;150;150}%*d%~{}|\n", len, tab[size - 1], len, " ");
+	// ft_printf("\n%~{255;150;150}%*d%~{}|%~{150;255;150}", len, seuil);
 }
 
 int		get_tab_from_file(char *str, int **tab)

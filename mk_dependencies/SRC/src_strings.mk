@@ -11,6 +11,9 @@ SRC += 	ft_strmapi.c \
 	ft_nmatch.c \
 	ft_match.c \
 	ft_char_srch.c \
+	ft_strnlen.c \
+	ft_strlen.c \
+	ft_strfastlen.c \
 	ft_toupper.c \
 	ft_tolower.c \
 	ft_isupper.c \
@@ -23,6 +26,7 @@ SRC += 	ft_strmapi.c \
 	ft_strtrim.c \
 	ft_strsub.c \
 	ft_strsplit.c \
+	ft_strjoin_multi.c \
 	ft_strjoin.c \
 	ft_strdup.c \
 	ft_strncpy.c \
@@ -33,8 +37,4 @@ SRC += 	ft_strmapi.c \
 	ft_strnequ.c \
 	ft_strncmp.c \
 	ft_strequ.c \
-	ft_strcmp.c \
-	ft_strfastlen.c \
-	ft_strnlen.c \
-	ft_strjoin_multi.c \
-	ft_strlen.c 
+	ft_strcmp.c 

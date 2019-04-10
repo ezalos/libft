@@ -1,33 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   time_exe.h                                         :+:      :+:    :+:   */
+/*   ft_get_tab_from_file.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/19 12:51:05 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/04/10 23:27:01 by ldevelle         ###   ########.fr       */
+/*   Created: 2019/04/10 22:44:03 by ldevelle          #+#    #+#             */
+/*   Updated: 2019/04/10 22:46:42 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef TIME_EXE_H
-# define TIME_EXE_H
+#include "libft.h"
 
-# include "libft.h"
-# include <time.h>
-# include <stdlib.h>
-# include <stdio.h>
-
-typedef struct			s_time
+int		ft_get_tab_from_file(char *str, int **tab, int lines)
 {
-	double				t;
-	int					nb_call;
-	char				*name;
-	struct	s_time		*next;
-}						t_time;
+	size_t	fd;
+	int		i;
+	char	*line;
 
-//main
-t_time	*time_exe(const char* s);
-void	print_time(void);
-
-#endif
+	if (!(fd = open(str, O_RDONLY)))
+		return (-1);
+	if (!(*tab = ft_memalloc(sizeof(int) * lines)))
+		return (-1);
+	i = -1;
+	while (get_next_line(fd, &line) > 0 && i < lines)
+		(*tab)[++i] = ft_atoi(line);
+	close(fd);
+	return (i + 1);
+}

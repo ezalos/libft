@@ -12,13 +12,13 @@ SRC += 	ft_putstr.c \
 	ft_putendl_fd.c \
 	ft_putchar_fd.c \
 	ft_putchar.c \
-	ft_patoi.c \
-	ft_nb_char_to_int.c \
-	ft_intlen.c \
-	ft_atoi.c \
-	ft_nb_len.c \
-	ft_nb_to_a.c \
-	ft_u_nb_len.c \
-	ft_u_nb_to_a.c \
 	ft_get_next_line.c \
-	ft_itoa.c 
+	ft_u_nb_to_a.c \
+	ft_u_nb_len.c \
+	ft_patoi.c \
+	ft_nb_to_a.c \
+	ft_nb_len.c \
+	ft_nb_char_to_int.c \
+	ft_itoa.c \
+	ft_intlen.c \
+	ft_atoi.c 

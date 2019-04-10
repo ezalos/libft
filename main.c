@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/29 15:36:08 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/04/07 21:11:53 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/04/10 23:41:36 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ int		get_tab_from_file(char *str, int **tab)
 	char	*line;
 
 	fd = open(str, O_RDONLY);
-	*tab = ft_memalloc(sizeof(int) * 1000);
+	*tab = ft_memalloc(sizeof(int) * 5000);
 	i = -1;
 	while (get_next_line(fd, &line) > 0)
 		(*tab)[++i] = ft_atoi(line);
@@ -122,7 +122,7 @@ int		main(int ac, char **av)
 	size = get_tab_from_file(av[1], &tab);
 	ft_squick_sort(&tab, 0, size - 1);
 	print_tab(av[1], tab, get_n_step(tab, size, 20), size);
-	// create_new_file(av[1]);
+	// ft_create_new_file(av[1]);
 	// (void)av;
 	// av_one = INTMAX_MIN;
 	// av_two = INTMAX_MAX;

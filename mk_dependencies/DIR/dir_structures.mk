@@ -1,13 +1,31 @@
-DIR += 	srcs/structures/tab/move/ \
+DIR += 	srcs/structures/tab/transform/ \
+	srcs/structures/tab/print/ \
+	srcs/structures/tab/print/ \
 	srcs/structures/tab/move/ \
+	srcs/structures/tab/move/ \
+	srcs/structures/tab/move/ \
+	srcs/structures/tab/len/ \
 	srcs/structures/tab/len/ \
 	srcs/structures/tab/ \
 	srcs/structures/tab/dir/ \
 	srcs/structures/tab/dir/ \
 	srcs/structures/tab/dir/ \
 	srcs/structures/tab/dir/ \
+	srcs/structures/tab/del/ \
+	srcs/structures/tab/del/ \
 	srcs/structures/tab/create/ \
 	srcs/structures/tab/create/ \
+	srcs/structures/tab/create/ \
+	srcs/structures/tab/create/ \
+	srcs/structures/tab/connect/ \
+	srcs/structures/tab/connect/ \
+	srcs/structures/tab/connect/ \
+	srcs/structures/tab/connect/ \
+	srcs/structures/tab/connect/ \
+	srcs/structures/tab/connect/ \
+	srcs/structures/tab/connect/ \
+	srcs/structures/tab/connect/ \
+	srcs/structures/tab/connect/ \
 	srcs/structures/list/transform/ \
 	srcs/structures/list/transform/ \
 	srcs/structures/list/move/ \
@@ -15,29 +33,11 @@ DIR += 	srcs/structures/tab/move/ \
 	srcs/structures/list/len/ \
 	srcs/structures/list/del/ \
 	srcs/structures/list/del/ \
-	srcs/structures/list/create/ \
-	srcs/structures/list/connect/ \
-	srcs/structures/list/connect/ \
-	srcs/structures/list/connect/ \
-	srcs/structures/list/connect/ \
-	srcs/structures/list/connect/ \
-	srcs/structures/tab/connect/ \
-	srcs/structures/tab/connect/ \
-	srcs/structures/tab/connect/ \
-	srcs/structures/tab/connect/ \
 	srcs/structures/list/del/ \
 	srcs/structures/list/create/ \
-	srcs/structures/tab/move/ \
-	srcs/structures/tab/del/ \
-	srcs/structures/tab/del/ \
-	srcs/structures/tab/connect/ \
-	srcs/structures/tab/connect/ \
-	srcs/structures/tab/create/ \
-	srcs/structures/tab/len/ \
-	srcs/structures/tab/print/ \
-	srcs/structures/tab/print/ \
-	srcs/structures/tab/create/ \
-	srcs/structures/tab/connect/ \
-	srcs/structures/tab/transform/ \
-	srcs/structures/tab/connect/ \
-	srcs/structures/tab/connect/ 
+	srcs/structures/list/create/ \
+	srcs/structures/list/connect/ \
+	srcs/structures/list/connect/ \
+	srcs/structures/list/connect/ \
+	srcs/structures/list/connect/ \
+	srcs/structures/list/connect/ 

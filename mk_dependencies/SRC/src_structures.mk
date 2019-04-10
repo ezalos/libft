@@ -1,13 +1,31 @@
-SRC += 	ft_tab_reach_end.c \
+SRC += 	ft_tabiter.c \
+	ft_tab_print_one_elmnt.c \
+	ft_tab_print_dir.c \
+	ft_tab_reach_end.c \
 	ft_tab_dirth.c \
+	ft_tab_access.c \
+	ft_tabloop_lendir.c \
 	ft_tab_lendir.c \
 	ft_tabloop_itis.c \
 	ft_tab_dir_reverse.c \
 	ft_tab_dir_rclock.c \
 	ft_tab_dir_nclock.c \
 	ft_tab_dir_clock.c \
+	ft_tab_delete_row_len.c \
+	ft_tab_delete_row.c \
+	ft_tabnew_rectangle.c \
 	ft_tabnew_ptr.c \
 	ft_tabnew_dir.c \
+	ft_tab_square_it.c \
+	ft_tabloop_it.c \
+	ft_tabadd_start.c \
+	ft_tabadd_here.c \
+	ft_tabadd_end.c \
+	ft_tabadd.c \
+	ft_tab_cutone.c \
+	ft_tab_cut_loop.c \
+	ft_tab_connect_structs.c \
+	ft_tab_connect_dir.c \
 	ft_lstmap.c \
 	ft_lstiter.c \
 	ft_lstfind_th.c \
@@ -15,29 +33,11 @@ SRC += 	ft_tab_reach_end.c \
 	ft_lst_count.c \
 	ft_lstdelone.c \
 	ft_lstdel.c \
+	ft_lst_free.c \
 	ft_lstnew_ptr.c \
+	ft_lstnew.c \
 	ft_lstcutone.c \
 	ft_lstadd_start.c \
 	ft_lstadd_here.c \
 	ft_lstadd_end.c \
-	ft_lstadd.c \
-	ft_tabadd_end.c \
-	ft_tabloop_it.c \
-	ft_tab_cut_loop.c \
-	ft_tabadd_here.c \
-	ft_lst_free.c \
-	ft_lstnew.c \
-	ft_tab_access.c \
-	ft_tab_delete_row.c \
-	ft_tab_delete_row_len.c \
-	ft_tab_cutone.c \
-	ft_tabadd_start.c \
-	ft_tab_square_it.c \
-	ft_tabloop_lendir.c \
-	ft_tab_print_dir.c \
-	ft_tab_print_one_elmnt.c \
-	ft_tabnew_rectangle.c \
-	ft_tabadd.c \
-	ft_tabiter.c \
-	ft_tab_connect_structs.c \
-	ft_tab_connect_dir.c 
+	ft_lstadd.c 

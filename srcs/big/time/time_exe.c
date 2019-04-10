@@ -6,17 +6,16 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/19 12:52:19 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/03/23 18:54:19 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/04/10 23:25:29 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "time_exe.h"
 
 /*
-	time_exe(__func__, cl(clock()));
-print_time(time_exe(__func__, clock()));
+** time_exe(__func__);
+** print_time();
 */
-
 
 void 	print_time_struct(t_time *g)
 {
@@ -112,12 +111,14 @@ void	print_total(double total)
 	}
 }
 
-void	print_time(t_time *timee)
+void	print_time(void)
 {
+	t_time		*timee;
 	t_time		*tmp;
 	double		total;
 	int			max_length;
 
+	timee = time_exe(__func__);
 	total = 0;
 	tmp = timee;
 	max_length = 0;
@@ -202,12 +203,14 @@ t_time	*update_last(t_time *timee, char **last, const char* s)
 	return (timee);
 }
 
-t_time	*time_exe(const char* s, double t)
+t_time	*time_exe(const char* s)
 {
 	static t_time		*timee;
 	static char			*last;
 	t_time				*tmp;
+	double				t;
 
+	t = cl(clock());
 	if (s == NULL || timee == NULL || last == NULL)
 		return (time_exceptions(&timee, &last, s, t));
 	if (update_time(timee, (const char*)last, t))

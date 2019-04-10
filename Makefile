@@ -6,7 +6,7 @@
 #    By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/12 15:04:16 by ldevelle          #+#    #+#              #
-#    Updated: 2019/03/29 15:36:02 by ldevelle         ###   ########.fr        #
+#    Updated: 2019/04/10 22:52:02 by ldevelle         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,7 +41,7 @@ DFLAGS = -Wall -Wextra -Werror -fsanitize=address,undefined -g3 -pedantic\
 
 MASTER		= srcs/
 
-MAIN_FOLD = inout maths mem strings structures terminal big
+MAIN_FOLD = inout maths mem strings structures terminal big files
 
 HEAD_DIR = ./includes/
 

@@ -1,33 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   time_exe.h                                         :+:      :+:    :+:   */
+/*   ft_add_to_file.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/19 12:51:05 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/04/10 23:27:01 by ldevelle         ###   ########.fr       */
+/*   Created: 2019/04/10 22:36:25 by ldevelle          #+#    #+#             */
+/*   Updated: 2019/04/10 22:36:32 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef TIME_EXE_H
-# define TIME_EXE_H
+#include "libft.h"
 
-# include "libft.h"
-# include <time.h>
-# include <stdlib.h>
-# include <stdio.h>
-
-typedef struct			s_time
+void		ft_add_to_file(char *name, char *data)
 {
-	double				t;
-	int					nb_call;
-	char				*name;
-	struct	s_time		*next;
-}						t_time;
+	int				fd;
 
-//main
-t_time	*time_exe(const char* s);
-void	print_time(void);
-
-#endif
+	fd = open(name, O_CREAT|O_RDWR|O_APPEND, S_IRWXU|S_IRWXG|S_IRWXO);
+	ft_putendl_fd(data, fd);
+	close(fd);
+}

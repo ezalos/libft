@@ -5,4 +5,5 @@ SRC += 	ft_wait_pls.c \
 	ft_rgb_color.c \
 	ft_rgb_bcolor.c \
 	ft_putstr_color.c \
-	ft_print_address_color.c 
+	ft_print_address_color.c \
+	ft_progress.c 

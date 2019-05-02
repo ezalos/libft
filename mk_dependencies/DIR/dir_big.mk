@@ -1,4 +1,4 @@
-DIR += 	srcs/big/time/time \
+DIR += 	srcs/big/ \
 	srcs/big/ \
 	srcs/big/ \
 	srcs/big/ \
@@ -22,4 +22,4 @@ DIR += 	srcs/big/time/time \
 	srcs/big/ \
 	srcs/big/ \
 	srcs/big/ \
-	srcs/big/ 
+	srcs/big/time/time 

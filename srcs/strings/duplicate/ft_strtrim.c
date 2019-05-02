@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 12:54:32 by ldevelle          #+#    #+#             */
-/*   Updated: 2018/12/11 14:08:44 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/04/12 19:44:00 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char		*ft_strtrim(char const *s)
 	int		end;
 	char	*new;
 
-	if (s == NULL)
+	if (!s)
 		return (NULL);
 	while (ft_char_srch(*s, " \n\t\0"))
 		s++;

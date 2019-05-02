@@ -13,7 +13,6 @@ SRC += 	ft_strmapi.c \
 	ft_char_srch.c \
 	ft_strnlen.c \
 	ft_strlen.c \
-	ft_strfastlen.c \
 	ft_toupper.c \
 	ft_tolower.c \
 	ft_isupper.c \
@@ -23,7 +22,6 @@ SRC += 	ft_strmapi.c \
 	ft_isascii.c \
 	ft_isalpha.c \
 	ft_isalnum.c \
-	ft_strtrim.c \
 	ft_strsub.c \
 	ft_strsplit.c \
 	ft_strjoin_multi.c \
@@ -37,4 +35,6 @@ SRC += 	ft_strmapi.c \
 	ft_strnequ.c \
 	ft_strncmp.c \
 	ft_strequ.c \
-	ft_strcmp.c 
+	ft_strcmp.c \
+	ft_strfastlen.c \
+	ft_strtrim.c 

@@ -6,7 +6,7 @@
 #    By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/12 15:04:16 by ldevelle          #+#    #+#              #
-#    Updated: 2019/04/10 22:52:02 by ldevelle         ###   ########.fr        #
+#    Updated: 2019/04/30 13:18:51 by ldevelle         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -62,7 +62,7 @@ DIR_OBJ = ./objs/
 AUTO_HEAD	= $(MAIN_FOLD:%=auto/auto_%.h)
 
 
-HEADERS		=	$(HEADS:%=$(HEAD_DIR)%)
+HEAD		=	$(HEADERS:%=$(HEAD_DIR)%)
 
 update_head	=	$(MAIN_FOLD:%=sh scripts/get_protos.sh % $(MASTER);)
 update_dep	=	$(MAIN_FOLD:%=sh scripts/get_mk_srcs.sh % $(MASTER);)
@@ -149,10 +149,10 @@ endef
 
 all :		$(NAME)
 
-$(NAME):	Makefile $(HEAD) $(OBJS)
+$(NAME):	$(OBJS)
 			@$(call run_and_test, ar -rcs $(NAME) $(OBJS))
 
-$(DIR_OBJ)%.o:$(MASTER)%.c
+$(DIR_OBJ)%.o:$(MASTER)%.c $(HEAD) Makefile
 			@$(call run_and_test, $(CC) $(CFLAGS) -I$(HEAD_DIR) -o $@ -c $<)
 
 clean :

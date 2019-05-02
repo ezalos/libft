@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/05 17:45:14 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/03/22 18:31:38 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/05/01 19:08:14 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,13 @@ static int		ft_connect_opposite(t_tab *in_between_tab, size_t dir_first)
 	if (tmp->dir[ft_tab_dir_reverse(dir)] && tmp->dir[dir])
 		ft_tab_connect_structs(tmp->dir[ft_tab_dir_reverse(dir)],
 		tmp->dir[dir], dir);
-	else if (tmp->dir[ft_tab_dir_reverse(dir)])
-		tmp->dir[ft_tab_dir_reverse(dir)]->dir[dir] = NULL;
-	else if (tmp->dir[dir])
-		tmp->dir[dir]->dir[ft_tab_dir_reverse(dir)] = NULL;
+	else
+	{
+		if (tmp->dir[ft_tab_dir_reverse(dir)])
+			tmp->dir[ft_tab_dir_reverse(dir)]->dir[dir] = NULL;
+		if (tmp->dir[dir])
+			tmp->dir[dir]->dir[ft_tab_dir_reverse(dir)] = NULL;
+	}
 	return (0);
 }
 

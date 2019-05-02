@@ -1,5 +1,4 @@
-SRC += 	time_exe.c \
-	type_unsigned_integer.c \
+SRC += 	type_unsigned_integer.c \
 	type_string.c \
 	type_pointer.c \
 	type_integer.c \
@@ -22,4 +21,5 @@ SRC += 	time_exe.c \
 	check_arg.c \
 	bonus_gestion.c \
 	bonus_color.c \
-	ajust_flags.c 
+	ajust_flags.c \
+	time_exe.c 

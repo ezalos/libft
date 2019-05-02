@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/29 15:36:08 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/04/10 23:41:36 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/04/12 18:56:08 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ void	print_tab(char *name, int *tab, int step, int size)
 	seuil = tab[i];
 	x = 0;
 	quant = (size / 1000) + 1;
+	quant = 1;
 	ft_printf("%~{255;255;0}Printing\t%~{255;0;0}%s\t%~{155;155;255}%s%~{255;255;0}\n", name + ft_strlen("../push_swap/tests/count/"), name);
 	ft_printf("Possesses %~{155;155;255}%d%~{255;255;0} values\t", size);
 	ft_printf("Ranging from %~{155;155;255}%d%~{255;255;0} to %~{155;155;255}%d%~{255;255;0}\n", tab[0], tab[size - 1]);
@@ -114,11 +115,17 @@ int		main(int ac, char **av)
 	int		size;
 	// size_t			fd;
 	// intmax_t		i;
+	// char			**split;
 	// intmax_t		av_one;
 	// intmax_t		av_two;
 
-	if (ac != 2)
+	if (ac == 1)
 		return (0);
+	// ft_printf("%c\t|%s|\n", av[1], av[2][0]);
+	// i = 0;
+	// split = ft_strsplit(av[1], av[2][0]);
+	// while (++i < ac)
+		// ft_printf("\t%s\n", split[i]);
 	size = get_tab_from_file(av[1], &tab);
 	ft_squick_sort(&tab, 0, size - 1);
 	print_tab(av[1], tab, get_n_step(tab, size, 20), size);

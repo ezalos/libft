@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 11:15:02 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/03/30 16:35:06 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/04/30 14:50:11 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,14 @@ typedef	struct		s_tab
 	size_t			content_size;
 }					t_tab;
 
+typedef struct		s_progress
+{
+	char			*name;
+	intmax_t		max;
+	intmax_t		now;
+	intmax_t		len;
+	intmax_t		written;
+}					t_progress;
 
 # define BUFF_SIZE 256
 
@@ -49,7 +57,13 @@ typedef	struct		s_tab
 # ifndef NREE
 #  define NREE 1
 # endif
+
+# ifndef TIME_RECORD
+#  define TIME_RECORD	0
+# endif
+
 # include "./auto.h"
+# include "./time_exe.h"
 
 /*
 ** # define ILLEGAL (intmax_t)&rando

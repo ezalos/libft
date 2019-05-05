@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/11 20:52:12 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/03/29 16:21:58 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/05/05 18:59:18 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,7 @@ intmax_t		ft_random(intmax_t min, intmax_t max, intmax_t rando, size_t len)
 	int			i;
 	int			mod;
 
-	mod	= 1;
+	mod = 1;
 	if (!max && !min)
 		mod = 0;
 	else if (max == min)

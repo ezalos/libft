@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/19 12:52:19 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/04/30 12:54:04 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/05/05 19:03:58 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,7 +108,7 @@ void			print_total(double total)
 		_CYAN " minutes " _RED "\n\t\t\t\t%f" _CYAN " seconds to execute\n\n"
 		_RESET, min, total);
 	}
-	C_RESET
+	_C_RESET;
 }
 
 void			print_time(void)
@@ -132,7 +132,7 @@ void			print_time(void)
 		tmp = tmp->next;
 	}
 	tmp = timee;
-	if (!(timee = (t_time*)malloc(sizeof(t_time))))
+	if (!(timee = (t_time*)P_MALLOC(sizeof(t_time))))
 		return ;
 	timee->t = 0;
 	timee->next = tmp;
@@ -155,7 +155,7 @@ static t_time	*time_link_creation(const char *s, double t)
 {
 	t_time			*timee;
 
-	if (!(timee = (t_time*)malloc(sizeof(t_time))))
+	if (!(timee = (t_time*)P_MALLOC(sizeof(t_time))))
 		return (NULL);
 	timee->name = ft_strdup((const char*)s);
 	timee->t = t;

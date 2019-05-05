@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/25 22:00:14 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/03/22 18:54:56 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/05/05 18:55:54 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int		ft_tab_print_dir(t_tab *tab, size_t dir, int lin)
 		ft_rgb_color(0, 0, 0);
 		ft_putnbr(lin / 4);
 		ft_putstr("->");
-		C_RESET
+		_C_RESET;
 		ft_tab_print_one_elmnt(tmp, lin, col, structh);
 		tmp = tmp->dir[dir];
 		structh++;

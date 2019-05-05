@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/27 19:38:25 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/03/29 15:16:15 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/05/05 19:15:02 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,12 +58,18 @@ static int		ft_choose_pivot(int **array, int low, int high, int *count)
 		(*count)++;
 	}
 	else if (((*array)[high] < (*array)[mid] && (*array)[mid] < (*array)[low])
-		|| ((*array)[high] > (*array)[mid] && (*array)[mid]> (*array)[low]))
+		|| ((*array)[high] > (*array)[mid] && (*array)[mid] > (*array)[low]))
 	{
 		ft_swap(&(*array)[mid], &(*array)[high], sizeof(int));
 		(*count)++;
 	}
 	return ((*array)[high]);
+}
+
+static void		ft_swap_and_count(int *count, int **array, int one, int two)
+{
+	ft_swap(&(*array)[one], &(*array)[two], sizeof(int));
+	(*count)++;
 }
 
 static int		ft_qs_partition(int **array, int low, int high, int *count)
@@ -72,19 +78,15 @@ static int		ft_qs_partition(int **array, int low, int high, int *count)
 	int		look_left;
 	int		look_right;
 
-    pivot = ft_choose_pivot(array, low, high, count);
+	pivot = ft_choose_pivot(array, low, high, count);
 	look_left = low;
 	look_right = high - 1;
-
 	while (look_left < look_right)
 	{
-        if ((*array)[look_left] > pivot)
+		if ((*array)[look_left] > pivot)
 		{
 			if ((*array)[look_right] < pivot)
-			{
-				ft_swap(&(*array)[look_right], &(*array)[look_left], sizeof(int));
-				(*count)++;
-			}
+				ft_swap_and_count(count, array, look_right, look_left);
 			else
 				look_right--;
 		}
@@ -92,22 +94,18 @@ static int		ft_qs_partition(int **array, int low, int high, int *count)
 			look_left++;
 	}
 	if ((*array)[look_left] > (*array)[high])
-	{
-		ft_swap(&(*array)[look_left], &(*array)[high], sizeof(int));
-		(*count)++;
-	}
+		ft_swap_and_count(count, array, look_left, high);
 	return (look_left);
 }
 
-void		ft_quick_sort(int **array, int low, int high, int *count)
+void			ft_quick_sort(int **array, int low, int high, int *count)
 {
 	int		pivot;
 
-    if (low < high)
-    {
-        pivot = ft_qs_partition(array, low, high, count);
-
-        ft_quick_sort(array, low, pivot - 1, count);
-        ft_quick_sort(array, pivot + 1, high, count);
-    }
+	if (low < high)
+	{
+		pivot = ft_qs_partition(array, low, high, count);
+		ft_quick_sort(array, low, pivot - 1, count);
+		ft_quick_sort(array, pivot + 1, high, count);
+	}
 }

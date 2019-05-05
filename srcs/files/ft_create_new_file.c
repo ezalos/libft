@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/10 22:38:26 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/04/10 22:43:15 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/05/05 18:47:46 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ int		ft_create_new_file(char *str)
 	num = NULL;
 	i = -1;
 	while (++i || fd == -1)
-		if (-1 != (fd
-			= open(name, O_CREAT|O_EXCL|O_RDWR, S_IRWXU|S_IRWXG|S_IRWXO)))
+		if (-1 != (fd = open(name, O_CREAT | O_EXCL | O_RDWR,
+			S_IRWXU | S_IRWXG | S_IRWXO)))
 			break ;
 		else
 		{

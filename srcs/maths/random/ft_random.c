@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/11 20:52:12 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/05/05 18:59:18 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/05/06 12:48:57 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,11 +78,8 @@ static intmax_t	ft_end_n_random(intmax_t rando, size_t len)
 	return (rando);
 }
 
-intmax_t		ft_random(intmax_t min, intmax_t max, intmax_t rando, size_t len)
+intmax_t		ft_random(intmax_t min, intmax_t max, intmax_t ran, size_t len)
 {
-	char		*rand;
-	int			fd;
-	int			i;
 	int			mod;
 
 	mod = 1;
@@ -93,32 +90,17 @@ intmax_t		ft_random(intmax_t min, intmax_t max, intmax_t rando, size_t len)
 	if (min > max)
 		ft_swap(&min, &max, sizeof(min));
 	max++;
-	if (rando && len)
-		ft_if_random(min, max, &rando, &len);
-	else if (!rando || !len)
-	{
-		rando = clock();
-		len = clock() % 50000;
-	}
-	else if (-1 == (fd = open("/dev/random", O_RDONLY)))
-		ft_if_random(min, max, &rando, &len);
+	if (ran && len)
+		ft_if_random(min, max, &ran, &len);
 	else
 	{
-		if (!(get_next_line(fd, &rand)))
-			return (0);
-		if (len == 0)
-			len = ft_strnlen(rand, 1000);
-		else if (len > 50000)
-			len = 50000;
-		i = -1;
-		if (rando == 0)
-			while (++i < (int)len)
-				rando += rand[i];
-		close(fd);
-		ft_strdel(&rand);
+		if (!ran)
+			ran = ft_seed_gnl(min, max);
+		while (!len)
+			len = ft_seed_gnl(min, max);
 	}
 	if (mod)
-		return (ft_end_random(min, max, rando, len));
+		return (ft_end_random(min, max, ran, len));
 	else
-		return (ft_end_n_random(rando, len));
+		return (ft_end_n_random(ran, len));
 }

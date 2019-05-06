@@ -1,6 +1,4 @@
-SRC += 	ft_tabiter.c \
-	ft_tab_print_one_elmnt.c \
-	ft_tab_print_dir.c \
+SRC += 	ft_tab_print_one_elmnt.c \
 	ft_tab_reach_end.c \
 	ft_tab_dirth.c \
 	ft_tab_access.c \
@@ -17,15 +15,9 @@ SRC += 	ft_tabiter.c \
 	ft_tabnew_ptr.c \
 	ft_tabnew_dir.c \
 	ft_tab_square_it.c \
-	ft_tabloop_it.c \
 	ft_tabadd_start.c \
-	ft_tabadd_here.c \
 	ft_tabadd_end.c \
 	ft_tabadd.c \
-	ft_tab_cutone.c \
-	ft_tab_cut_loop.c \
-	ft_tab_connect_structs.c \
-	ft_tab_connect_dir.c \
 	ft_lstmap.c \
 	ft_lstiter.c \
 	ft_lstfind_th.c \
@@ -40,4 +32,12 @@ SRC += 	ft_tabiter.c \
 	ft_lstadd_start.c \
 	ft_lstadd_here.c \
 	ft_lstadd_end.c \
-	ft_lstadd.c 
+	ft_lstadd.c \
+	ft_tab_cutone.c \
+	ft_tabadd_here.c \
+	ft_tab_cut_loop.c \
+	ft_tabloop_it.c \
+	ft_tab_print_dir.c \
+	ft_tabiter.c \
+	ft_tab_connect_structs.c \
+	ft_tab_connect_dir.c 

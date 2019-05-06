@@ -36,5 +36,5 @@ SRC += 	ft_strmapi.c \
 	ft_strncmp.c \
 	ft_strequ.c \
 	ft_strcmp.c \
-	ft_strfastlen.c \
+	.ft_strfastlen.c \
 	ft_strtrim.c 

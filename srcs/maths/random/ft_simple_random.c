@@ -6,13 +6,13 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/11 20:52:12 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/05/05 18:51:10 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/05/06 12:25:02 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void			ft_if_random(intmax_t min, intmax_t max, intmax_t *rando,
+static void		ft_if_random(intmax_t min, intmax_t max, intmax_t *rando,
 					size_t *len)
 {
 	if (*len > 50000)
@@ -23,7 +23,7 @@ static void			ft_if_random(intmax_t min, intmax_t max, intmax_t *rando,
 		*rando = ft_power(min, max);
 }
 
-static intmax_t		ft_10digits_prime(intmax_t nb)
+static intmax_t	ft_10digits_prime(intmax_t nb)
 {
 	if (nb < 0)
 		nb = -nb;
@@ -49,7 +49,7 @@ static intmax_t		ft_10digits_prime(intmax_t nb)
 		return (3367900313);
 }
 
-static intmax_t		ft_end_random(intmax_t min, intmax_t max, intmax_t rando,
+static intmax_t	ft_end_random(intmax_t min, intmax_t max, intmax_t rando,
 					size_t len)
 {
 	while ((int)--len > 0)
@@ -67,7 +67,7 @@ static intmax_t		ft_end_random(intmax_t min, intmax_t max, intmax_t rando,
 	return (rando);
 }
 
-static intmax_t		ft_end_n_random(intmax_t rando, size_t len)
+static intmax_t	ft_end_n_random(intmax_t rando, size_t len)
 {
 	while ((int)--len > 0)
 		rando = (ft_10digits_prime(len * rando) * (rando % 100000))
@@ -77,29 +77,29 @@ static intmax_t		ft_end_n_random(intmax_t rando, size_t len)
 	return (rando);
 }
 
-intmax_t			ft_simple_random(intmax_t min, intmax_t max, intmax_t rando, size_t len)
+intmax_t		ft_simple_random(intmax_t mn, intmax_t mx, intmax_t r, size_t l)
 {
 	int			mod;
 
 	mod = 1;
-	if (max == 0 && min == 0)
+	if (mx == 0 && mn == 0)
 		mod = 0;
-	else if (max - min == 0)
-		max = min + 100;
-	if (min > max)
-		ft_swap(&min, &max, sizeof(min));
-	max++;
-	if (rando && len)
-		ft_if_random(min, max, &rando, &len);
-	else if (!rando || !len)
+	else if (mx - mn == 0)
+		mx = mn + 100;
+	if (mn > mx)
+		ft_swap(&mn, &mx, sizeof(mn));
+	mx++;
+	if (r && l)
+		ft_if_random(mn, mx, &r, &l);
+	else if (!r || !l)
 	{
-		if (!rando)
-			rando = ILLEGAL;
-		if (!len)
-			len = ILLEGAL % 50000;
+		if (!r)
+			r = ILLEGAL;
+		if (!l)
+			l = ILLEGAL % 50000;
 	}
 	if (mod)
-		return (ft_end_random(min, max, rando, len));
+		return (ft_end_random(mn, mx, r, l));
 	else
-		return (ft_end_n_random(rando, len));
+		return (ft_end_n_random(r, l));
 }

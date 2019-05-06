@@ -36,5 +36,5 @@ PAT += 	srcs/strings/transform/ft_strmapi.c \
 	srcs/strings/compare/ft_strncmp.c \
 	srcs/strings/compare/ft_strequ.c \
 	srcs/strings/compare/ft_strcmp.c \
-	srcs/strings/len/ft_strfastlen.c \
+	srcs/strings/len/.ft_strfastlen.c \
 	srcs/strings/duplicate/ft_strtrim.c 

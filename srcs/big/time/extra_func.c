@@ -1,34 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   time_exe.h                                         :+:      :+:    :+:   */
+/*   extra_func.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/19 12:51:05 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/05/06 12:49:35 by ldevelle         ###   ########.fr       */
+/*   Created: 2019/05/06 12:46:25 by ldevelle          #+#    #+#             */
+/*   Updated: 2019/05/06 12:46:31 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef TIME_EXE_H
-# define TIME_EXE_H
+#include "time_exe.h"
 
-# include "libft.h"
-# include <time.h>
-# include <stdlib.h>
-# include <stdio.h>
-
-typedef struct			s_time
+double				cl(clock_t t)
 {
-	double				t;
-	int					nb_call;
-	char				*name;
-	struct	s_time		*next;
-}						t_time;
+	static double	last;
+	double			m;
 
-//main
-t_time	*time_exe(const char* s);
-void	print_time(void);
-double	cl(clock_t t);
-
-#endif
+	m = ((double)(t - last)) / (CLOCKS_PER_SEC);
+	last = ((double)(clock()));
+	return (m);
+}

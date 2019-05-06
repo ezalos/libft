@@ -16,10 +16,12 @@ PAT += 	srcs/big/ft_printf/type_unsigned_integer.c \
 	srcs/big/ft_printf/get_str_float.c \
 	srcs/big/ft_printf/get_str_char.c \
 	srcs/big/ft_printf/get_printf.c \
-	srcs/big/ft_printf/ft_printf.c \
 	srcs/big/ft_printf/check_arg2.c \
 	srcs/big/ft_printf/check_arg.c \
 	srcs/big/ft_printf/bonus_gestion.c \
 	srcs/big/ft_printf/bonus_color.c \
 	srcs/big/ft_printf/ajust_flags.c \
+	srcs/big/ft_printf/ft_printf.c \
+	srcs/big/time/print_time.c \
+	srcs/big/time/extra_func.c \
 	srcs/big/time/time_exe.c 

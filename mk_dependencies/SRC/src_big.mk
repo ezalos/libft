@@ -16,10 +16,12 @@ SRC += 	type_unsigned_integer.c \
 	get_str_float.c \
 	get_str_char.c \
 	get_printf.c \
-	ft_printf.c \
 	check_arg2.c \
 	check_arg.c \
 	bonus_gestion.c \
 	bonus_color.c \
 	ajust_flags.c \
+	ft_printf.c \
+	print_time.c \
+	extra_func.c \
 	time_exe.c 

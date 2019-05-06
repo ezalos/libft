@@ -1,7 +1,7 @@
 #ifndef AUTO_STRUCTURES_H
 # define AUTO_STRUCTURES_H
 
-int			ft_tab_connect_dir(size_t dir_line, t_tab *line_one, t_tab *line_two, size_t dir_connec);
+int			ft_tab_connect_dir(size_t d_a, t_tab *l_a, t_tab *l_b, size_t d_b);
 int			ft_tab_cut_loop(t_tab *tab, size_t dir);
 int			ft_tab_print_dir(t_tab *tab, size_t dir, int lin);
 int			ft_tab_print_one_elmnt(t_tab *tmp, size_t lin, size_t col, int structh);
@@ -38,11 +38,11 @@ void		ft_lstcutone(t_list **alst, void (*del)(void *, size_t));
 void		ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void		ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void		ft_lstiter(t_list *lst, void (*f)(t_list *elem));
-void		ft_tab_connect_structs(t_tab *tab_one, t_tab *tab_two, size_t dir_one);
+void		ft_tab_connect_structs(t_tab *t_one, t_tab *t_two, size_t dir_one);
 void		ft_tabadd(t_tab **tab, t_tab *new, size_t dir, int umpteenth);
 void		ft_tabadd_end(t_tab *alst, t_tab *new, size_t dir);
 void		ft_tabadd_here(t_tab *alst, t_tab *new, size_t dir);
 void		ft_tabadd_start(t_tab **alst, t_tab *new, size_t dir);
-void		ft_tabiter(t_tab *tab, size_t dir, int (*f)(t_tab *, size_t, int), size_t dirf);
+void		ft_tabiter(t_tab *t, size_t d, int (*f)(t_tab *, size_t, int), size_t s);
 
 #endif

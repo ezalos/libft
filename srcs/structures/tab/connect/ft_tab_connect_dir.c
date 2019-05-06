@@ -6,30 +6,35 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/25 22:10:43 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/03/23 18:19:26 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/05/06 12:22:31 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			ft_tab_connect_dir(size_t dir_line, t_tab *line_one, t_tab *line_two, size_t dir_connec)
+/*
+** int			ft_tab_connect_dir(size_t dir_line, t_tab *line_one,
+** 	t_tab *line_two, size_t dir_connec)
+*/
+
+int			ft_tab_connect_dir(size_t d_a, t_tab *l_a, t_tab *l_b, size_t d_b)
 {
 	t_tab	*tmp_one;
 	t_tab	*tmp_two;
 	int		already;
 
-	if (!line_one || dir_line > 3 || !line_two || dir_connec > 3)
+	if (!l_a || d_a > 3 || !l_b || d_b > 3)
 		return (-1);
-	tmp_one = line_one;
-	tmp_two = line_two;
+	tmp_one = l_a;
+	tmp_two = l_b;
 	already = 0;
 	while ((tmp_one && tmp_two)
-	&& ((tmp_one != line_one && tmp_two != line_two) || !already))
+	&& ((tmp_one != l_a && tmp_two != l_b) || !already))
 	{
-		tmp_one->dir[dir_connec] = tmp_two;
-		tmp_one->dir[dir_connec]->dir[ft_tab_dir_reverse(dir_connec)] = tmp_one;
-		tmp_one = tmp_one->dir[dir_line];
-		tmp_two = tmp_two->dir[dir_line];
+		tmp_one->dir[d_b] = tmp_two;
+		tmp_one->dir[d_b]->dir[ft_tab_dir_reverse(d_b)] = tmp_one;
+		tmp_one = tmp_one->dir[d_a];
+		tmp_two = tmp_two->dir[d_a];
 		already++;
 	}
 	return (0);

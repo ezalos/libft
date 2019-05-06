@@ -1,6 +1,4 @@
-DIR += 	srcs/structures/tab/transform/ \
-	srcs/structures/tab/print/ \
-	srcs/structures/tab/print/ \
+DIR += 	srcs/structures/tab/print/ \
 	srcs/structures/tab/move/ \
 	srcs/structures/tab/move/ \
 	srcs/structures/tab/move/ \
@@ -20,12 +18,6 @@ DIR += 	srcs/structures/tab/transform/ \
 	srcs/structures/tab/connect/ \
 	srcs/structures/tab/connect/ \
 	srcs/structures/tab/connect/ \
-	srcs/structures/tab/connect/ \
-	srcs/structures/tab/connect/ \
-	srcs/structures/tab/connect/ \
-	srcs/structures/tab/connect/ \
-	srcs/structures/tab/connect/ \
-	srcs/structures/tab/connect/ \
 	srcs/structures/list/transform/ \
 	srcs/structures/list/transform/ \
 	srcs/structures/list/move/ \
@@ -40,4 +32,12 @@ DIR += 	srcs/structures/tab/transform/ \
 	srcs/structures/list/connect/ \
 	srcs/structures/list/connect/ \
 	srcs/structures/list/connect/ \
-	srcs/structures/list/connect/ 
+	srcs/structures/list/connect/ \
+	srcs/structures/tab/connect/ \
+	srcs/structures/tab/connect/ \
+	srcs/structures/tab/connect/ \
+	srcs/structures/tab/connect/ \
+	srcs/structures/tab/print/ \
+	srcs/structures/tab/transform/ \
+	srcs/structures/tab/connect/ \
+	srcs/structures/tab/connect/ 

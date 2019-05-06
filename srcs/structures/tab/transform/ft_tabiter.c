@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/25 22:01:34 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/03/23 18:19:06 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/05/06 12:18:57 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,21 +17,26 @@
 ** increment :	lin += 4;
 */
 
-void	ft_tabiter(t_tab *tab, size_t dir, int (*f)(t_tab *, size_t, int), size_t dirf)
+/*
+** ft_tabiter(t_tab *tab, size_t dir_one,
+** 	int (*f)(t_tab *, size_t, int), size_t dir_two)
+*/
+
+void	ft_tabiter(t_tab *t, size_t d, int (*f)(t_tab *, size_t, int), size_t s)
 {
 	t_tab	*ptr;
 	int		lin;
 
-	if (tab != NULL && f != NULL)
+	if (t != NULL && f != NULL)
 	{
-		ptr = tab;
+		ptr = t;
 		lin = 0;
-		while (ptr->dir[dir] != NULL)
+		while (ptr->dir[d] != NULL)
 		{
-			f(ptr, dirf, lin);
-			ptr = ptr->dir[dir];
+			f(ptr, s, lin);
+			ptr = ptr->dir[d];
 			lin++;
 		}
-		f(ptr, dirf, lin);
+		f(ptr, s, lin);
 	}
 }

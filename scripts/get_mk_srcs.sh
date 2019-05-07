@@ -6,7 +6,7 @@
 #    By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/22 19:03:06 by ldevelle          #+#    #+#              #
-#    Updated: 2019/03/27 14:33:05 by ldevelle         ###   ########.fr        #
+#    Updated: 2019/05/07 13:14:25 by ldevelle         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,4 +57,4 @@ sed -i '' "1s/^/DIR += /" $name2
 sed -i '' '1h;1!H;$!d;g;s/\(.*\)\\/\1/' $name2
 
 
-echo "$1\t\tconverted to Makefile source in subdirectory $path"
+# echo "$1\t\tconverted to Makefile source"

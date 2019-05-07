@@ -22,4 +22,5 @@ PAT += 	srcs/inout/write/string/ft_putstr.c \
 	srcs/inout/converters/ft_itoa.c \
 	srcs/inout/converters/ft_intlen.c \
 	srcs/inout/converters/ft_atoi.c \
-	srcs/inout/write/return/ft_putstr_r0_fd.c 
+	srcs/inout/write/return/ft_putstr_r0_fd.c \
+	srcs/inout/converters/ft_is_str_bigger_than_int.c 

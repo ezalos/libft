@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldevelle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/07 12:33:56 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/05/07 12:33:56 by ldevelle         ###   ########.fr       */
+/*   Created: 2019/05/07 18:45:05 by ldevelle          #+#    #+#             */
+/*   Updated: 2019/05/07 18:45:05 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 int			ft_atoi(const char *src);
 int			ft_intlen(int n);
+int			ft_is_str_bigger_than_int(char *str);
 char		*ft_itoa(int n);
 int			ft_nb_char_to_int(char c);
 size_t		ft_nb_len(intmax_t n, size_t base);

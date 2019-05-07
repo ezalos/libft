@@ -6,7 +6,7 @@
 #    By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/22 19:02:24 by ldevelle          #+#    #+#              #
-#    Updated: 2019/05/07 12:31:26 by ldevelle         ###   ########.fr        #
+#    Updated: 2019/05/07 13:14:37 by ldevelle         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,18 +27,6 @@ name=$path$prefix$1$extension
 spe=$prefix$1$suffix
 
 rm -rf $name
-
-# echo '/* ************************************************************************** */' >> $name
-# echo '/*                                                                            */' >> $name
-# echo '/*                                                        :::      ::::::::   */' >> $name
-# echo "/*   $prefix$1.h                                        :+:      :+:    :+:   */" >> $name
-# echo '/*                                                    +:+ +:+         +:+     */' >> $name
-# echo '/*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */' >> $name
-# echo '/*                                                +#+#+#+#+#+   +#+           */' >> $name
-# echo '/*   Created: 2019/01/24 18:06:30 by ldevelle          #+#    #+#             */' >> $name
-# echo '/*   Updated: 2019/05/06 19:33:38 by ldevelle         ###   ########.fr       */' >> $name
-# echo '/*                                                                            */' >> $name
-# echo '/* ************************************************************************** */' >> $name
 
 echo "#ifndef \c" >> $name
 printf $spe | awk '{ print toupper($1) }' >> $name
@@ -61,4 +49,4 @@ echo "\n#endif" >> $name
 
 vim -c :Stdheader -c:wq $name
 
-echo "includes/auto_$1.h\t\tcreated"
+# echo "includes/auto_$1.h\t\tcreated"

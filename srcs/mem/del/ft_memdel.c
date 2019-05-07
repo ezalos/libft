@@ -6,43 +6,25 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 11:10:47 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/05/06 19:06:50 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/05/07 18:44:28 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	ft_lstfind_and_free(void **ap)
-{
-	t_list		*tmp;
-
-	tmp = *ft_garbage_collector();
-	while (tmp)
-	{
-		if (*ap == tmp->content)
-		{
-			free(tmp->content);
-			tmp->content = NULL;
-			return ;
-		}
-		tmp = tmp->next;
-	}
-}
-
 void		ft_memdel(void **ap)
 {
-	if (!ap)
-		if (!*ap)
+	if (ap && *ap)
+	{
+		if (NREE)
 		{
-			if (NREE)
-			{
-				ft_lstfind_and_free(ap);
-				*ap = NULL;
-			}
-			else
-			{
-				free(*ap);
-				*ap = NULL;
-			}
+			ft_free_with_nalloc(*ap - 8);
+			*ap = NULL;
 		}
+		else
+		{
+			free(*ap);
+			*ap = NULL;
+		}
+	}
 }

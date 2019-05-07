@@ -22,4 +22,5 @@ SRC += 	ft_putstr.c \
 	ft_itoa.c \
 	ft_intlen.c \
 	ft_atoi.c \
-	ft_putstr_r0_fd.c 
+	ft_putstr_r0_fd.c \
+	ft_is_str_bigger_than_int.c 

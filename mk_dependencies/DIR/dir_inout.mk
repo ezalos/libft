@@ -22,4 +22,5 @@ DIR += 	srcs/inout/write/string/ \
 	srcs/inout/converters/ \
 	srcs/inout/converters/ \
 	srcs/inout/converters/ \
-	srcs/inout/write/return/ 
+	srcs/inout/write/return/ \
+	srcs/inout/converters/ 

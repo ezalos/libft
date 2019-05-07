@@ -6,13 +6,14 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/25 21:58:05 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/03/22 18:56:22 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/05/07 12:05:08 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_tab_print_one_elmnt(t_tab *tmp, size_t lin, size_t col, int structh)
+int		ft_tab_print_one_elmnt(t_tab *tmp, size_t lin,
+	size_t col, int structh)
 {
 	size_t				addr;
 

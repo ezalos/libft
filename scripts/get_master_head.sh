@@ -6,7 +6,7 @@
 #    By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/23 19:04:48 by ldevelle          #+#    #+#              #
-#    Updated: 2019/03/23 19:12:52 by ldevelle         ###   ########.fr        #
+#    Updated: 2019/05/07 12:32:24 by ldevelle         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,3 +22,5 @@ find includes/auto -type f | sed 's~includes/auto~# include "auto~g' | sed 's~\.
 
 echo '' >> $path
 echo '#endif' >> $path
+
+vim -c :Stdheader -c:wq $path

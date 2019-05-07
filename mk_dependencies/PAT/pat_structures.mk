@@ -1,5 +1,4 @@
-PAT += 	srcs/structures/tab/print/ft_tab_print_one_elmnt.c \
-	srcs/structures/tab/move/ft_tab_reach_end.c \
+PAT += 	srcs/structures/tab/move/ft_tab_reach_end.c \
 	srcs/structures/tab/move/ft_tab_dirth.c \
 	srcs/structures/tab/move/ft_tab_access.c \
 	srcs/structures/tab/len/ft_tabloop_lendir.c \
@@ -25,7 +24,6 @@ PAT += 	srcs/structures/tab/print/ft_tab_print_one_elmnt.c \
 	srcs/structures/list/len/ft_lst_count.c \
 	srcs/structures/list/del/ft_lstdelone.c \
 	srcs/structures/list/del/ft_lstdel.c \
-	srcs/structures/list/del/ft_lst_free.c \
 	srcs/structures/list/create/ft_lstnew_ptr.c \
 	srcs/structures/list/create/ft_lstnew.c \
 	srcs/structures/list/connect/ft_lstcutone.c \
@@ -38,6 +36,8 @@ PAT += 	srcs/structures/tab/print/ft_tab_print_one_elmnt.c \
 	srcs/structures/tab/connect/ft_tab_cut_loop.c \
 	srcs/structures/tab/connect/ft_tabloop_it.c \
 	srcs/structures/tab/print/ft_tab_print_dir.c \
-	srcs/structures/tab/transform/ft_tabiter.c \
 	srcs/structures/tab/connect/ft_tab_connect_structs.c \
-	srcs/structures/tab/connect/ft_tab_connect_dir.c 
+	srcs/structures/tab/connect/ft_tab_connect_dir.c \
+	srcs/structures/list/del/ft_lst_free.c \
+	srcs/structures/tab/print/ft_tab_print_one_elmnt.c \
+	srcs/structures/tab/transform/ft_tabiter.c 

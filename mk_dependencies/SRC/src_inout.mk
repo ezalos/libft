@@ -21,4 +21,5 @@ SRC += 	ft_putstr.c \
 	ft_nb_char_to_int.c \
 	ft_itoa.c \
 	ft_intlen.c \
-	ft_atoi.c 
+	ft_atoi.c \
+	ft_putstr_r0_fd.c 

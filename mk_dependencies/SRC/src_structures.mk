@@ -1,5 +1,4 @@
-SRC += 	ft_tab_print_one_elmnt.c \
-	ft_tab_reach_end.c \
+SRC += 	ft_tab_reach_end.c \
 	ft_tab_dirth.c \
 	ft_tab_access.c \
 	ft_tabloop_lendir.c \
@@ -25,7 +24,6 @@ SRC += 	ft_tab_print_one_elmnt.c \
 	ft_lst_count.c \
 	ft_lstdelone.c \
 	ft_lstdel.c \
-	ft_lst_free.c \
 	ft_lstnew_ptr.c \
 	ft_lstnew.c \
 	ft_lstcutone.c \
@@ -38,6 +36,8 @@ SRC += 	ft_tab_print_one_elmnt.c \
 	ft_tab_cut_loop.c \
 	ft_tabloop_it.c \
 	ft_tab_print_dir.c \
-	ft_tabiter.c \
 	ft_tab_connect_structs.c \
-	ft_tab_connect_dir.c 
+	ft_tab_connect_dir.c \
+	ft_lst_free.c \
+	ft_tab_print_one_elmnt.c \
+	ft_tabiter.c 

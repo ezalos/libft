@@ -11,9 +11,9 @@ SRC += 	ft_swap.c \
 	ft_strnew.c \
 	ft_memalloc.c \
 	ft_strdel_multi.c \
-	ft_strdel.c \
-	ft_memdel.c \
 	ft_del.c \
 	ft_memmove.c \
 	ft_memcpy.c \
-	ft_memccpy.c 
+	ft_memccpy.c \
+	ft_strdel.c \
+	ft_memdel.c 

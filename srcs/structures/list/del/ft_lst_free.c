@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/04 20:22:07 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/03/14 15:45:24 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/05/06 19:09:16 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,11 @@ size_t			ft_lst_free(t_list **delete_me)
 	{
 		next = tmp->next;
 		leaks = tmp->content;
-		ft_strdel((char**)&leaks);
-		ft_strdel((char**)&tmp);
+		ft_memdel((void**)&leaks);
+		ft_memdel((void**)&tmp);
 		i++;
 		tmp = next;
 	}
+	ft_memdel((void**)delete_me);
 	return (i);
 }

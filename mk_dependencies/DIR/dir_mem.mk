@@ -12,8 +12,8 @@ DIR += 	srcs/mem/transform/ \
 	srcs/mem/malloc/ \
 	srcs/mem/del/ \
 	srcs/mem/del/ \
-	srcs/mem/del/ \
-	srcs/mem/del/ \
 	srcs/mem/copy/ \
 	srcs/mem/copy/ \
-	srcs/mem/copy/ 
+	srcs/mem/copy/ \
+	srcs/mem/del/ \
+	srcs/mem/del/ 

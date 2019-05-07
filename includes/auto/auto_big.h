@@ -1,7 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   auto_big.h                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ldevelle <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/05/07 12:33:58 by ldevelle          #+#    #+#             */
+/*   Updated: 2019/05/07 12:33:58 by ldevelle         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef AUTO_BIG_H
 # define AUTO_BIG_H
 
-char		*ft_strrev(char *str, size_t size);
 int			ft_printf(const char *format, ...);
+char		*ft_strrev(char *str, size_t size);
 
 #endif

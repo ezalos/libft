@@ -6,7 +6,7 @@
 #    By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/12 15:04:16 by ldevelle          #+#    #+#              #
-#    Updated: 2019/04/30 13:18:51 by ldevelle         ###   ########.fr        #
+#    Updated: 2019/05/07 12:18:30 by ldevelle         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,6 +49,8 @@ HEADERS	=	$(AUTO_HEAD)\
 			auto.h\
 			ft_printf.h\
 			libft.h\
+			structures.h\
+			terminal_defines.h\
 			time_exe.h
 
 DIR_OBJ = ./objs/
@@ -83,7 +85,9 @@ SRC =
 PAT =
 DIR =
 
+ifneq ("$(shell find $(mk) -type f )","")
 include $(include_dep)
+endif
 
 OBJ = $(PAT:%.c=%.o)
 OBJS = $(PAT:$(MASTER)%.c=$(DIR_OBJ)%.o)
@@ -197,6 +201,7 @@ file :	object_ready
 object_ready :
 				@rm -rf $(DIR_OBJ)/*
 				@find $(MASTER) -type d -exec mkdir objs/{} \;
+				@find $(MASTER) -type d -exec touch objs/{}/.gitkeep \;
 				@mv -f $(DIR_OBJ)$(MASTER)/* $(DIR_OBJ)
 				@rm -rf $(DIR_OBJ)$(MASTER)
 

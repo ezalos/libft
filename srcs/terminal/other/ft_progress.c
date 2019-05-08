@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/27 18:24:18 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/05/05 19:15:35 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/05/08 15:31:35 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static void	ft_is_new_progress(t_progress *tim, const char *name, intmax_t max)
 
 	if (tim->name)
 		ft_strdel(&tim->name);
-	ft_bzero(tim, sizeof(tim));
+	ft_bzero(tim, sizeof(*tim));
 	tim->len = 40;
 	tim->name = ft_strdup(name);
 	tim->max = max;

@@ -1,21 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   auto_files.h                                       :+:      :+:    :+:   */
+/*   ft_hfunc.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldevelle <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/08 18:53:40 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/05/08 18:53:40 by ldevelle         ###   ########.fr       */
+/*   Created: 2019/05/08 17:12:38 by ldevelle          #+#    #+#             */
+/*   Updated: 2019/05/08 17:15:24 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef AUTO_FILES_H
-# define AUTO_FILES_H
+#include "libft.h"
 
-void		ft_add_to_file(char *name, char *data);
-int			ft_create_new_file(char *str);
-ssize_t		ft_get_size_file(char *str);
-int			ft_get_tab_from_file(char *str, int **tab, int lines);
+ssize_t		ft_hfunc(void *data, size_t size)
+{
+	intmax_t		temp;
 
-#endif
+	(void)size;
+	temp = ft_atoi(data);
+	if (temp > SIZE_HTABLE || temp < 0)
+		return (-1);
+	return (temp);
+}

@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   auto_terminal.h                                    :+:      :+:    :+:   */
+/*   auto_data_base.h                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldevelle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/08 18:53:40 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/05/08 18:53:40 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/05/08 18:53:41 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef AUTO_TERMINAL_H
-# define AUTO_TERMINAL_H
+#ifndef AUTO_DATA_BASE_H
+# define AUTO_DATA_BASE_H
 
-void		ft_print_address_color(intmax_t nb);
-void		ft_putstr_color(char const *s, int r, int g, int b);
-int			ft_rgb_bcolor(int red, int green, int blue);
-int			ft_rgb_color(int red, int green, int blue);
-char		*ft_str_rgbcolor(char background, int red, int green, int blue);
-int			ft_place_cursor(size_t line, size_t column);
-void		ft_press_any_key(void);
-void		ft_progress(const char *name, intmax_t now, intmax_t max);
-void		ft_wait_pls(uintmax_t wait);
+size_t		ft_access_htable(size_t key);
+int			ft_get_file_in_htable(char *str);
+ssize_t		ft_hfunc(void *data, size_t size);
+size_t		**ft_htable_mem(void);
+ssize_t		ft_store_htable(void *data, size_t size,
+		ssize_t (*hf)(void *, size_t));
+ssize_t		ft_unstore_htable(void *data, size_t size,
+		ssize_t (*hf)(void *, size_t));
 
 #endif

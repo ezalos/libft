@@ -1,21 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   auto_files.h                                       :+:      :+:    :+:   */
+/*   ft_htable_mem.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldevelle <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/08 18:53:40 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/05/08 18:53:40 by ldevelle         ###   ########.fr       */
+/*   Created: 2019/05/08 17:08:43 by ldevelle          #+#    #+#             */
+/*   Updated: 2019/05/08 17:08:55 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef AUTO_FILES_H
-# define AUTO_FILES_H
+#include "libft.h"
 
-void		ft_add_to_file(char *name, char *data);
-int			ft_create_new_file(char *str);
-ssize_t		ft_get_size_file(char *str);
-int			ft_get_tab_from_file(char *str, int **tab, int lines);
+size_t	**ft_htable_mem(void)
+{
+	static size_t		*h_table;
 
-#endif
+	if (!h_table)
+		h_table = ft_memalloc(sizeof(*h_table) * SIZE_HTABLE);
+	return ((size_t**)&h_table);
+}

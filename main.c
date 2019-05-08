@@ -6,22 +6,31 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/07 13:36:45 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/05/07 19:35:08 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/05/08 18:59:27 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
-#include <stdio.h>
 
-
-
-int		main(void)
+int		main(int ac, char **av)
 {
-	int		v;
 	int		i;
 
-
-
+	if (ac != 2)
+		return (0);
+	ft_get_file_in_htable(av[1]);
+	i = 0;
+	while (!ft_access_htable(i))
+		i++;
+	i--;
+	_CLEAR_SCREEN;
+	ft_place_cursor(0, 0);
+	while (++i < SIZE_HTABLE)
+		if (ft_access_htable(i))
+			ft_printf("[%*d] %~{155;255;155}%*d%~{}\n",
+			ft_nb_len(SIZE_HTABLE, 10), i, ft_access_htable(i) / 3, ft_access_htable(i));
+		else
+			ft_printf("[%*d]%~{255;155;155}0%~{}\n", ft_nb_len(SIZE_HTABLE, 10), i);
 	ft_clean_garbage();
 	return (0);
 }

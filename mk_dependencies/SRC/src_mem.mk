@@ -12,9 +12,9 @@ SRC += 	ft_swap.c \
 	ft_memccpy.c \
 	ft_garbage_collector.c \
 	ft_cnalloc.c \
-	ft_clean_garbage.c \
 	ft_burn_garbage.c \
-	ft_nalloc.c \
 	ft_memdel.c \
+	ft_strdel.c \
+	ft_clean_garbage.c \
 	ft_free_with_nalloc.c \
-	ft_strdel.c 
+	ft_nalloc.c 

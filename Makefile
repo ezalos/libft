@@ -6,7 +6,7 @@
 #    By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/12 15:04:16 by ldevelle          #+#    #+#              #
-#    Updated: 2019/05/08 16:15:57 by ldevelle         ###   ########.fr        #
+#    Updated: 2019/05/10 13:33:46 by root             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -100,7 +100,16 @@ MSG ?= Makefile automated push
 ##		 COLORS			##
 ##						##
 ##########################
-
+UNAME := $(shell uname)
+ifeq ($(UNAME),Linux)
+RED     = \e[31m
+GREEN   = \e[32m
+YELLOW  = \e[33m
+BLUE	= \e[34m
+MAGENTA	= \e[35m
+CYAN	= \e[36m
+END     = \e[0m
+else
 RED     = \x1b[31m
 GREEN   = \x1b[32m
 YELLOW  = \x1b[33m
@@ -108,6 +117,7 @@ BLUE	= \x1b[34m
 MAGENTA	= \x1b[35m
 CYAN	= \x1b[36m
 END     = \x1b[0m
+endif
 
 COM_COLOR   = $(BLUE)
 OBJ_COLOR   = $(CYAN)
@@ -218,6 +228,10 @@ object_ready :
 
 check :
 		bash /Users/ldevelle/42/TESTS/42FileChecker/42FileChecker.sh
+
+ehco :
+		@echo "$(OS)"
+		@echo "$(UNAME)"
 
 FORCE:
 

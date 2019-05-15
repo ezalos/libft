@@ -1,40 +1,40 @@
-PAT += 	-rw-r--r-- 1 ezalos ezalos 1118 mai   10 15:38 srcs/strings/copy/ft_strncpy.c \
-	-rw-r--r-- 1 ezalos ezalos 1134 mai   10 15:38 srcs/strings/copy/ft_strncat.c \
-	-rw-r--r-- 1 ezalos ezalos 1398 mai   10 15:38 srcs/strings/copy/ft_strlcat.c \
-	-rw-r--r-- 1 ezalos ezalos 1038 mai   10 15:38 srcs/strings/copy/ft_strcpy.c \
-	-rw-r--r-- 1 ezalos ezalos 1100 mai   10 15:38 srcs/strings/copy/ft_strcat.c \
-	-rw-r--r-- 1 ezalos ezalos 1277 mai   10 15:38 srcs/strings/compare/ft_strnequ.c \
-	-rw-r--r-- 1 ezalos ezalos 1229 mai   10 15:38 srcs/strings/compare/ft_strncmp.c \
-	-rw-r--r-- 1 ezalos ezalos 1156 mai   10 15:38 srcs/strings/compare/ft_strequ.c \
-	-rw-r--r-- 1 ezalos ezalos 1143 mai   10 15:38 srcs/strings/compare/ft_strcmp.c \
-	-rw-r--r-- 1 ezalos ezalos 1266 mai   10 15:38 srcs/strings/transform/ft_strmapi.c \
-	-rw-r--r-- 1 ezalos ezalos 1209 mai   10 15:38 srcs/strings/transform/ft_strmap.c \
-	-rw-r--r-- 1 ezalos ezalos 1063 mai   10 15:38 srcs/strings/transform/ft_striteri.c \
-	-rw-r--r-- 1 ezalos ezalos 1019 mai   10 15:38 srcs/strings/transform/ft_striter.c \
-	-rw-r--r-- 1 ezalos ezalos  984 mai   10 15:38 srcs/strings/transform/ft_strclr.c \
-	-rw-r--r-- 1 ezalos ezalos 1352 mai   10 15:38 srcs/strings/search/ft_strstr.c \
-	-rw-r--r-- 1 ezalos ezalos 1149 mai   10 15:38 srcs/strings/search/ft_strrchr.c \
-	-rw-r--r-- 1 ezalos ezalos 1255 mai   10 15:38 srcs/strings/search/ft_strnstr.c \
-	-rw-r--r-- 1 ezalos ezalos 1090 mai   10 15:38 srcs/strings/search/ft_strchr.c \
-	-rw-r--r-- 1 ezalos ezalos 1350 mai   10 15:38 srcs/strings/search/ft_pstrnstr.c \
-	-rw-r--r-- 1 ezalos ezalos 1388 mai   10 15:38 srcs/strings/search/ft_nmatch.c \
-	-rw-r--r-- 1 ezalos ezalos 1261 mai   10 15:38 srcs/strings/search/ft_match.c \
-	-rw-r--r-- 1 ezalos ezalos 1023 mai   10 15:38 srcs/strings/search/ft_char_srch.c \
-	-rw-r--r-- 1 ezalos ezalos 1052 mai   10 15:38 srcs/strings/len/ft_strnlen.c \
-	-rw-r--r-- 1 ezalos ezalos 1003 mai   10 15:38 srcs/strings/len/ft_strlen.c \
-	-rw-r--r-- 1 ezalos ezalos 6758 mai   10 15:38 srcs/strings/len/.ft_strfastlen.c \
-	-rw-r--r-- 1 ezalos ezalos  993 mai   10 15:38 srcs/strings/ft_is/ft_toupper.c \
-	-rw-r--r-- 1 ezalos ezalos  993 mai   10 15:38 srcs/strings/ft_is/ft_tolower.c \
-	-rw-r--r-- 1 ezalos ezalos  951 mai   10 15:38 srcs/strings/ft_is/ft_isupper.c \
-	-rw-r--r-- 1 ezalos ezalos  950 mai   10 15:38 srcs/strings/ft_is/ft_isprint.c \
-	-rw-r--r-- 1 ezalos ezalos  951 mai   10 15:38 srcs/strings/ft_is/ft_islower.c \
-	-rw-r--r-- 1 ezalos ezalos  951 mai   10 15:38 srcs/strings/ft_is/ft_isdigit.c \
-	-rw-r--r-- 1 ezalos ezalos  949 mai   10 15:38 srcs/strings/ft_is/ft_isascii.c \
-	-rw-r--r-- 1 ezalos ezalos  981 mai   10 15:38 srcs/strings/ft_is/ft_isalpha.c \
-	-rw-r--r-- 1 ezalos ezalos  981 mai   10 15:38 srcs/strings/ft_is/ft_isalnum.c \
-	-rw-r--r-- 1 ezalos ezalos 1260 mai   10 15:38 srcs/strings/duplicate/ft_strtrim.c \
-	-rw-r--r-- 1 ezalos ezalos 1293 mai   10 15:38 srcs/strings/duplicate/ft_strsub.c \
-	-rw-r--r-- 1 ezalos ezalos 1841 mai   10 15:38 srcs/strings/duplicate/ft_strsplit.c \
-	-rw-r--r-- 1 ezalos ezalos 2161 mai   10 15:38 srcs/strings/duplicate/ft_strjoin_multi.c \
-	-rw-r--r-- 1 ezalos ezalos 1313 mai   10 15:38 srcs/strings/duplicate/ft_strjoin.c \
-	-rw-r--r-- 1 ezalos ezalos 1169 mai   10 15:38 srcs/strings/duplicate/ft_strdup.c 
+PAT += 	srcs/strings/transform/ft_strmapi.c \
+	srcs/strings/transform/ft_strmap.c \
+	srcs/strings/transform/ft_striteri.c \
+	srcs/strings/transform/ft_striter.c \
+	srcs/strings/transform/ft_strclr.c \
+	srcs/strings/search/ft_strstr.c \
+	srcs/strings/search/ft_strrchr.c \
+	srcs/strings/search/ft_strnstr.c \
+	srcs/strings/search/ft_strchr.c \
+	srcs/strings/search/ft_pstrnstr.c \
+	srcs/strings/search/ft_nmatch.c \
+	srcs/strings/search/ft_match.c \
+	srcs/strings/search/ft_char_srch.c \
+	srcs/strings/len/ft_strnlen.c \
+	srcs/strings/len/ft_strlen.c \
+	srcs/strings/len/.ft_strfastlen.c \
+	srcs/strings/ft_is/ft_toupper.c \
+	srcs/strings/ft_is/ft_tolower.c \
+	srcs/strings/ft_is/ft_isupper.c \
+	srcs/strings/ft_is/ft_isprint.c \
+	srcs/strings/ft_is/ft_islower.c \
+	srcs/strings/ft_is/ft_isdigit.c \
+	srcs/strings/ft_is/ft_isascii.c \
+	srcs/strings/ft_is/ft_isalpha.c \
+	srcs/strings/ft_is/ft_isalnum.c \
+	srcs/strings/duplicate/ft_strtrim.c \
+	srcs/strings/duplicate/ft_strsub.c \
+	srcs/strings/duplicate/ft_strsplit.c \
+	srcs/strings/duplicate/ft_strjoin_multi.c \
+	srcs/strings/duplicate/ft_strjoin.c \
+	srcs/strings/duplicate/ft_strdup.c \
+	srcs/strings/copy/ft_strncpy.c \
+	srcs/strings/copy/ft_strncat.c \
+	srcs/strings/copy/ft_strlcat.c \
+	srcs/strings/copy/ft_strcpy.c \
+	srcs/strings/copy/ft_strcat.c \
+	srcs/strings/compare/ft_strnequ.c \
+	srcs/strings/compare/ft_strncmp.c \
+	srcs/strings/compare/ft_strequ.c \
+	srcs/strings/compare/ft_strcmp.c 

@@ -1,27 +1,27 @@
-PAT += 	-rw-r--r-- 1 ezalos ezalos 3266 mai   10 15:38 srcs/big/ft_printf/type_float.c \
-	-rw-r--r-- 1 ezalos ezalos 1989 mai   10 15:38 srcs/big/ft_printf/type_float2.c \
-	-rw-r--r-- 1 ezalos ezalos 1017 mai   10 15:38 srcs/big/ft_printf/type_character.c \
-	-rw-r--r-- 1 ezalos ezalos 2247 mai   10 15:38 srcs/big/ft_printf/type_binary.c \
-	-rw-r--r-- 1 ezalos ezalos 2405 mai   10 15:38 srcs/big/ft_printf/tools_flag.c \
-	-rw-r--r-- 1 ezalos ezalos 2274 mai   10 15:38 srcs/big/ft_printf/tools_flag2.c \
-	-rw-r--r-- 1 ezalos ezalos 2844 mai   10 15:38 srcs/big/ft_printf/parsing.c \
-	-rw-r--r-- 1 ezalos ezalos 1825 mai   10 15:38 srcs/big/ft_printf/output.c \
-	-rw-r--r-- 1 ezalos ezalos 1346 mai   10 15:38 srcs/big/ft_printf/init.c \
-	-rw-r--r-- 1 ezalos ezalos 1203 mai   10 15:38 srcs/big/ft_printf/get_str_str.c \
-	-rw-r--r-- 1 ezalos ezalos 1504 mai   10 15:38 srcs/big/ft_printf/get_str_int.c \
-	-rw-r--r-- 1 ezalos ezalos 1651 mai   10 15:38 srcs/big/ft_printf/get_str_float.c \
-	-rw-r--r-- 1 ezalos ezalos 1219 mai   10 15:38 srcs/big/ft_printf/get_str_char.c \
-	-rw-r--r-- 1 ezalos ezalos 1860 mai   10 15:38 srcs/big/ft_printf/get_printf.c \
-	-rw-r--r-- 1 ezalos ezalos 2115 mai   10 15:38 srcs/big/ft_printf/ft_printf.c \
-	-rw-r--r-- 1 ezalos ezalos 2178 mai   10 15:38 srcs/big/ft_printf/check_arg.c \
-	-rw-r--r-- 1 ezalos ezalos 2693 mai   10 15:38 srcs/big/ft_printf/check_arg2.c \
-	-rw-r--r-- 1 ezalos ezalos 1334 mai   10 15:38 srcs/big/ft_printf/bonus_gestion.c \
-	-rw-r--r-- 1 ezalos ezalos 3648 mai   10 15:38 srcs/big/ft_printf/bonus_color.c \
-	-rw-r--r-- 1 ezalos ezalos 3763 mai   10 15:38 srcs/big/ft_printf/ajust_flags.c \
-	-rw-r--r-- 1 ezalos ezalos 2889 mai   10 15:38 srcs/big/time/time_exe.c \
-	-rw-r--r-- 1 ezalos ezalos 3361 mai   10 15:38 srcs/big/time/print_time.c \
-	-rw-r--r-- 1 ezalos ezalos 1066 mai   10 15:38 srcs/big/time/extra_func.c \
-	-rw-r--r-- 1 ezalos ezalos 1479 mai   10 15:38 srcs/big/ft_printf/type_unsigned_integer.c \
-	-rw-r--r-- 1 ezalos ezalos 1119 mai   10 15:38 srcs/big/ft_printf/type_string.c \
-	-rw-r--r-- 1 ezalos ezalos 1211 mai   10 15:38 srcs/big/ft_printf/type_pointer.c \
-	-rw-r--r-- 1 ezalos ezalos 1096 mai   10 15:38 srcs/big/ft_printf/type_integer.c 
+PAT += 	srcs/big/time/time_exe.c \
+	srcs/big/time/print_time.c \
+	srcs/big/time/extra_func.c \
+	srcs/big/ft_printf/type_unsigned_integer.c \
+	srcs/big/ft_printf/type_string.c \
+	srcs/big/ft_printf/type_pointer.c \
+	srcs/big/ft_printf/type_integer.c \
+	srcs/big/ft_printf/type_float2.c \
+	srcs/big/ft_printf/type_float.c \
+	srcs/big/ft_printf/type_character.c \
+	srcs/big/ft_printf/type_binary.c \
+	srcs/big/ft_printf/tools_flag2.c \
+	srcs/big/ft_printf/tools_flag.c \
+	srcs/big/ft_printf/parsing.c \
+	srcs/big/ft_printf/output.c \
+	srcs/big/ft_printf/init.c \
+	srcs/big/ft_printf/get_str_str.c \
+	srcs/big/ft_printf/get_str_int.c \
+	srcs/big/ft_printf/get_str_float.c \
+	srcs/big/ft_printf/get_str_char.c \
+	srcs/big/ft_printf/get_printf.c \
+	srcs/big/ft_printf/ft_printf.c \
+	srcs/big/ft_printf/check_arg2.c \
+	srcs/big/ft_printf/check_arg.c \
+	srcs/big/ft_printf/bonus_gestion.c \
+	srcs/big/ft_printf/bonus_color.c \
+	srcs/big/ft_printf/ajust_flags.c 

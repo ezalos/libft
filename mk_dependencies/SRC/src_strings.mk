@@ -1,13 +1,4 @@
-SRC += 	ft_strncpy.c \
-	ft_strncat.c \
-	ft_strlcat.c \
-	ft_strcpy.c \
-	ft_strcat.c \
-	ft_strnequ.c \
-	ft_strncmp.c \
-	ft_strequ.c \
-	ft_strcmp.c \
-	ft_strmapi.c \
+SRC += 	ft_strmapi.c \
 	ft_strmap.c \
 	ft_striteri.c \
 	ft_striter.c \
@@ -37,4 +28,13 @@ SRC += 	ft_strncpy.c \
 	ft_strsplit.c \
 	ft_strjoin_multi.c \
 	ft_strjoin.c \
-	ft_strdup.c 
+	ft_strdup.c \
+	ft_strncpy.c \
+	ft_strncat.c \
+	ft_strlcat.c \
+	ft_strcpy.c \
+	ft_strcat.c \
+	ft_strnequ.c \
+	ft_strncmp.c \
+	ft_strequ.c \
+	ft_strcmp.c 

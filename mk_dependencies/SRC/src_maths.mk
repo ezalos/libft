@@ -8,9 +8,9 @@ SRC += 	ft_nprime.c \
 	ft_seed_gnl.c \
 	ft_seed_adress.c \
 	ft_simple_random.c \
+	ft_random.c \
 	ft_sum_to_nb.c \
 	ft_power.c \
 	ft_nb_in_range.c \
 	ft_fsqrt.c \
-	ft_factorial.c \
-	ft_random.c 
+	ft_factorial.c 

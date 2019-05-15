@@ -1,26 +1,26 @@
-PAT += 	-rw-r--r-- 1 ezalos ezalos 1001 mai   10 15:38 srcs/inout/write/string/ft_putstr.c \
-	-rw-r--r-- 1 ezalos ezalos 1034 mai   10 15:38 srcs/inout/write/string/ft_putnstr.c \
-	-rw-r--r-- 1 ezalos ezalos 1008 mai   10 15:38 srcs/inout/write/string/ft_putendl.c \
-	-rw-r--r-- 1 ezalos ezalos 1120 mai   10 15:38 srcs/inout/write/spacing/ft_puttab_len.c \
-	-rw-r--r-- 1 ezalos ezalos 1044 mai   10 15:38 srcs/inout/write/spacing/ft_puttab.c \
-	-rw-r--r-- 1 ezalos ezalos 1034 mai   10 15:38 srcs/inout/write/return/ft_putstr_rnull.c \
-	-rw-r--r-- 1 ezalos ezalos 1036 mai   10 15:38 srcs/inout/write/return/ft_putstr_r0_fd.c \
-	-rw-r--r-- 1 ezalos ezalos 1024 mai   10 15:38 srcs/inout/write/return/ft_putstr_r0.c \
-	-rw-r--r-- 1 ezalos ezalos 1264 mai   10 15:38 srcs/inout/write/nb/ft_putnbr.c \
-	-rw-r--r-- 1 ezalos ezalos 1196 mai   10 15:38 srcs/inout/write/nb/ft_putbnbr_str.c \
-	-rw-r--r-- 1 ezalos ezalos 1013 mai   10 15:38 srcs/inout/write/fd/ft_putstr_fd.c \
-	-rw-r--r-- 1 ezalos ezalos 1319 mai   10 15:38 srcs/inout/write/fd/ft_putnbr_fd.c \
-	-rw-r--r-- 1 ezalos ezalos 1035 mai   10 15:38 srcs/inout/write/fd/ft_putendl_fd.c \
-	-rw-r--r-- 1 ezalos ezalos  970 mai   10 15:38 srcs/inout/write/fd/ft_putchar_fd.c \
-	-rw-r--r-- 1 ezalos ezalos  958 mai   10 15:38 srcs/inout/write/char/ft_putchar.c \
-	-rw-r--r-- 1 ezalos ezalos 3586 mai   10 15:38 srcs/inout/read/ft_get_next_line.c \
-	-rw-r--r-- 1 ezalos ezalos 1170 mai   10 15:38 srcs/inout/converters/ft_u_nb_to_a.c \
-	-rw-r--r-- 1 ezalos ezalos 1111 mai   10 15:38 srcs/inout/converters/ft_u_nb_len.c \
-	-rw-r--r-- 1 ezalos ezalos 1303 mai   10 15:38 srcs/inout/converters/ft_patoi.c \
-	-rw-r--r-- 1 ezalos ezalos 1290 mai   10 15:38 srcs/inout/converters/ft_nb_to_a.c \
-	-rw-r--r-- 1 ezalos ezalos 1175 mai   10 15:38 srcs/inout/converters/ft_nb_len.c \
-	-rw-r--r-- 1 ezalos ezalos  986 mai   10 15:38 srcs/inout/converters/ft_nb_char_to_int.c \
-	-rw-r--r-- 1 ezalos ezalos 1393 mai   10 15:38 srcs/inout/converters/ft_itoa.c \
-	-rw-r--r-- 1 ezalos ezalos 2197 mai   10 15:38 srcs/inout/converters/ft_is_str_bigger_than_int.c \
-	-rw-r--r-- 1 ezalos ezalos 1049 mai   10 15:38 srcs/inout/converters/ft_intlen.c \
-	-rw-r--r-- 1 ezalos ezalos 1311 mai   10 15:38 srcs/inout/converters/ft_atoi.c 
+PAT += 	srcs/inout/write/string/ft_putstr.c \
+	srcs/inout/write/string/ft_putnstr.c \
+	srcs/inout/write/string/ft_putendl.c \
+	srcs/inout/write/spacing/ft_puttab_len.c \
+	srcs/inout/write/spacing/ft_puttab.c \
+	srcs/inout/write/return/ft_putstr_rnull.c \
+	srcs/inout/write/return/ft_putstr_r0_fd.c \
+	srcs/inout/write/return/ft_putstr_r0.c \
+	srcs/inout/write/nb/ft_putnbr.c \
+	srcs/inout/write/nb/ft_putbnbr_str.c \
+	srcs/inout/write/fd/ft_putstr_fd.c \
+	srcs/inout/write/fd/ft_putnbr_fd.c \
+	srcs/inout/write/fd/ft_putendl_fd.c \
+	srcs/inout/write/fd/ft_putchar_fd.c \
+	srcs/inout/write/char/ft_putchar.c \
+	srcs/inout/read/ft_get_next_line.c \
+	srcs/inout/converters/ft_u_nb_to_a.c \
+	srcs/inout/converters/ft_u_nb_len.c \
+	srcs/inout/converters/ft_patoi.c \
+	srcs/inout/converters/ft_nb_to_a.c \
+	srcs/inout/converters/ft_nb_len.c \
+	srcs/inout/converters/ft_nb_char_to_int.c \
+	srcs/inout/converters/ft_itoa.c \
+	srcs/inout/converters/ft_is_str_bigger_than_int.c \
+	srcs/inout/converters/ft_intlen.c \
+	srcs/inout/converters/ft_atoi.c 

@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/04 20:18:57 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/05/07 19:14:25 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/05/15 14:20:16 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 void			*nalloc(size_t size_content)
 {
 	char	*new_malloc;
-	void	**it;
 
 	if (!size_content)
 		return (NULL);

@@ -1,16 +1,16 @@
-PAT += 	srcs/maths/suites/ft_nprime.c \
-	srcs/maths/suites/ft_fibonacci.c \
-	srcs/maths/round/ft_round_upper.c \
-	srcs/maths/round/ft_round.c \
-	srcs/maths/random/seed/ft_seed_time.c \
-	srcs/maths/random/seed/ft_seed_gnl.c \
-	srcs/maths/random/seed/ft_seed_adress.c \
-	srcs/maths/operators/ft_sum_to_nb.c \
-	srcs/maths/operators/ft_power.c \
-	srcs/maths/operators/ft_fsqrt.c \
-	srcs/maths/operators/ft_factorial.c \
-	srcs/maths/operators/ft_nb_in_range.c \
-	srcs/maths/sort/ft_squick_sort.c \
-	srcs/maths/sort/ft_quick_sort.c \
-	srcs/maths/random/ft_simple_random.c \
-	srcs/maths/random/ft_random.c 
+PAT += 	-rw-r--r-- 1 ezalos ezalos 1817 mai   10 15:38 srcs/maths/suites/ft_nprime.c \
+	-rw-r--r-- 1 ezalos ezalos 1079 mai   10 15:38 srcs/maths/suites/ft_fibonacci.c \
+	-rw-r--r-- 1 ezalos ezalos 2295 mai   10 15:38 srcs/maths/sort/ft_squick_sort.c \
+	-rw-r--r-- 1 ezalos ezalos 3077 mai   10 15:38 srcs/maths/sort/ft_quick_sort.c \
+	-rw-r--r-- 1 ezalos ezalos  955 mai   10 15:38 srcs/maths/round/ft_round_upper.c \
+	-rw-r--r-- 1 ezalos ezalos  945 mai   10 15:38 srcs/maths/round/ft_round.c \
+	-rw-r--r-- 1 ezalos ezalos 1079 mai   10 15:38 srcs/maths/random/seed/ft_seed_time.c \
+	-rw-r--r-- 1 ezalos ezalos 1295 mai   10 15:38 srcs/maths/random/seed/ft_seed_gnl.c \
+	-rw-r--r-- 1 ezalos ezalos 1061 mai   10 15:38 srcs/maths/random/seed/ft_seed_adress.c \
+	-rw-r--r-- 1 ezalos ezalos 2904 mai   10 15:38 srcs/maths/random/ft_simple_random.c \
+	-rw-r--r-- 1 ezalos ezalos 1124 mai   10 15:38 srcs/maths/operators/ft_sum_to_nb.c \
+	-rw-r--r-- 1 ezalos ezalos 1100 mai   10 15:38 srcs/maths/operators/ft_power.c \
+	-rw-r--r-- 1 ezalos ezalos 1303 mai   10 15:38 srcs/maths/operators/ft_nb_in_range.c \
+	-rw-r--r-- 1 ezalos ezalos 1097 mai   10 15:38 srcs/maths/operators/ft_fsqrt.c \
+	-rw-r--r-- 1 ezalos ezalos 1094 mai   10 15:38 srcs/maths/operators/ft_factorial.c \
+	-rw-r--r-- 1 ezalos ezalos 2958 mai   13 20:48 srcs/maths/random/ft_random.c 

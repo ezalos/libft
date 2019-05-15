@@ -1,20 +1,20 @@
-PAT += 	srcs/mem/transform/ft_swap.c \
-	srcs/mem/transform/ft_memset.c \
-	srcs/mem/transform/ft_bzero.c \
-	srcs/mem/search/ft_memcmp.c \
-	srcs/mem/search/ft_memchr.c \
-	srcs/mem/malloc/ft_strnew.c \
-	srcs/mem/malloc/ft_memalloc.c \
-	srcs/mem/del/ft_strdel_multi.c \
-	srcs/mem/del/ft_del.c \
-	srcs/mem/copy/ft_memmove.c \
-	srcs/mem/copy/ft_memcpy.c \
-	srcs/mem/copy/ft_memccpy.c \
-	srcs/mem/nalloc/ft_garbage_collector.c \
-	srcs/mem/nalloc/ft_cnalloc.c \
-	srcs/mem/nalloc/ft_burn_garbage.c \
-	srcs/mem/del/ft_memdel.c \
-	srcs/mem/del/ft_strdel.c \
-	srcs/mem/nalloc/ft_clean_garbage.c \
-	srcs/mem/del/ft_free_with_nalloc.c \
-	srcs/mem/nalloc/ft_nalloc.c 
+PAT += 	-rw-r--r-- 1 ezalos ezalos 1117 mai   10 15:38 srcs/mem/transform/ft_swap.c \
+	-rw-r--r-- 1 ezalos ezalos 1041 mai   10 15:38 srcs/mem/transform/ft_memset.c \
+	-rw-r--r-- 1 ezalos ezalos 1010 mai   10 15:38 srcs/mem/transform/ft_bzero.c \
+	-rw-r--r-- 1 ezalos ezalos 1139 mai   10 15:38 srcs/mem/search/ft_memcmp.c \
+	-rw-r--r-- 1 ezalos ezalos 1117 mai   10 15:38 srcs/mem/search/ft_memchr.c \
+	-rw-r--r-- 1 ezalos ezalos 1508 mai   10 15:38 srcs/mem/nalloc/ft_nalloc.c \
+	-rw-r--r-- 1 ezalos ezalos  996 mai   10 15:38 srcs/mem/nalloc/ft_garbage_collector.c \
+	-rw-r--r-- 1 ezalos ezalos 1197 mai   10 15:38 srcs/mem/nalloc/ft_cnalloc.c \
+	-rw-r--r-- 1 ezalos ezalos 1160 mai   10 15:38 srcs/mem/nalloc/ft_clean_garbage.c \
+	-rw-r--r-- 1 ezalos ezalos 1105 mai   10 15:38 srcs/mem/nalloc/ft_burn_garbage.c \
+	-rw-r--r-- 1 ezalos ezalos 1112 mai   10 15:38 srcs/mem/malloc/ft_strnew.c \
+	-rw-r--r-- 1 ezalos ezalos 1103 mai   10 15:38 srcs/mem/malloc/ft_memalloc.c \
+	-rw-r--r-- 1 ezalos ezalos 1133 mai   10 15:38 srcs/mem/del/ft_strdel_multi.c \
+	-rw-r--r-- 1 ezalos ezalos 1078 mai   10 15:38 srcs/mem/del/ft_strdel.c \
+	-rw-r--r-- 1 ezalos ezalos 1077 mai   10 15:38 srcs/mem/del/ft_memdel.c \
+	-rw-r--r-- 1 ezalos ezalos 1256 mai   10 15:38 srcs/mem/del/ft_free_with_nalloc.c \
+	-rw-r--r-- 1 ezalos ezalos  998 mai   10 15:38 srcs/mem/del/ft_del.c \
+	-rw-r--r-- 1 ezalos ezalos 1169 mai   10 15:38 srcs/mem/copy/ft_memmove.c \
+	-rw-r--r-- 1 ezalos ezalos 1074 mai   10 15:38 srcs/mem/copy/ft_memcpy.c \
+	-rw-r--r-- 1 ezalos ezalos 1149 mai   10 15:38 srcs/mem/copy/ft_memccpy.c 

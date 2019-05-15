@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/11 20:52:12 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/05/07 11:58:48 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/05/13 20:48:21 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,9 +95,9 @@ intmax_t		ft_random(intmax_t min, intmax_t max, intmax_t ran, size_t len)
 	else
 	{
 		if (!ran)
-			ran = ft_seed_gnl(min, max);
+			ran = ft_seed_time(min, max);
 		while (!len)
-			len = ft_seed_gnl(min, max);
+			len = ft_seed_time(min, max);
 	}
 	if (mod)
 		return (ft_end_random(min, max, ran, len));

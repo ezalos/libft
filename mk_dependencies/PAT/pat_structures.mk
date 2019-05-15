@@ -1,43 +1,43 @@
-PAT += 	srcs/structures/tab/move/ft_tab_reach_end.c \
-	srcs/structures/tab/move/ft_tab_dirth.c \
-	srcs/structures/tab/move/ft_tab_access.c \
-	srcs/structures/tab/len/ft_tabloop_lendir.c \
-	srcs/structures/tab/len/ft_tab_lendir.c \
-	srcs/structures/tab/ft_is/ft_tabloop_itis.c \
-	srcs/structures/tab/dir/ft_tab_dir_reverse.c \
-	srcs/structures/tab/dir/ft_tab_dir_rclock.c \
-	srcs/structures/tab/dir/ft_tab_dir_nclock.c \
-	srcs/structures/tab/dir/ft_tab_dir_clock.c \
-	srcs/structures/tab/del/ft_tab_delete_row_len.c \
-	srcs/structures/tab/del/ft_tab_delete_row.c \
-	srcs/structures/tab/create/ft_tabnew_rectangle.c \
-	srcs/structures/tab/create/ft_tabnew_ptr.c \
-	srcs/structures/tab/create/ft_tabnew_dir.c \
-	srcs/structures/tab/create/ft_tab_square_it.c \
-	srcs/structures/tab/connect/ft_tabadd_start.c \
-	srcs/structures/tab/connect/ft_tabadd_end.c \
-	srcs/structures/tab/connect/ft_tabadd.c \
-	srcs/structures/list/transform/ft_lstmap.c \
-	srcs/structures/list/transform/ft_lstiter.c \
-	srcs/structures/list/move/ft_lstfind_th.c \
-	srcs/structures/list/move/ft_lst_reach_end.c \
-	srcs/structures/list/len/ft_lst_count.c \
-	srcs/structures/list/del/ft_lstdelone.c \
-	srcs/structures/list/del/ft_lstdel.c \
-	srcs/structures/list/create/ft_lstnew_ptr.c \
-	srcs/structures/list/create/ft_lstnew.c \
-	srcs/structures/list/connect/ft_lstcutone.c \
-	srcs/structures/list/connect/ft_lstadd_start.c \
-	srcs/structures/list/connect/ft_lstadd_here.c \
-	srcs/structures/list/connect/ft_lstadd_end.c \
-	srcs/structures/list/connect/ft_lstadd.c \
-	srcs/structures/tab/connect/ft_tab_cutone.c \
-	srcs/structures/tab/connect/ft_tabadd_here.c \
-	srcs/structures/tab/connect/ft_tab_cut_loop.c \
-	srcs/structures/tab/connect/ft_tabloop_it.c \
-	srcs/structures/tab/print/ft_tab_print_dir.c \
-	srcs/structures/tab/connect/ft_tab_connect_structs.c \
-	srcs/structures/tab/connect/ft_tab_connect_dir.c \
-	srcs/structures/list/del/ft_lst_free.c \
-	srcs/structures/tab/print/ft_tab_print_one_elmnt.c \
-	srcs/structures/tab/transform/ft_tabiter.c 
+PAT += 	-rw-r--r-- 1 ezalos ezalos 1337 mai   10 15:38 srcs/structures/tab/transform/ft_tabiter.c \
+	-rw-r--r-- 1 ezalos ezalos 1424 mai   10 15:38 srcs/structures/tab/print/ft_tab_print_one_elmnt.c \
+	-rw-r--r-- 1 ezalos ezalos 1354 mai   10 15:38 srcs/structures/tab/print/ft_tab_print_dir.c \
+	-rw-r--r-- 1 ezalos ezalos 1080 mai   10 15:38 srcs/structures/tab/move/ft_tab_reach_end.c \
+	-rw-r--r-- 1 ezalos ezalos 1152 mai   10 15:38 srcs/structures/tab/move/ft_tab_dirth.c \
+	-rw-r--r-- 1 ezalos ezalos 1575 mai   10 15:38 srcs/structures/tab/move/ft_tab_access.c \
+	-rw-r--r-- 1 ezalos ezalos 1145 mai   10 15:38 srcs/structures/tab/len/ft_tabloop_lendir.c \
+	-rw-r--r-- 1 ezalos ezalos 1115 mai   10 15:38 srcs/structures/tab/len/ft_tab_lendir.c \
+	-rw-r--r-- 1 ezalos ezalos 1134 mai   10 15:38 srcs/structures/tab/ft_is/ft_tabloop_itis.c \
+	-rw-r--r-- 1 ezalos ezalos  992 mai   10 15:38 srcs/structures/tab/dir/ft_tab_dir_reverse.c \
+	-rw-r--r-- 1 ezalos ezalos  991 mai   10 15:38 srcs/structures/tab/dir/ft_tab_dir_rclock.c \
+	-rw-r--r-- 1 ezalos ezalos 1007 mai   10 15:38 srcs/structures/tab/dir/ft_tab_dir_nclock.c \
+	-rw-r--r-- 1 ezalos ezalos  987 mai   10 15:38 srcs/structures/tab/dir/ft_tab_dir_clock.c \
+	-rw-r--r-- 1 ezalos ezalos 1371 mai   10 15:38 srcs/structures/tab/del/ft_tab_delete_row_len.c \
+	-rw-r--r-- 1 ezalos ezalos 1291 mai   10 15:38 srcs/structures/tab/del/ft_tab_delete_row.c \
+	-rw-r--r-- 1 ezalos ezalos 1445 mai   10 15:38 srcs/structures/tab/create/ft_tab_square_it.c \
+	-rw-r--r-- 1 ezalos ezalos 1573 mai   10 15:38 srcs/structures/tab/create/ft_tabnew_rectangle.c \
+	-rw-r--r-- 1 ezalos ezalos 1362 mai   10 15:38 srcs/structures/tab/create/ft_tabnew_ptr.c \
+	-rw-r--r-- 1 ezalos ezalos 1312 mai   10 15:38 srcs/structures/tab/create/ft_tabnew_dir.c \
+	-rw-r--r-- 1 ezalos ezalos 1118 mai   10 15:38 srcs/structures/tab/connect/ft_tabloop_it.c \
+	-rw-r--r-- 1 ezalos ezalos 1688 mai   10 15:38 srcs/structures/tab/connect/ft_tab_cutone.c \
+	-rw-r--r-- 1 ezalos ezalos 1149 mai   10 15:38 srcs/structures/tab/connect/ft_tab_cut_loop.c \
+	-rw-r--r-- 1 ezalos ezalos 1107 mai   10 15:38 srcs/structures/tab/connect/ft_tab_connect_structs.c \
+	-rw-r--r-- 1 ezalos ezalos 1519 mai   10 15:38 srcs/structures/tab/connect/ft_tab_connect_dir.c \
+	-rw-r--r-- 1 ezalos ezalos 1410 mai   10 15:38 srcs/structures/tab/connect/ft_tabadd_start.c \
+	-rw-r--r-- 1 ezalos ezalos 1501 mai   10 15:38 srcs/structures/tab/connect/ft_tabadd_here.c \
+	-rw-r--r-- 1 ezalos ezalos 1284 mai   10 15:38 srcs/structures/tab/connect/ft_tabadd_end.c \
+	-rw-r--r-- 1 ezalos ezalos 2421 mai   10 15:38 srcs/structures/tab/connect/ft_tabadd.c \
+	-rw-r--r-- 1 ezalos ezalos 1415 mai   10 15:38 srcs/structures/list/transform/ft_lstmap.c \
+	-rw-r--r-- 1 ezalos ezalos 1112 mai   10 15:38 srcs/structures/list/transform/ft_lstiter.c \
+	-rw-r--r-- 1 ezalos ezalos 1084 mai   10 15:38 srcs/structures/list/move/ft_lst_reach_end.c \
+	-rw-r--r-- 1 ezalos ezalos 1114 mai   10 15:38 srcs/structures/list/move/ft_lstfind_th.c \
+	-rw-r--r-- 1 ezalos ezalos 1095 mai   10 15:38 srcs/structures/list/len/ft_lst_count.c \
+	-rw-r--r-- 1 ezalos ezalos 1256 mai   10 15:38 srcs/structures/list/del/ft_lst_free.c \
+	-rw-r--r-- 1 ezalos ezalos 1110 mai   10 15:38 srcs/structures/list/del/ft_lstdelone.c \
+	-rw-r--r-- 1 ezalos ezalos 1217 mai   10 15:38 srcs/structures/list/del/ft_lstdel.c \
+	-rw-r--r-- 1 ezalos ezalos 1387 mai   10 15:38 srcs/structures/list/create/ft_lstnew_ptr.c \
+	-rw-r--r-- 1 ezalos ezalos 1350 mai   10 15:38 srcs/structures/list/create/ft_lstnew.c \
+	-rw-r--r-- 1 ezalos ezalos 1138 mai   10 15:38 srcs/structures/list/connect/ft_lstcutone.c \
+	-rw-r--r-- 1 ezalos ezalos 1026 mai   10 15:38 srcs/structures/list/connect/ft_lstadd_start.c \
+	-rw-r--r-- 1 ezalos ezalos 1081 mai   10 15:38 srcs/structures/list/connect/ft_lstadd_here.c \
+	-rw-r--r-- 1 ezalos ezalos 1076 mai   10 15:38 srcs/structures/list/connect/ft_lstadd_end.c \
+	-rw-r--r-- 1 ezalos ezalos 1203 mai   10 15:38 srcs/structures/list/connect/ft_lstadd.c 

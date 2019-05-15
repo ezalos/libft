@@ -6,7 +6,7 @@
 #    By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/12 15:04:16 by ldevelle          #+#    #+#              #
-#    Updated: 2019/05/10 13:33:46 by root             ###   ########.fr        #
+#    Updated: 2019/05/13 21:21:23 by root             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -109,6 +109,8 @@ BLUE	= \e[34m
 MAGENTA	= \e[35m
 CYAN	= \e[36m
 END     = \e[0m
+update_head	=	$(MAIN_FOLD:%=sh scripts/get_protos.sh % $(MASTER);)
+update_dep	=	$(MAIN_FOLD:%=sh scripts/get_mk_srcs.sh % $(MASTER);)
 else
 RED     = \x1b[31m
 GREEN   = \x1b[32m

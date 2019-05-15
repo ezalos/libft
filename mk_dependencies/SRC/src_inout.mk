@@ -4,6 +4,7 @@ SRC += 	ft_putstr.c \
 	ft_puttab_len.c \
 	ft_puttab.c \
 	ft_putstr_rnull.c \
+	ft_putstr_r0_fd.c \
 	ft_putstr_r0.c \
 	ft_putnbr.c \
 	ft_putbnbr_str.c \
@@ -20,7 +21,6 @@ SRC += 	ft_putstr.c \
 	ft_nb_len.c \
 	ft_nb_char_to_int.c \
 	ft_itoa.c \
+	ft_is_str_bigger_than_int.c \
 	ft_intlen.c \
-	ft_atoi.c \
-	ft_putstr_r0_fd.c \
-	ft_is_str_bigger_than_int.c 
+	ft_atoi.c 

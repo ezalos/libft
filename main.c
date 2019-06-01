@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/07 13:36:45 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/05/13 20:49:37 by root             ###   ########.fr       */
+/*   Updated: 2019/05/20 00:00:05 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int		main(int ac, char **av)
 	while (!ft_access_htable(i))
 		i++;
 	i--;
-	_CLEAR_SCREEN;
+	_C_CLEAR_SCREEN;
 	ft_place_cursor(0, 0);
 	while (++i < SIZE_HTABLE)
 		if (ft_access_htable(i))

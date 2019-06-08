@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 11:15:02 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/05/08 18:58:15 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/06/07 16:38:54 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@
 # endif
 
 # ifndef TIME_RECORD
-#  define TIME_RECORD	0
+#  define TIME_RECORD	1
 # endif
 
 /*

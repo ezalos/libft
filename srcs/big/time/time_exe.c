@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/19 12:52:19 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/05/06 12:49:57 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/06/07 16:46:01 by root             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ static t_time		*update_last(t_time *timee, char **last, const char *s)
 	{
 		tmp = (char*)*last;
 		*last = ft_strdup((const char*)s);
-		free(tmp);
+		ft_memdel((void**)&tmp);
 	}
 	cl(clock());
 	return (timee);

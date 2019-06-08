@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/25 22:03:00 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/05/19 15:05:38 by root             ###   ########.fr       */
+/*   Updated: 2019/06/08 18:05:51 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ t_tab		*ft_tabnew_ptr(void const *content, size_t content_size)
 	if (content_size && content != NULL)
 	{
 		new->content_size = content_size;
-		new->content = content;
+		new->content = (void*)content;
 	}
 	return (new);
 }

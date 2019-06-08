@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldevelle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/15 13:14:55 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/05/15 13:14:55 by ldevelle         ###   ########.fr       */
+/*   Created: 2019/06/08 18:05:13 by ldevelle          #+#    #+#             */
+/*   Updated: 2019/06/08 18:05:13 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define AUTO_MATHS_H
 
 int			ft_factorial(int nb);
+float		ft_fsqrt(int nb, int limite);
 intmax_t	ft_nb_in_range(intmax_t min, intmax_t max, intmax_t nb);
 intmax_t	ft_power(int nb, int power);
 intmax_t	ft_sum_to_nb(intmax_t nb);

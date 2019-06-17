@@ -14,7 +14,6 @@ SRC += 	ft_tabiter.c \
 	ft_tab_delete_row_len.c \
 	ft_tab_delete_row.c \
 	ft_tabnew_rectangle.c \
-	ft_tabnew_ptr.c \
 	ft_tabnew_dir.c \
 	ft_tab_square_it.c \
 	ft_tabloop_it.c \
@@ -40,4 +39,5 @@ SRC += 	ft_tabiter.c \
 	ft_lstadd_start.c \
 	ft_lstadd_here.c \
 	ft_lstadd_end.c \
-	ft_lstadd.c 
+	ft_lstadd.c \
+	ft_tabnew_ptr.c 

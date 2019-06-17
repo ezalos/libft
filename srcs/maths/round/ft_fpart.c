@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   auto_big.h                                         :+:      :+:    :+:   */
+/*   ft_fpart.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldevelle <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/13 23:47:50 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/06/13 23:47:50 by ldevelle         ###   ########.fr       */
+/*   Created: 2019/06/13 18:50:50 by ldevelle          #+#    #+#             */
+/*   Updated: 2019/06/13 18:50:56 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef AUTO_BIG_H
-# define AUTO_BIG_H
+#include "libft.h"
 
-int			ft_printf(const char *format, ...);
-char		*ft_strrev(char *str, size_t size);
-
-#endif
+float	ft_fpart(float x)
+{
+    return (x - (int)x);
+}

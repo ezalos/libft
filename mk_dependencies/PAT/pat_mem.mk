@@ -12,9 +12,9 @@ PAT += 	srcs/mem/transform/ft_swap.c \
 	srcs/mem/malloc/ft_memalloc.c \
 	srcs/mem/del/ft_strdel_multi.c \
 	srcs/mem/del/ft_strdel.c \
-	srcs/mem/del/ft_memdel.c \
 	srcs/mem/del/ft_free_with_nalloc.c \
 	srcs/mem/del/ft_del.c \
 	srcs/mem/copy/ft_memmove.c \
 	srcs/mem/copy/ft_memcpy.c \
-	srcs/mem/copy/ft_memccpy.c 
+	srcs/mem/copy/ft_memccpy.c \
+	srcs/mem/del/ft_memdel.c 

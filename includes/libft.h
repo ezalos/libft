@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 11:15:02 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/06/07 16:38:54 by root             ###   ########.fr       */
+/*   Updated: 2019/06/14 00:14:40 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,9 @@
 
 # include "./auto.h"
 
-# define BUFF_SIZE 256
-# define SIZE_HTABLE		5000
+# define BUFF_SIZE 		512
+# define BUFF_READ 		4194304
+# define SIZE_HTABLE	5000
 
 # ifndef P_MALLOC
 #  define P_MALLOC nalloc

@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memdel.c                                        :+:      :+:    :+:   */
+/*   ft_seed_string.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/12 11:10:47 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/06/13 23:43:55 by ldevelle         ###   ########.fr       */
+/*   Created: 2019/06/13 19:55:43 by ldevelle          #+#    #+#             */
+/*   Updated: 2019/06/13 23:51:27 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		ft_memdel(void **ap)
+intmax_t	ft_seed_string(const char *str)
 {
-	if (ap && *ap)
-	{
-		if (NREE)
-		{
-			ft_free_with_nalloc(*ap - 8);
-			*ap = NULL;
-		}
-		else
-		{
-			free(*ap);
-			*ap = NULL;
-		}
-	}
+	intmax_t	seed;
+	intmax_t	seedo;
+	int			len;
+	int			i;
+
+	len = ft_strlen(str);
+	seed = 0;
+	i = -1;
+	while (++i < len)
+		seed += (int)str[i] * (i + 1);
+	seedo = *str++;
+	while (*str)
+		seedo ^= *str++;
+	return (seed * seedo);
 }

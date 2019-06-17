@@ -13,4 +13,10 @@ SRC += 	ft_nprime.c \
 	ft_power.c \
 	ft_nb_in_range.c \
 	ft_fsqrt.c \
-	ft_factorial.c 
+	ft_factorial.c \
+	ft_abs.c \
+	ft_rfpart.c \
+	ft_fpart.c \
+	ft_ipart.c \
+	ft_rand.c \
+	ft_seed_string.c 

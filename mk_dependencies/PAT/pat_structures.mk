@@ -14,7 +14,6 @@ PAT += 	srcs/structures/tab/transform/ft_tabiter.c \
 	srcs/structures/tab/del/ft_tab_delete_row_len.c \
 	srcs/structures/tab/del/ft_tab_delete_row.c \
 	srcs/structures/tab/create/ft_tabnew_rectangle.c \
-	srcs/structures/tab/create/ft_tabnew_ptr.c \
 	srcs/structures/tab/create/ft_tabnew_dir.c \
 	srcs/structures/tab/create/ft_tab_square_it.c \
 	srcs/structures/tab/connect/ft_tabloop_it.c \
@@ -40,4 +39,5 @@ PAT += 	srcs/structures/tab/transform/ft_tabiter.c \
 	srcs/structures/list/connect/ft_lstadd_start.c \
 	srcs/structures/list/connect/ft_lstadd_here.c \
 	srcs/structures/list/connect/ft_lstadd_end.c \
-	srcs/structures/list/connect/ft_lstadd.c 
+	srcs/structures/list/connect/ft_lstadd.c \
+	srcs/structures/tab/create/ft_tabnew_ptr.c 

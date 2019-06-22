@@ -18,5 +18,5 @@ SRC += 	ft_nprime.c \
 	ft_rfpart.c \
 	ft_fpart.c \
 	ft_ipart.c \
-	ft_rand.c \
-	ft_seed_string.c 
+	ft_seed_string.c \
+	ft_rand.c 

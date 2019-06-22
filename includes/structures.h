@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/07 11:12:47 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/05/07 11:13:09 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/06/22 17:38:54 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,14 @@ typedef	struct		s_tab
 	void			*content;
 	size_t			content_size;
 }					t_tab;
+
+typedef	struct		s_gnl
+{
+	char			*content;
+	size_t			content_size;
+	int				fd;
+	int				end;
+}					t_gnl;
 
 typedef struct		s_progress
 {

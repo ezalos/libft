@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldevelle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/13 23:47:49 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/06/13 23:47:49 by ldevelle         ###   ########.fr       */
+/*   Created: 2019/06/22 17:42:55 by ldevelle          #+#    #+#             */
+/*   Updated: 2019/06/22 17:42:55 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ int			ft_patoi(const char *str);
 size_t		ft_u_nb_len(uintmax_t nb, size_t base);
 char		*ft_u_nb_to_a(uintmax_t n, size_t base);
 int			get_next_line(const int fd, char **line);
+int			ft_gnl(const int fd, char **line);
 void		ft_putchar(char c);
 void		ft_putchar_fd(char c, int fd);
 void		ft_putendl_fd(char const *s, int fd);

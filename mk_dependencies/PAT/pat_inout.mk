@@ -7,7 +7,6 @@ PAT += 	srcs/inout/write/string/ft_putstr.c \
 	srcs/inout/write/return/ft_putstr_r0_fd.c \
 	srcs/inout/write/return/ft_putstr_r0.c \
 	srcs/inout/write/nb/ft_putnbr.c \
-	srcs/inout/write/nb/ft_putbnbr_str.c \
 	srcs/inout/write/fd/ft_putstr_fd.c \
 	srcs/inout/write/fd/ft_putnbr_fd.c \
 	srcs/inout/write/fd/ft_putendl_fd.c \
@@ -23,4 +22,6 @@ PAT += 	srcs/inout/write/string/ft_putstr.c \
 	srcs/inout/converters/ft_itoa.c \
 	srcs/inout/converters/ft_is_str_bigger_than_int.c \
 	srcs/inout/converters/ft_intlen.c \
-	srcs/inout/converters/ft_atoi.c 
+	srcs/inout/converters/ft_atoi.c \
+	srcs/inout/write/nb/ft_putbnbr_str.c \
+	srcs/inout/read/ft_gnl.c 

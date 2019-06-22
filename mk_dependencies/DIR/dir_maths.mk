@@ -18,5 +18,5 @@ DIR += 	srcs/maths/suites/ \
 	srcs/maths/round/ \
 	srcs/maths/round/ \
 	srcs/maths/round/ \
-	srcs/maths/random/ \
-	srcs/maths/random/seed/ 
+	srcs/maths/random/seed/ \
+	srcs/maths/random/ 

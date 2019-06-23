@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldevelle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/22 17:42:56 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/06/22 17:42:56 by ldevelle         ###   ########.fr       */
+/*   Created: 2019/06/23 17:21:09 by ldevelle          #+#    #+#             */
+/*   Updated: 2019/06/23 17:21:09 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ char		*ft_strncpy(char *dest, const char *src, size_t n);
 char		*ft_strdup(const char *src);
 char		*ft_strjoin(char const *s1, char const *s2);
 char		*ft_strjoin_multi(size_t nb, ...);
+char		*ft_strrealloc(const char *src, size_t size);
 char		**ft_strsplit(char const *s, char c);
 char		*ft_strsub(char const *s, unsigned int start, size_t len);
 char		*ft_strtrim(char const *s);

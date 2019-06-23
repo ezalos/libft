@@ -37,4 +37,5 @@ DIR += 	srcs/strings/transform/ \
 	srcs/strings/compare/ \
 	srcs/strings/compare/ \
 	srcs/strings/compare/ \
-	srcs/strings/compare/ 
+	srcs/strings/compare/ \
+	srcs/strings/duplicate/ 

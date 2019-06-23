@@ -37,4 +37,5 @@ SRC += 	ft_strmapi.c \
 	ft_strnequ.c \
 	ft_strncmp.c \
 	ft_strequ.c \
-	ft_strcmp.c 
+	ft_strcmp.c \
+	ft_strrealloc.c 

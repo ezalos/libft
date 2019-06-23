@@ -6,109 +6,37 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/05 17:03:34 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/06/22 17:43:43 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/06/23 17:40:45 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		send_exceptions(char **line, t_gnl *gnl)
-{
-	if (gnl->content == NULL)
-	{
-		if (!(*line = ft_memalloc(1)))
-			return (-1);
-		return (0);
-	}
-	if (NULL == ft_strchr((char*)gnl->content, '\n'))
-	{
-		if (!(*(char*)gnl->content))
-		{
-			if (!(*line = ft_memalloc(1)))
-				return (-1);
-		}
-		else
-		{
-			if (!(*line = ft_strsub((char*)gnl->content, 0,
-			ft_strlen((char*)gnl->content))))
-				return (-1);
-		}
-		ft_bzero(gnl->content, ft_strlen((char*)gnl->content));
-		return (1);
-	}
-	return (1);
-}
-
-int		send_line(char **line, t_gnl *gnl)
-{
-	int		size_line;
-
-	if (gnl->content == NULL || NULL == ft_strchr((char*)gnl->content, '\n'))
-		return (send_exceptions(line, gnl));
-	size_line = (int)(ft_strchr((char*)gnl->content, '\n')
-	- (char*)gnl->content);
-	if (!(*line = ft_strsub((char*)gnl->content, 0, size_line)))
-		return (-1);
-	ft_memmove((char*)gnl->content, (char*)gnl->content + size_line + 1,
-				ft_strlen((char*)gnl->content + size_line + 1) + 1);
-	return (1);
-}
-
-int		save_file(t_gnl *gnl, char *buf, int read)
-{
-	char	*new;
-	int		size_save;
-	int		i;
-
-	if (gnl->content != NULL)
-		size_save = ft_strlen((char*)gnl->content);
-	else
-	{
-		if (!(gnl->content = ft_memalloc(1)))
-			return (-2);
-		size_save = 0;
-	}
-	if (!(new = ft_strjoin(gnl->content, buf)))
-		return (-2);
-	ft_strdel((char**)&gnl->content);
-	gnl->content = new;
-	ft_bzero(buf, BUFF_SIZE + 1);
-	if (read != BUFF_SIZE)
-		return (1);
-	i = -1;
-	while (++i <= (read + size_save))
-		if (((char*)gnl->content)[i] == '\n')
-			return (i);
-	return (-1);
-}
-
 int		get_line(t_gnl *gnl, char **line)
 {
-	char			buf[BUFF_SIZE + 1];
-	int				v_read;
-	int				v_save;
+	char	*tmp;
+	int		next_break;
 
-	ft_bzero(buf, BUFF_SIZE + 1);
-	if (!gnl->end)
-		while (0 < (v_read = read(gnl->fd, buf, BUFF_SIZE)))
-		{
-			if (-2 == (v_save = save_file(gnl, buf, v_read)))
-				return (-1);
-			if (v_save >= 0)
-				return (send_line(line, gnl));
-		}
-	else
-		v_read = 0;
-	if (v_read == -1)
-		return (-1);
-	if (!(gnl->content) || 0 == ft_strlen(gnl->content))
+	if (gnl->end)
 		return (0);
-	if (v_read == 0)
+	if (!gnl->content && !(gnl->content = ft_read_file(gnl->fd, &gnl->content_size)))
+		return (-1);
+	if ((tmp = ft_strchr(gnl->content, (int)'\n')))
+	 	next_break = (tmp - gnl->content);
+	else
+		next_break = ft_strlen(gnl->content);
+	*line = ft_memalloc(next_break + 1);
+	ft_memmove(*line, gnl->content, next_break);
+	(*line)[next_break] = '\0';
+	gnl->content += next_break + 1;
+	gnl->already_read += next_break + 1;
+	gnl->content_size -= next_break + 1;
+	if (gnl->content_size <= 0)
 	{
-		gnl->end = 1;
-		return (send_line(line, gnl));
+		gnl->end = 0;
+		ft_strdel(&gnl->content);
 	}
-	return (-1);
+	return (next_break);
 }
 
 int		ft_gnl(const int fd, char **line)

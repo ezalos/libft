@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/24 18:06:47 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/06/23 20:39:51 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/06/24 19:31:52 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ int			ft_printf(const char *format, ...)
 	t_printf			print;
 	int					r_val;
 
+	// return (0);
 	if (!(init_struct(&print, format)))
 		return (-1);
 	va_start(print.ap, format);

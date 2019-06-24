@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/05 17:03:34 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/06/23 17:40:45 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/06/24 17:14:21 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,16 @@ int		get_line(t_gnl *gnl, char **line)
 	int		next_break;
 
 	if (gnl->end)
-		return (0);
+	{
+		gnl->content = ft_read_file(gnl->fd, &gnl->content_size);
+		if (!gnl->content_size)
+		{
+			ft_strdel(&gnl->content);
+			return (0);
+		}
+		else
+			gnl->end = 1;
+	}
 	if (!gnl->content && !(gnl->content = ft_read_file(gnl->fd, &gnl->content_size)))
 		return (-1);
 	if ((tmp = ft_strchr(gnl->content, (int)'\n')))

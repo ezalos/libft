@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/07 13:36:45 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/05/20 00:00:05 by root             ###   ########.fr       */
+/*   Updated: 2019/07/02 18:40:15 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,22 +30,7 @@ int		main(int ac, char **av)
 	if (ac != 2)
 		return (0);
 	i = 0;
-	while (++i < SIZE_HTABLE)
-		ft_store_htable((void*)ft_random(0, 5000, 0, 0), sizeof(int), &ft_hfuncoo);
-
-	// ft_get_file_in_htable(av[1]);
-	i = 0;
-	while (!ft_access_htable(i))
-		i++;
-	i--;
-	_C_CLEAR_SCREEN;
-	ft_place_cursor(0, 0);
-	while (++i < SIZE_HTABLE)
-		if (ft_access_htable(i))
-			ft_printf("[%*d] %~{155;255;155}%*d%~{}\n",
-			ft_nb_len(SIZE_HTABLE, 10), i, ft_access_htable(i) / 3, ft_access_htable(i));
-		else
-			ft_printf("[%*d]%~{255;155;155}0%~{}\n", ft_nb_len(SIZE_HTABLE, 10), i);
-	ft_clean_garbage();
+	(void)av;
+	ft_printf("Hello: %f\n", 14.3);
 	return (0);
 }

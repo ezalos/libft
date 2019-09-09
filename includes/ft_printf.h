@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/24 18:06:30 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/05/06 19:33:38 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/07/02 18:49:54 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,9 @@ typedef struct			s_printf
 ** 	unsigned char		exposant[8 * 3 + 1];
 ** 	unsigned char		mantisse[5 * 8];
 ** }						t_float;
-**
+*/
+
+/*
 ** typedef struct			s_pre_min
 ** {
 ** 	size_t				len_str;

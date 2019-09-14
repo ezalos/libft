@@ -6,7 +6,7 @@
 #    By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/12 15:04:16 by ldevelle          #+#    #+#              #
-#    Updated: 2019/09/11 18:41:07 by ldevelle         ###   ########.fr        #
+#    Updated: 2019/09/14 18:57:23 by ldevelle         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,6 @@ TESTEUR = test
 CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror
-CFLAGS =
 
 DFLAGS = -Wall -Wextra -Werror -fsanitize=address,undefined -g3 -pedantic\
 -ansi -O2 -Wchar-subscripts -Wcomment -Wformat=2 -Wimplicit-int\

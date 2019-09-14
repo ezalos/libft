@@ -6,14 +6,15 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/05 17:03:34 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/09/14 18:53:45 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/09/14 18:59:39 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		update_gnl_struct(t_gnl *gnl, char **line, char *tmp)
+int		update_gnl_struct(t_gnl *gnl, char **line)
 {
+	char	*tmp;
 	int		next_break;
 
 	if ((tmp = ft_strchr(gnl->content, (int)'\n')))
@@ -36,8 +37,6 @@ int		update_gnl_struct(t_gnl *gnl, char **line, char *tmp)
 
 int		get_line(t_gnl *gnl, char **line)
 {
-	char	*tmp;
-
 	if (gnl->end)
 	{
 		gnl->content = ft_read_file(gnl->fd, &gnl->content_size);
@@ -52,7 +51,7 @@ int		get_line(t_gnl *gnl, char **line)
 	if (!gnl->content
 	&& !(gnl->content = ft_read_file(gnl->fd, &gnl->content_size)))
 		return (-1);
-	return (update_gnl_struct(gnl, line, tmp));
+	return (update_gnl_struct(gnl, line));
 }
 
 int		create_struct_for_fd(int fd, char **line, t_list *tmp)

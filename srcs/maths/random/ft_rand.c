@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/11 20:52:12 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/06/13 23:55:33 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/09/14 18:58:54 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,6 @@ static intmax_t	ft_end_n_random(intmax_t rando, size_t len)
 
 intmax_t		ft_rand(intmax_t max, intmax_t seed)
 {
-	intmax_t	ran;
 	size_t		len;
 
 	len = 32;

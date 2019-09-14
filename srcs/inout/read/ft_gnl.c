@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/05 17:03:34 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/09/14 18:32:18 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/09/14 18:36:08 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,8 +64,7 @@ int		ft_gnl(const int fd, char **line)
 		((t_gnl*)gnl->content)->fd = fd;
 		return (get_line(gnl->content, line));
 	}
-	tmp = gnl;
-	if (((t_gnl*)tmp->content)->fd == fd)
+	if ((tmp = gnl) && ((t_gnl*)tmp->content)->fd == fd)
 		return (get_line(tmp->content, line));
 	while (tmp->next != NULL)
 	{

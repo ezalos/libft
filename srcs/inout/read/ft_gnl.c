@@ -6,31 +6,16 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/05 17:03:34 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/09/14 18:36:08 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/09/14 18:53:45 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		get_line(t_gnl *gnl, char **line)
+int		update_gnl_struct(t_gnl *gnl, char **line, char *tmp)
 {
-	char	*tmp;
 	int		next_break;
 
-	if (gnl->end)
-	{
-		gnl->content = ft_read_file(gnl->fd, &gnl->content_size);
-		if (!gnl->content_size)
-		{
-			ft_strdel(&gnl->content);
-			return (0);
-		}
-		else
-			gnl->end = 1;
-	}
-	if (!gnl->content
-	&& !(gnl->content = ft_read_file(gnl->fd, &gnl->content_size)))
-		return (-1);
 	if ((tmp = ft_strchr(gnl->content, (int)'\n')))
 		next_break = (tmp - gnl->content);
 	else
@@ -49,6 +34,36 @@ int		get_line(t_gnl *gnl, char **line)
 	return (next_break);
 }
 
+int		get_line(t_gnl *gnl, char **line)
+{
+	char	*tmp;
+
+	if (gnl->end)
+	{
+		gnl->content = ft_read_file(gnl->fd, &gnl->content_size);
+		if (!gnl->content_size)
+		{
+			ft_strdel(&gnl->content);
+			return (0);
+		}
+		else
+			gnl->end = 1;
+	}
+	if (!gnl->content
+	&& !(gnl->content = ft_read_file(gnl->fd, &gnl->content_size)))
+		return (-1);
+	return (update_gnl_struct(gnl, line, tmp));
+}
+
+int		create_struct_for_fd(int fd, char **line, t_list *tmp)
+{
+	if (!(tmp->next = ft_lstnew(0, fd))
+	|| !(tmp->next->content = ft_memalloc(sizeof(t_gnl))))
+		return (-1);
+	((t_gnl*)tmp->next->content)->fd = fd;
+	return (get_line(tmp->next->content, line));
+}
+
 int		ft_gnl(const int fd, char **line)
 {
 	static	t_list	*gnl;
@@ -64,7 +79,8 @@ int		ft_gnl(const int fd, char **line)
 		((t_gnl*)gnl->content)->fd = fd;
 		return (get_line(gnl->content, line));
 	}
-	if ((tmp = gnl) && ((t_gnl*)tmp->content)->fd == fd)
+	tmp = gnl;
+	if (((t_gnl*)tmp->content)->fd == fd)
 		return (get_line(tmp->content, line));
 	while (tmp->next != NULL)
 	{
@@ -72,9 +88,5 @@ int		ft_gnl(const int fd, char **line)
 			return (get_line(tmp->next->content, line));
 		tmp = tmp->next;
 	}
-	if (!(tmp->next = ft_lstnew(0, fd))
-	|| !(tmp->next->content = ft_memalloc(sizeof(t_gnl))))
-		return (-1);
-	((t_gnl*)tmp->next->content)->fd = fd;
-	return (get_line(tmp->next->content, line));
+	return (create_struct_for_fd(fd, line, tmp));
 }

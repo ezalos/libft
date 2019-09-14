@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/05 17:03:34 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/06/24 17:14:21 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/09/14 18:32:18 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,11 @@ int		get_line(t_gnl *gnl, char **line)
 		else
 			gnl->end = 1;
 	}
-	if (!gnl->content && !(gnl->content = ft_read_file(gnl->fd, &gnl->content_size)))
+	if (!gnl->content
+	&& !(gnl->content = ft_read_file(gnl->fd, &gnl->content_size)))
 		return (-1);
 	if ((tmp = ft_strchr(gnl->content, (int)'\n')))
-	 	next_break = (tmp - gnl->content);
+		next_break = (tmp - gnl->content);
 	else
 		next_break = ft_strlen(gnl->content);
 	*line = ft_memalloc(next_break + 1);
@@ -57,7 +58,8 @@ int		ft_gnl(const int fd, char **line)
 		return (-1);
 	if (gnl == (t_list*)NULL)
 	{
-		if (!(gnl = ft_lstnew(0, fd)) || !(gnl->content = ft_memalloc(sizeof(t_gnl))))
+		if (!(gnl = ft_lstnew(0, fd))
+		|| !(gnl->content = ft_memalloc(sizeof(t_gnl))))
 			return (-1);
 		((t_gnl*)gnl->content)->fd = fd;
 		return (get_line(gnl->content, line));
@@ -71,7 +73,8 @@ int		ft_gnl(const int fd, char **line)
 			return (get_line(tmp->next->content, line));
 		tmp = tmp->next;
 	}
-	if (!(tmp->next = ft_lstnew(0, fd)) || !(tmp->next->content = ft_memalloc(sizeof(t_gnl))))
+	if (!(tmp->next = ft_lstnew(0, fd))
+	|| !(tmp->next->content = ft_memalloc(sizeof(t_gnl))))
 		return (-1);
 	((t_gnl*)tmp->next->content)->fd = fd;
 	return (get_line(tmp->next->content, line));

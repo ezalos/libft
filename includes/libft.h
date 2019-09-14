@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 11:15:02 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/09/09 11:07:36 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/09/14 18:31:16 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,8 +51,8 @@
 #  define TIME_RECORD	1
 # endif
 
-#  define DEBUG_FUNC	ft_printf("%s\n", __func__)
-#  define DEBUG_COLOR	ft_printf("%~{?}%s\n", __func__)
+# define DEBUG_FUNC		ft_printf("%s\n", __func__)
+# define DEBUG_COLOR	ft_printf("%~{?}%s\n", __func__)
 
 /*
 ** # define ILLEGAL (intmax_t)&rando

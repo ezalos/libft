@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/13 18:50:50 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/06/13 18:50:56 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/09/14 18:24:06 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 float	ft_fpart(float x)
 {
-    return (x - (int)x);
+	return (x - (int)x);
 }

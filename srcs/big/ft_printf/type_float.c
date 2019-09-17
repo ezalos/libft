@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/07 15:54:32 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/07/02 18:49:48 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/09/17 13:52:12 by ezalos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,8 @@
 
 int			float_exception(t_printf *print, double ldb)
 {
-	unsigned char	*conv;
 	char			*str;
-	int				i;
 
-	conv = (unsigned char*)&ldb;
-	i = -1;
 	if (ldb < 0 && ldb / 2 == ldb)
 		str = ft_strdup("-inf");
 	else if (ldb != ldb)

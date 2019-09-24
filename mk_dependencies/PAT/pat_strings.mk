@@ -13,7 +13,6 @@ PAT += 	srcs/strings/transform/ft_strmapi.c \
 	srcs/strings/search/ft_char_srch.c \
 	srcs/strings/len/ft_strnlen.c \
 	srcs/strings/len/ft_strlen.c \
-	srcs/strings/len/.ft_strfastlen.c \
 	srcs/strings/ft_is/ft_toupper.c \
 	srcs/strings/ft_is/ft_tolower.c \
 	srcs/strings/ft_is/ft_isupper.c \

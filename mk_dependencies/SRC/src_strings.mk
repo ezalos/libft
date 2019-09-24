@@ -13,7 +13,6 @@ SRC += 	ft_strmapi.c \
 	ft_char_srch.c \
 	ft_strnlen.c \
 	ft_strlen.c \
-	.ft_strfastlen.c \
 	ft_toupper.c \
 	ft_tolower.c \
 	ft_isupper.c \

@@ -15,8 +15,8 @@ DIR += 	srcs/maths/suites/ \
 	srcs/maths/operators/ \
 	srcs/maths/operators/ \
 	srcs/maths/operators/ \
-	srcs/maths/round/ \
-	srcs/maths/round/ \
-	srcs/maths/round/ \
 	srcs/maths/random/seed/ \
+	srcs/maths/round/ \
+	srcs/maths/round/ \
+	srcs/maths/round/ \
 	srcs/maths/random/ 

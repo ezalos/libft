@@ -13,7 +13,6 @@ DIR += 	srcs/strings/transform/ \
 	srcs/strings/search/ \
 	srcs/strings/len/ \
 	srcs/strings/len/ \
-	srcs/strings/len/ \
 	srcs/strings/ \
 	srcs/strings/ \
 	srcs/strings/ \

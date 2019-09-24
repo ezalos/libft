@@ -15,8 +15,8 @@ PAT += 	srcs/maths/suites/ft_nprime.c \
 	srcs/maths/operators/ft_fsqrt.c \
 	srcs/maths/operators/ft_factorial.c \
 	srcs/maths/operators/ft_abs.c \
-	srcs/maths/round/ft_rfpart.c \
-	srcs/maths/round/ft_fpart.c \
-	srcs/maths/round/ft_ipart.c \
 	srcs/maths/random/seed/ft_seed_string.c \
+	srcs/maths/round/ft_ipart.c \
+	srcs/maths/round/ft_fpart.c \
+	srcs/maths/round/ft_rfpart.c \
 	srcs/maths/random/ft_rand.c 

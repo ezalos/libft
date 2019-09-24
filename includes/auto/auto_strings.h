@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldevelle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/23 17:21:09 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/06/23 17:21:09 by ldevelle         ###   ########.fr       */
+/*   Created: 2019/09/24 12:05:23 by ldevelle          #+#    #+#             */
+/*   Updated: 2019/09/24 12:05:23 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ int			ft_isprint(int c);
 int			ft_isupper(int c);
 int			ft_tolower(int c);
 int			ft_toupper(int c);
-size_t		ft_strfastlen(const char *str);
 size_t		ft_strlen(const char *s);
 size_t		ft_strnlen(const char *s, size_t size);
 int			ft_char_srch(const char src, const char *dlt);

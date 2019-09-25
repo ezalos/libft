@@ -20,7 +20,6 @@ SRC += 	ft_tabiter.c \
 	ft_tabadd_start.c \
 	ft_tabadd_here.c \
 	ft_tabadd_end.c \
-	ft_tabadd.c \
 	ft_tab_cutone.c \
 	ft_tab_cut_loop.c \
 	ft_tab_connect_structs.c \
@@ -40,4 +39,5 @@ SRC += 	ft_tabiter.c \
 	ft_lstadd_here.c \
 	ft_lstadd_end.c \
 	ft_lstadd.c \
-	ft_tabnew_ptr.c 
+	ft_tabnew_ptr.c \
+	ft_tabadd.c 

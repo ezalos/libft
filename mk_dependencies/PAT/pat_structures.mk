@@ -20,7 +20,6 @@ PAT += 	srcs/structures/tab/transform/ft_tabiter.c \
 	srcs/structures/tab/connect/ft_tabadd_start.c \
 	srcs/structures/tab/connect/ft_tabadd_here.c \
 	srcs/structures/tab/connect/ft_tabadd_end.c \
-	srcs/structures/tab/connect/ft_tabadd.c \
 	srcs/structures/tab/connect/ft_tab_cutone.c \
 	srcs/structures/tab/connect/ft_tab_cut_loop.c \
 	srcs/structures/tab/connect/ft_tab_connect_structs.c \
@@ -40,4 +39,5 @@ PAT += 	srcs/structures/tab/transform/ft_tabiter.c \
 	srcs/structures/list/connect/ft_lstadd_here.c \
 	srcs/structures/list/connect/ft_lstadd_end.c \
 	srcs/structures/list/connect/ft_lstadd.c \
-	srcs/structures/tab/create/ft_tabnew_ptr.c 
+	srcs/structures/tab/create/ft_tabnew_ptr.c \
+	srcs/structures/tab/connect/ft_tabadd.c 

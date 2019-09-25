@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/23 16:51:21 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/06/23 16:55:07 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/09/25 19:01:37 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,12 @@ char		*ft_strrealloc(const char *src, size_t size)
 {
 	char	*str;
 
-	if (!(str = ft_memalloc(size + 1)))
+	if (!(str = ft_memalloc(size)))
 		return (NULL);
-	str = ft_strcpy(str, src);
-	ft_strdel((char**)&src);
+	if (src)
+	{
+		str = ft_strcpy(str, src);
+		ft_strdel((char**)&src);
+	}
 	return (str);
 }

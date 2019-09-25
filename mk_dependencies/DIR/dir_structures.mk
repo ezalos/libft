@@ -24,7 +24,6 @@ DIR += 	srcs/structures/tab/transform/ \
 	srcs/structures/tab/connect/ \
 	srcs/structures/tab/connect/ \
 	srcs/structures/tab/connect/ \
-	srcs/structures/tab/connect/ \
 	srcs/structures/list/transform/ \
 	srcs/structures/list/transform/ \
 	srcs/structures/list/move/ \
@@ -40,4 +39,5 @@ DIR += 	srcs/structures/tab/transform/ \
 	srcs/structures/list/connect/ \
 	srcs/structures/list/connect/ \
 	srcs/structures/list/connect/ \
-	srcs/structures/tab/create/ 
+	srcs/structures/tab/create/ \
+	srcs/structures/tab/connect/ 

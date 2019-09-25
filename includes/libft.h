@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 11:15:02 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/09/14 19:09:44 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/09/25 19:15:36 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@
 # ifndef BUFF_SIZE
 #  define BUFF_SIZE 	65536
 # endif
-# define BUFF_READ 		4194304
+# define BUFF_READ 		4194304 / 32
 # define SIZE_HTABLE	5000
 
 # ifndef P_MALLOC

@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/05 17:03:34 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/09/14 18:59:39 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/09/24 16:54:37 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int		update_gnl_struct(t_gnl *gnl, char **line)
 	return (next_break);
 }
 
-int		get_line(t_gnl *gnl, char **line)
+int		get_line_2(t_gnl *gnl, char **line)
 {
 	if (gnl->end)
 	{
@@ -60,7 +60,7 @@ int		create_struct_for_fd(int fd, char **line, t_list *tmp)
 	|| !(tmp->next->content = ft_memalloc(sizeof(t_gnl))))
 		return (-1);
 	((t_gnl*)tmp->next->content)->fd = fd;
-	return (get_line(tmp->next->content, line));
+	return (get_line_2(tmp->next->content, line));
 }
 
 int		ft_gnl(const int fd, char **line)
@@ -76,15 +76,15 @@ int		ft_gnl(const int fd, char **line)
 		|| !(gnl->content = ft_memalloc(sizeof(t_gnl))))
 			return (-1);
 		((t_gnl*)gnl->content)->fd = fd;
-		return (get_line(gnl->content, line));
+		return (get_line_2(gnl->content, line));
 	}
 	tmp = gnl;
 	if (((t_gnl*)tmp->content)->fd == fd)
-		return (get_line(tmp->content, line));
+		return (get_line_2(tmp->content, line));
 	while (tmp->next != NULL)
 	{
 		if (((t_gnl*)tmp->next->content)->fd == fd)
-			return (get_line(tmp->next->content, line));
+			return (get_line_2(tmp->next->content, line));
 		tmp = tmp->next;
 	}
 	return (create_struct_for_fd(fd, line, tmp));

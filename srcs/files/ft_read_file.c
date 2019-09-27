@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/13 23:30:39 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/09/25 19:09:08 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/09/27 19:50:37 by ezalos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ char		*ft_read_file(int fd, int *size)
 	{
 		if (buff[0] == '\0')
 			return (NULL);
-		buff[ret - 1] = '\0';
+		buff[ret] = '\0';
 		*size += ret;
 		if (!(dest = ft_strrealloc(dest, *size + 1)))
 			return (NULL);

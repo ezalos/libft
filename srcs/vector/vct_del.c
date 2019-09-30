@@ -1,19 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   auto_big.h                                         :+:      :+:    :+:   */
+/*   vct_del.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldevelle <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: amartino <amartino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/30 13:48:22 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/09/30 13:48:22 by ldevelle         ###   ########.fr       */
+/*   Created: 2019/08/27 16:30:22 by amartino          #+#    #+#             */
+/*   Updated: 2019/09/20 10:57:44 by fkante           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef AUTO_BIG_H
-# define AUTO_BIG_H
+#include "libft.h"
 
-int			ft_printf(const char *format, ...);
-char		*ft_strrev(char *str, size_t size);
+/*
+**	Free the vector and set it to NULL
+*/
 
-#endif
+void			vct_del(t_vector **vector)
+{
+	if (*vector != NULL && (*vector)->str != NULL)
+		ft_strdel(&((*vector)->str));
+	ft_memdel((void**)vector);
+}

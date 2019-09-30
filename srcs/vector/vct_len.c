@@ -1,19 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   auto_big.h                                         :+:      :+:    :+:   */
+/*   vct_len.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldevelle <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: amartino <amartino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/30 13:48:22 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/09/30 13:48:22 by ldevelle         ###   ########.fr       */
+/*   Created: 2019/09/01 14:54:09 by amartino          #+#    #+#             */
+/*   Updated: 2019/09/03 17:14:29 by amartino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef AUTO_BIG_H
-# define AUTO_BIG_H
+#include "libft.h"
 
-int			ft_printf(const char *format, ...);
-char		*ft_strrev(char *str, size_t size);
+/*
+** Return the len of the vector
+*/
 
-#endif
+size_t	vct_len(t_vector *vector)
+{
+	if (vector == NULL)
+		return (0);
+	return (vector->len);
+}

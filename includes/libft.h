@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 11:15:02 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/09/25 19:15:36 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/09/30 13:41:14 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@
 # include "./time_exe.h"
 # include "./structures.h"
 # include "./terminal_defines.h"
+# include "./vector.h"
+# include "./define.h"
 
 # ifndef ILLEGAL
 #  include <time.h>

@@ -1,19 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   auto_big.h                                         :+:      :+:    :+:   */
+/*   vct_bzero.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldevelle <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: amartino <amartino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/30 13:48:22 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/09/30 13:48:22 by ldevelle         ###   ########.fr       */
+/*   Created: 2019/08/29 17:05:32 by amartino          #+#    #+#             */
+/*   Updated: 2019/09/03 17:13:05 by amartino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef AUTO_BIG_H
-# define AUTO_BIG_H
+#include "libft.h"
 
-int			ft_printf(const char *format, ...);
-char		*ft_strrev(char *str, size_t size);
+/*
+**	Fill the allocated bloc with '\0'
+*/
 
-#endif
+void			vct_bzero(t_vector *vector)
+{
+	if (vector != NULL && vector->str != NULL)
+	{
+		ft_bzero(vector->str, vector->size);
+		vector->len = 0;
+	}
+}

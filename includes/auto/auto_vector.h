@@ -1,27 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   auto.h                                             :+:      :+:    :+:   */
+/*   auto_vector.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldevelle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/30 13:48:24 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/09/30 13:48:24 by ldevelle         ###   ########.fr       */
+/*   Created: 2019/09/30 13:48:23 by ldevelle          #+#    #+#             */
+/*   Updated: 2019/09/30 13:48:23 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef AUTO_H
-# define AUTO_H
+#ifndef AUTO_VECTOR_H
+# define AUTO_VECTOR_H
 
-# include "auto/auto_big.h"
-# include "auto/auto_data_base.h"
-# include "auto/auto_files.h"
-# include "auto/auto_inout.h"
-# include "auto/auto_maths.h"
-# include "auto/auto_mem.h"
-# include "auto/auto_strings.h"
-# include "auto/auto_structures.h"
-# include "auto/auto_terminal.h"
-# include "auto/auto_vector.h"
 
 #endif

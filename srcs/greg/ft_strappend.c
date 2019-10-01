@@ -1,25 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   auto_data_base.h                                   :+:      :+:    :+:   */
+/*   ft_strappend.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gtaja <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/01 17:20:35 by gtaja             #+#    #+#             */
-/*   Updated: 2019/10/01 17:20:35 by gtaja            ###   ########.fr       */
+/*   Created: 2019/01/29 18:45:45 by gtaja             #+#    #+#             */
+/*   Updated: 2019/01/29 18:59:54 by gtaja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef AUTO_DATA_BASE_H
-# define AUTO_DATA_BASE_H
+#include "libft.h"
+#include <stdlib.h>
 
-size_t		ft_access_htable(size_t key);
-int			ft_get_file_in_htable(char *str);
-ssize_t		ft_hfunc(void *data, size_t size);
-size_t		**ft_htable_mem(void);
-ssize_t		ft_store_htable(void *data, size_t size,
-		ssize_t (*hf)(void *, size_t));
-ssize_t		ft_unstore_htable(void *data, size_t size,
-		ssize_t (*hf)(void *, size_t));
+int		ft_strappend(char **base, char *more)
+{
+	char	*tmp;
 
-#endif
+	if (base == NULL || more == NULL)
+		return (0);
+	if (*base == NULL)
+	{
+		if (!(*base = ft_strdup(more)))
+			return (0);
+		return (1);
+	}
+	tmp = *base;
+	if (!(*base = ft_strnew(ft_strlen(*base) + ft_strlen(more))))
+		return (0);
+	ft_strcpy(*base, tmp);
+	ft_strcat(*base, more);
+	free(tmp);
+	return (1);
+}

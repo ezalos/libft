@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   auto.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldevelle <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: gtaja <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/30 13:48:24 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/09/30 13:48:24 by ldevelle         ###   ########.fr       */
+/*   Created: 2019/10/01 17:20:36 by gtaja             #+#    #+#             */
+/*   Updated: 2019/10/01 17:20:36 by gtaja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include "auto/auto_big.h"
 # include "auto/auto_data_base.h"
 # include "auto/auto_files.h"
+# include "auto/auto_greg.h"
 # include "auto/auto_inout.h"
 # include "auto/auto_maths.h"
 # include "auto/auto_mem.h"

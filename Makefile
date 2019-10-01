@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+         #
+#    By: gtaja <gtaja@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/12 15:04:16 by ldevelle          #+#    #+#              #
-#    Updated: 2019/09/30 13:47:14 by ldevelle         ###   ########.fr        #
+#    Updated: 2019/10/01 15:40:28 by gtaja            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ TESTEUR = test
 
 CC = gcc
 
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g3 -fsanitize=address
 
 DFLAGS = -Wall -Wextra -Werror -fsanitize=address,undefined -g3 -pedantic\
 -ansi -O2 -Wchar-subscripts -Wcomment -Wformat=2 -Wimplicit-int\
@@ -42,7 +42,7 @@ DFLAGS = -Wall -Wextra -Werror -fsanitize=address,undefined -g3 -pedantic\
 
 MASTER		= srcs/
 
-MAIN_FOLD = inout maths mem strings structures terminal big files data_base vector
+MAIN_FOLD = inout maths mem strings structures terminal big files data_base vector greg
 
 HEAD_DIR = ./includes/
 

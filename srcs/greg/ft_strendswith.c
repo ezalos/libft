@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strendswith.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gtaja <gtaja@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/12 17:11:48 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/10/01 15:59:35 by gtaja            ###   ########.fr       */
+/*   Created: 2019/09/24 16:10:11 by gtaja             #+#    #+#             */
+/*   Updated: 2019/09/24 21:16:12 by gtaja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *src)
+int	ft_strendswith(char *str, char *ends)
 {
-	char	*dest;
-	int		i;
-	int		size;
+	int	i;
+	int	j;
 
-	size = ft_strlen(src);
-	if (!(dest = (char*)P_MALLOC(sizeof(char) * (size + 1))))
-		return (NULL);
-	dest[size] = '\0';
-	i = -1;
-	while (++i < size)
-		dest[i] = src[i];
-	return (dest);
+	i = ft_strlen(ends) - 1;
+	j = ft_strlen(str) - 1;
+	if (i > j)
+		return (0);
+	while (i >= 0)
+	{
+		if (ends[i] != ends[j])
+			return (0);
+		i--;
+		j--;
+	}
+	return (1);
 }

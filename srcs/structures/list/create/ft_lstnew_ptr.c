@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew_ptr.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gtaja <gtaja@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 17:15:19 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/03/08 20:34:41 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/10/01 17:22:38 by gtaja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,8 @@ t_list	*ft_lstnew_ptr(void const *content, size_t content_size)
 	}
 	else
 	{
+		new->content = content;
 		new->content_size = content_size;
-		if (!content_size || !(new->content = P_MALLOC(content_size)))
-		{
-			ft_memdel((void**)&new);
-			return (NULL);
-		}
-		ft_memmove(new->content, (void*)content, content_size);
 	}
 	new->next = NULL;
 	return (new);

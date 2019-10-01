@@ -6,7 +6,7 @@
 /*   By: gtaja <gtaja@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 17:15:19 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/10/01 17:22:38 by gtaja            ###   ########.fr       */
+/*   Updated: 2019/10/01 17:31:18 by gtaja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ t_list	*ft_lstnew_ptr(void const *content, size_t content_size)
 	}
 	else
 	{
-		new->content = content;
+		new->content = (void*)content;
 		new->content_size = content_size;
 	}
 	new->next = NULL;

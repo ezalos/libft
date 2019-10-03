@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 11:15:02 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/09/25 19:15:36 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/10/03 15:11:41 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@
 # include "./time_exe.h"
 # include "./structures.h"
 # include "./terminal_defines.h"
+# include "./define.h"
 
 # ifndef ILLEGAL
 #  include <time.h>
@@ -54,6 +55,7 @@
 # endif
 
 # define DEBUG_FUNC		ft_printf("%s\n", __func__)
+# define DEBUG_INT(ret)	ft_printf("%s: %d\n", __func__, ret)
 # define DEBUG_COLOR	ft_printf("%~{?}%s\n", __func__)
 
 /*

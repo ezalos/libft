@@ -6,7 +6,7 @@
 /*   By: gtaja <gtaja@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/24 16:10:11 by gtaja             #+#    #+#             */
-/*   Updated: 2019/09/24 21:16:12 by gtaja            ###   ########.fr       */
+/*   Updated: 2019/10/10 14:30:03 by gtaja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_strendswith(char *str, char *ends)
 		return (0);
 	while (i >= 0)
 	{
-		if (ends[i] != ends[j])
+		if (ends[i] != str[j])
 			return (0);
 		i--;
 		j--;

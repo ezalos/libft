@@ -6,7 +6,7 @@
 #    By: gtaja <gtaja@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/12 15:04:16 by ldevelle          #+#    #+#              #
-#    Updated: 2019/10/01 15:40:28 by gtaja            ###   ########.fr        #
+#    Updated: 2019/10/08 13:31:57 by gtaja            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,8 @@ TESTEUR = test
 
 CC = gcc
 
-CFLAGS = -Wall -Wextra -Werror -g3 -fsanitize=address
+CFLAGS = -Wall -Wextra -Werror -g3
+#-fsanitize=address
 
 DFLAGS = -Wall -Wextra -Werror -fsanitize=address,undefined -g3 -pedantic\
 -ansi -O2 -Wchar-subscripts -Wcomment -Wformat=2 -Wimplicit-int\

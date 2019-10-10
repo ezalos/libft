@@ -6,7 +6,7 @@
 /*   By: gtaja <gtaja@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/23 18:06:54 by gtaja             #+#    #+#             */
-/*   Updated: 2019/10/10 14:20:21 by gtaja            ###   ########.fr       */
+/*   Updated: 2019/10/10 14:38:32 by gtaja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,7 @@ static char	*split_buffer(char *result, char *buffer, int len)
 	if (backslash != NULL)
 	{
 		ft_strcpy(buffer, backslash + 1);
-		*backslash = '\0';
-		ft_strappend(&result, "\n");
+		backslash[1] = '\0';
 	}
 	else
 		buffer[0] = '\0';

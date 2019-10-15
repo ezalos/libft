@@ -6,7 +6,7 @@
 /*   By: amartino <amartino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/26 14:13:45 by amartino          #+#    #+#             */
-/*   Updated: 2019/09/30 13:44:27 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/10/08 14:51:11 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,15 @@
 
 # define FALSE				0
 # define TRUE				1
+
 # define FAILURE			-1
 # define SUCCESS			0
+
 # define ON					1
 # define OFF				0
+
 # define START				0
+
 # define STD_OUT			1
 
 #endif

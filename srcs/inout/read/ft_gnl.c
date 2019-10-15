@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/05 17:03:34 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/09/24 16:54:37 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/10/12 16:24:50 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,8 @@ int		update_gnl_struct(t_gnl *gnl, char **line)
 	if (gnl->content_size <= 0)
 	{
 		gnl->end = 0;
-		ft_strdel(&gnl->content);
+		ft_strdel(&gnl->save);
+		gnl->content = NULL;
 	}
 	return (next_break);
 }
@@ -40,9 +41,11 @@ int		get_line_2(t_gnl *gnl, char **line)
 	if (gnl->end)
 	{
 		gnl->content = ft_read_file(gnl->fd, &gnl->content_size);
+		gnl->save = gnl->content;
 		if (!gnl->content_size)
 		{
-			ft_strdel(&gnl->content);
+			ft_strdel(&gnl->save);
+			gnl->content = NULL;
 			return (0);
 		}
 		else

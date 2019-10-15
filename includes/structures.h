@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/07 11:12:47 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/09/25 18:43:03 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/10/12 16:51:30 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,13 @@ typedef	struct		s_list
 	struct s_list	*next;
 }					t_list;
 
+typedef	struct		s_btree
+{
+	void			*content;
+	size_t			content_size;
+	struct s_btree	*child[2];
+}					t_btree;
+
 # define DIR 4
 
 typedef	struct		s_tab
@@ -31,6 +38,7 @@ typedef	struct		s_tab
 
 typedef	struct		s_gnl
 {
+	char			*save;
 	char			*content;
 	int				content_size;
 	int				already_read;

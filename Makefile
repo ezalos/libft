@@ -6,7 +6,7 @@
 #    By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/12 15:04:16 by ldevelle          #+#    #+#              #
-#    Updated: 2019/09/30 13:47:14 by ldevelle         ###   ########.fr        #
+#    Updated: 2019/10/09 20:52:36 by ldevelle         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -166,7 +166,8 @@ endef
 ##						##
 ##########################
 
-all :		$(NAME)
+all :
+		$(MAKE) -j $(NAME)
 
 $(NAME):	$(OBJS)
 			@$(call run_and_test, ar -rcs $(NAME) $(OBJS))

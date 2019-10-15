@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew_ptr.c                                    :+:      :+:    :+:   */
+/*   ft_get_file.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/12 17:15:19 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/10/12 17:11:36 by ldevelle         ###   ########.fr       */
+/*   Created: 2019/10/12 15:46:14 by ldevelle          #+#    #+#             */
+/*   Updated: 2019/10/12 15:56:31 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew_ptr(void const *content, size_t content_size)
+size_t			ft_get_file(char *path, char **file)
 {
-	t_list	*new;
+	int			fd;
+	size_t		size;
 
-	if (!(new = P_MALLOC(sizeof(t_list))))
-		return (NULL);
-	new->content_size = content_size;
-	new->content = content;
-	new->next = NULL;
-	return (new);
+	if (!file || !(fd = open(path, O_RDONLY)))
+		return (-1);
+	*file = ft_read_file(fd, &size);
+	close(fd);
+	return (size);
 }

@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 11:15:02 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/09/30 13:41:14 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/10/15 13:04:24 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@
 # endif
 
 # define DEBUG_FUNC		ft_printf("%s\n", __func__)
+# define DEBUG_INT(ret)	ft_printf("%s: %d\n", __func__, ret)
 # define DEBUG_COLOR	ft_printf("%~{?}%s\n", __func__)
 
 /*

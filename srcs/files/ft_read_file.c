@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/13 23:30:39 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/09/25 19:09:08 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/10/03 17:48:17 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,15 +48,15 @@ char		*ft_read_file(int fd, int *size)
 	ft_bzero(buff, BUFF_READ + 1);
 	while ((ret = read(fd, buff, BUFF_READ)) > 0)
 	{
-		if (buff[0] == '\0')
-			return (NULL);
-		buff[ret - 1] = '\0';
+		// if (buff[0] == '\0')
+		// 	return (NULL);
+		buff[ret] = '\0';
 		*size += ret;
 		if (!(dest = ft_strrealloc(dest, *size + 1)))
 			return (NULL);
-		dest = ft_strcat(dest, buff);
-		if (*size >= 500000)
-			break ;
+		dest = ft_memmove(dest + (*size - ret), buff, ret);
+		// if (*size >= 500000)
+		// 	break ;
 		ft_bzero(buff, BUFF_READ + 1);
 	}
 	return (dest);

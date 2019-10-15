@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strstartwith.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gtaja <gtaja@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/12 17:11:48 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/10/01 15:59:35 by gtaja            ###   ########.fr       */
+/*   Created: 2019/09/24 16:10:11 by gtaja             #+#    #+#             */
+/*   Updated: 2019/09/24 21:14:34 by gtaja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *src)
+int	ft_strstartwith(char *str, char *start)
 {
-	char	*dest;
-	int		i;
-	int		size;
-
-	size = ft_strlen(src);
-	if (!(dest = (char*)P_MALLOC(sizeof(char) * (size + 1))))
-		return (NULL);
-	dest[size] = '\0';
-	i = -1;
-	while (++i < size)
-		dest[i] = src[i];
-	return (dest);
+	if (ft_strlen(start) > ft_strlen(str))
+		return (0);
+	while (*start != '\0')
+	{
+		if (*start != *str)
+			return (0);
+		start++;
+		str++;
+	}
+	return (1);
 }

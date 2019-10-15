@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   auto_data_base.h                                   :+:      :+:    :+:   */
+/*   auto_greg.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gtaja <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/01 17:20:35 by gtaja             #+#    #+#             */
-/*   Updated: 2019/10/01 17:20:35 by gtaja            ###   ########.fr       */
+/*   Created: 2019/10/01 17:20:36 by gtaja             #+#    #+#             */
+/*   Updated: 2019/10/01 17:20:36 by gtaja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef AUTO_DATA_BASE_H
-# define AUTO_DATA_BASE_H
+#ifndef AUTO_GREG_H
+# define AUTO_GREG_H
 
-size_t		ft_access_htable(size_t key);
-int			ft_get_file_in_htable(char *str);
-ssize_t		ft_hfunc(void *data, size_t size);
-size_t		**ft_htable_mem(void);
-ssize_t		ft_store_htable(void *data, size_t size,
-		ssize_t (*hf)(void *, size_t));
-ssize_t		ft_unstore_htable(void *data, size_t size,
-		ssize_t (*hf)(void *, size_t));
+int			ft_strappend(char **base, char *more);
+int			ft_strendswith(char *str, char *ends);
+char		*ft_strndup(char *str, size_t n);
+int			ft_strstartwith(char *str, char *start);
+char		*ft_strtrim_free(char *str);
+int			gnl(int fd, char **line);
 
 #endif

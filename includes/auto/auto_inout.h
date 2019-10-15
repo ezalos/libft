@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   auto_inout.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldevelle <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: gtaja <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/30 13:48:21 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/09/30 13:48:21 by ldevelle         ###   ########.fr       */
+/*   Created: 2019/10/01 17:20:34 by gtaja             #+#    #+#             */
+/*   Updated: 2019/10/01 17:20:34 by gtaja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,13 @@ char		*ft_nb_to_a(intmax_t n, size_t base);
 int			ft_patoi(const char *str);
 size_t		ft_u_nb_len(uintmax_t nb, size_t base);
 char		*ft_u_nb_to_a(uintmax_t n, size_t base);
+int			send_exceptions(char **line, t_list *gnl);
+int			send_line(char **line, t_list *gnl);
+int			save_file(t_list *gnl, char *buf, int read);
+int			get_line(t_list *gnl, char **line);
 int			get_next_line(const int fd, char **line);
+int			update_gnl_struct(t_gnl *gnl, char **line);
+int			get_line_2(t_gnl *gnl, char **line);
 int			ft_gnl(const int fd, char **line);
 void		ft_putchar(char c);
 void		ft_putchar_fd(char c, int fd);

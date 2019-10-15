@@ -6,7 +6,6 @@ PAT += 	srcs/strings/transform/ft_strmapi.c \
 	srcs/strings/search/ft_strstr.c \
 	srcs/strings/search/ft_strrchr.c \
 	srcs/strings/search/ft_strnstr.c \
-	srcs/strings/search/ft_strchr.c \
 	srcs/strings/search/ft_pstrnstr.c \
 	srcs/strings/search/ft_nmatch.c \
 	srcs/strings/search/ft_match.c \
@@ -25,9 +24,9 @@ PAT += 	srcs/strings/transform/ft_strmapi.c \
 	srcs/strings/duplicate/ft_strtrim.c \
 	srcs/strings/duplicate/ft_strsub.c \
 	srcs/strings/duplicate/ft_strsplit.c \
+	srcs/strings/duplicate/ft_strrealloc.c \
 	srcs/strings/duplicate/ft_strjoin_multi.c \
 	srcs/strings/duplicate/ft_strjoin.c \
-	srcs/strings/duplicate/ft_strdup.c \
 	srcs/strings/copy/ft_strncpy.c \
 	srcs/strings/copy/ft_strncat.c \
 	srcs/strings/copy/ft_strlcat.c \
@@ -37,4 +36,5 @@ PAT += 	srcs/strings/transform/ft_strmapi.c \
 	srcs/strings/compare/ft_strncmp.c \
 	srcs/strings/compare/ft_strequ.c \
 	srcs/strings/compare/ft_strcmp.c \
-	srcs/strings/duplicate/ft_strrealloc.c 
+	srcs/strings/search/ft_strchr.c \
+	srcs/strings/duplicate/ft_strdup.c 

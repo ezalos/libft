@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gtaja <gtaja@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 11:15:02 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/10/01 15:58:44 by gtaja            ###   ########.fr       */
+/*   Updated: 2019/10/15 15:41:55 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,11 +41,11 @@
 # define SIZE_HTABLE	5000
 
 # ifndef P_MALLOC
-#  define P_MALLOC malloc
+#  define P_MALLOC nalloc
 # endif
 
 # ifndef NREE
-#  define NREE 0
+#  define NREE 1
 # endif
 # ifndef PROGRESS
 #  define PROGRESS 1
@@ -57,6 +57,7 @@
 
 # define DEBUG_FUNC		ft_printf("%s\n", __func__)
 # define DEBUG_COLOR	ft_printf("%~{?}%s\n", __func__)
+# define DEBUG_INT(ret)	ft_printf("%s: %d\n", __func__, ret)
 
 /*
 ** # define ILLEGAL (intmax_t)&rando

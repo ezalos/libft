@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldevelle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/22 00:48:23 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/10/22 00:48:23 by ldevelle         ###   ########.fr       */
+/*   Created: 2019/10/22 01:06:59 by ldevelle          #+#    #+#             */
+/*   Updated: 2019/10/22 01:06:59 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ char		*ft_itoa(int n);
 int			ft_nb_char_to_int(char c);
 size_t		ft_nb_len(intmax_t n, size_t base);
 char		*ft_nb_to_a(intmax_t n, size_t base);
-char		*ft_nb_to_a_no_malloc(char *nb_str, intmax_t n, size_t base);
 int			ft_patoi(const char *str);
 size_t		ft_u_nb_len(uintmax_t nb, size_t base);
 char		*ft_u_nb_to_a(uintmax_t n, size_t base);

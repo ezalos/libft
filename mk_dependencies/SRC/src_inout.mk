@@ -24,5 +24,4 @@ SRC += 	ft_putstr.c \
 	ft_is_str_bigger_than_int.c \
 	ft_intlen.c \
 	ft_atoi.c \
-	ft_gnl.c \
-	ft_nb_to_a_no_malloc.c 
+	ft_gnl.c 

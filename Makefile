@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: gtaja <gtaja@student.42.fr>                +#+  +:+       +#+         #
+#    By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/12 15:04:16 by ldevelle          #+#    #+#              #
-#    Updated: 2019/10/08 13:31:57 by gtaja            ###   ########.fr        #
+#    Updated: 2019/10/22 01:07:20 by ldevelle         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -167,7 +167,8 @@ endef
 ##						##
 ##########################
 
-all :		$(NAME)
+all :
+			make -j $(NAME)
 
 $(NAME):	$(OBJS)
 			@$(call run_and_test, ar -rcs $(NAME) $(OBJS))

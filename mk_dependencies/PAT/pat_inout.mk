@@ -24,5 +24,4 @@ PAT += 	srcs/inout/write/string/ft_putstr.c \
 	srcs/inout/converters/ft_is_str_bigger_than_int.c \
 	srcs/inout/converters/ft_intlen.c \
 	srcs/inout/converters/ft_atoi.c \
-	srcs/inout/read/ft_gnl.c \
-	srcs/inout/converters/ft_nb_to_a_no_malloc.c 
+	srcs/inout/read/ft_gnl.c 

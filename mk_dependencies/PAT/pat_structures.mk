@@ -34,10 +34,10 @@ PAT += 	srcs/structures/tab/transform/ft_tabiter.c \
 	srcs/structures/list/del/ft_lstdelone.c \
 	srcs/structures/list/del/ft_lstdel.c \
 	srcs/structures/list/del/ft_lst_free.c \
-	srcs/structures/list/create/ft_lstnew_ptr.c \
 	srcs/structures/list/create/ft_lstnew.c \
 	srcs/structures/list/connect/ft_lstcutone.c \
 	srcs/structures/list/connect/ft_lstadd_start.c \
 	srcs/structures/list/connect/ft_lstadd_here.c \
 	srcs/structures/list/connect/ft_lstadd_end.c \
-	srcs/structures/list/connect/ft_lstadd.c 
+	srcs/structures/list/connect/ft_lstadd.c \
+	srcs/structures/list/create/ft_lstnew_ptr.c 

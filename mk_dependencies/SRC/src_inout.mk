@@ -13,7 +13,6 @@ SRC += 	ft_putstr.c \
 	ft_putendl_fd.c \
 	ft_putchar_fd.c \
 	ft_putchar.c \
-	ft_gnl.c \
 	ft_get_next_line.c \
 	ft_u_nb_to_a.c \
 	ft_u_nb_len.c \
@@ -24,4 +23,6 @@ SRC += 	ft_putstr.c \
 	ft_itoa.c \
 	ft_is_str_bigger_than_int.c \
 	ft_intlen.c \
-	ft_atoi.c 
+	ft_atoi.c \
+	ft_gnl.c \
+	ft_nb_to_a_no_malloc.c 

@@ -34,10 +34,10 @@ SRC += 	ft_tabiter.c \
 	ft_lstdelone.c \
 	ft_lstdel.c \
 	ft_lst_free.c \
-	ft_lstnew_ptr.c \
 	ft_lstnew.c \
 	ft_lstcutone.c \
 	ft_lstadd_start.c \
 	ft_lstadd_here.c \
 	ft_lstadd_end.c \
-	ft_lstadd.c 
+	ft_lstadd.c \
+	ft_lstnew_ptr.c 

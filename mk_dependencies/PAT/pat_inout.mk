@@ -13,6 +13,7 @@ PAT += 	srcs/inout/write/string/ft_putstr.c \
 	srcs/inout/write/fd/ft_putendl_fd.c \
 	srcs/inout/write/fd/ft_putchar_fd.c \
 	srcs/inout/write/char/ft_putchar.c \
+	srcs/inout/read/ft_gnl.c \
 	srcs/inout/read/ft_get_next_line.c \
 	srcs/inout/converters/ft_u_nb_to_a.c \
 	srcs/inout/converters/ft_u_nb_len.c \
@@ -23,5 +24,4 @@ PAT += 	srcs/inout/write/string/ft_putstr.c \
 	srcs/inout/converters/ft_itoa.c \
 	srcs/inout/converters/ft_is_str_bigger_than_int.c \
 	srcs/inout/converters/ft_intlen.c \
-	srcs/inout/converters/ft_atoi.c \
-	srcs/inout/read/ft_gnl.c 
+	srcs/inout/converters/ft_atoi.c 

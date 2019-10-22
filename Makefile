@@ -3,14 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+         #
+#    By: gtaja <gtaja@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/12 15:04:16 by ldevelle          #+#    #+#              #
-<<<<<<< HEAD
-#    Updated: 2019/10/21 18:02:59 by gtaja            ###   ########.fr        #
-=======
-#    Updated: 2019/10/22 03:37:56 by ldevelle         ###   ########.fr        #
->>>>>>> 4e112b6466b38819140de2371c0c206fc0933243
+#    Updated: 2019/10/22 16:03:37 by gtaja            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -206,13 +202,8 @@ endef
 ##						##
 ##########################
 
-<<<<<<< HEAD
-all :		
-			make -j $(NAME)
-=======
 all :		auteur $(DIR_OBJ)
 			@make -j $(NAME)
->>>>>>> 4e112b6466b38819140de2371c0c206fc0933243
 
 $(NAME):	$(OBJS)
 			@$(call run_and_test, ar -rcs $(NAME) $(OBJS))

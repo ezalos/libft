@@ -1,6 +1,6 @@
-DIR += 	srcs/greg/ \
+DIR += 	srcs/greg/gnl \
 	srcs/greg/ \
 	srcs/greg/ \
-	srcs/greg/gnl \
+	srcs/greg/ \
 	srcs/greg/ \
 	srcs/greg/ 

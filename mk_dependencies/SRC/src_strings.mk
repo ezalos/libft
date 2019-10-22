@@ -6,6 +6,7 @@ SRC += 	ft_strmapi.c \
 	ft_strstr.c \
 	ft_strrchr.c \
 	ft_strnstr.c \
+	ft_strchr.c \
 	ft_pstrnstr.c \
 	ft_nmatch.c \
 	ft_match.c \
@@ -27,6 +28,7 @@ SRC += 	ft_strmapi.c \
 	ft_strrealloc.c \
 	ft_strjoin_multi.c \
 	ft_strjoin.c \
+	ft_strdup.c \
 	ft_strncpy.c \
 	ft_strncat.c \
 	ft_strlcat.c \
@@ -35,6 +37,4 @@ SRC += 	ft_strmapi.c \
 	ft_strnequ.c \
 	ft_strncmp.c \
 	ft_strequ.c \
-	ft_strcmp.c \
-	ft_strchr.c \
-	ft_strdup.c 
+	ft_strcmp.c 

@@ -6,36 +6,42 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/19 14:29:12 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/03/19 14:35:43 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/10/22 01:01:30 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static size_t		ft_middle(char *nb_str, intmax_t n)
+{
+	size_t		size;
+
+	if (n <= 0)
+		n = -n;
+	if (n > 255)
+		n = 255;
+	size = ft_nb_len(n, 10);
+	ft_putbnbr_str(size - 1, n, nb_str, 10);
+	return (size + 1);
+}
+
 char			*ft_str_rgbcolor(char background, int red, int green, int blue)
 {
 	char		*color;
-	char		*s_red;
-	char		*s_green;
-	char		*s_blue;
+	size_t		cursor;
 
-	if (!(s_red = ft_nb_to_a(red, 10)))
-		return (NULL);
-	if (!(s_green = ft_nb_to_a(green, 10)))
-		return (NULL);
-	if (!(s_blue = ft_nb_to_a(blue, 10)))
-		return (NULL);
-	if (background)
+	if ((color = ft_memalloc(20)))
 	{
-		if (!(color = ft_strjoin_multi(7, "\x1b[48;2;", s_red, ";", s_green,
-		";", s_blue, "m")))
-			return (NULL);
+		ft_memmove(color, "\x1b[38;2;", 7);
+		if (background)
+			color[2] = '4';
+		cursor = 7;
+		cursor += ft_middle(color + cursor, red);
+		color[cursor - 1] = ';';
+		cursor += ft_middle(color + cursor, green);
+		color[cursor - 1] = ';';
+		cursor += ft_middle(color + cursor, blue);
+		color[cursor - 1] = 'm';
 	}
-	else if (!(color = ft_strjoin_multi(7, "\x1b[38;2;", s_red, ";", s_green,
-		";", s_blue, "m")))
-		return (NULL);
-	ft_strdel(&s_green);
-	ft_strdel(&s_blue);
-	ft_strdel(&s_red);
 	return (color);
 }

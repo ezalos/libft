@@ -3,10 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: gtaja <gtaja@student.42.fr>                +#+  +:+       +#+         #
+#    By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/12 15:04:16 by ldevelle          #+#    #+#              #
+<<<<<<< HEAD
 #    Updated: 2019/10/21 18:02:59 by gtaja            ###   ########.fr        #
+=======
+#    Updated: 2019/10/22 03:37:56 by ldevelle         ###   ########.fr        #
+>>>>>>> 4e112b6466b38819140de2371c0c206fc0933243
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,8 +19,7 @@ TESTEUR = test
 
 CC = gcc
 
-CFLAGS = -Wall -Wextra -Werror -g3
-#-fsanitize=address
+CFLAGS = -Wall -Wextra -Werror
 
 DFLAGS = -Wall -Wextra -Werror -fsanitize=address,undefined -g3 -pedantic\
 -ansi -O2 -Wchar-subscripts -Wcomment -Wformat=2 -Wimplicit-int\
@@ -41,9 +44,21 @@ DFLAGS = -Wall -Wextra -Werror -fsanitize=address,undefined -g3 -pedantic\
 ##############################################################################
 ##############################################################################
 
+login =	  ldevelle
+
 MASTER		= srcs/
 
-MAIN_FOLD = inout maths mem strings structures terminal big files data_base vector greg
+MAIN_FOLD = inout\
+			maths\
+			mem\
+			strings\
+			structures\
+			terminal\
+			big\
+			files\
+			data_base\
+			vector\
+			greg
 
 HEAD_DIR = ./includes/
 
@@ -65,11 +80,12 @@ DIR_OBJ = ./objs/
 
 AUTO_HEAD	= $(MAIN_FOLD:%=auto/auto_%.h)
 
-
 HEAD		=	$(HEADERS:%=$(HEAD_DIR)%)
 
 update_head	=	$(MAIN_FOLD:%=sh scripts/get_protos.sh % $(MASTER);)
+update_head	+=	sh scripts/get_protos.sh '' $(MASTER) '' '-d 1';
 update_dep	=	$(MAIN_FOLD:%=sh scripts/get_mk_srcs.sh % $(MASTER);)
+update_dep	+=	sh scripts/get_mk_srcs.sh '' $(MASTER) '' '-d 1';
 
 mk			=	./mk_dependencies
 
@@ -78,8 +94,11 @@ mk_s		= 	$(mk)/SRC/
 mk_p		= 	$(mk)/PAT/
 
 include_dir	=	$(MAIN_FOLD:%=$(mk_d)dir_%.mk)
+include_dir	+=	$(mk_d)dir_.mk
 include_pat	=	$(MAIN_FOLD:%=$(mk_p)pat_%.mk)
+include_pat	+=	$(mk_p)pat_.mk
 include_src	=	$(MAIN_FOLD:%=$(mk_s)src_%.mk)
+include_src	+=	$(mk_s)src_.mk
 
 include_dep	= $(include_src) $(include_pat) $(include_dir)
 
@@ -87,14 +106,15 @@ SRC =
 PAT =
 DIR =
 
-ifneq ("$(shell find $(mk) -type f )","")
+$(shell mkdir -p $(mk) $(mk_d) $(mk_s) $(mk_p))
+$(shell touch $(include_dep))
 include $(include_dep)
-endif
 
 OBJ = $(PAT:%.c=%.o)
 OBJS = $(PAT:$(MASTER)%.c=$(DIR_OBJ)%.o)
 
-MSG ?= Makefile automated push
+ARG ?= Makefile automated push
+
 ##########################
 ##						##
 ##		 COLORS			##
@@ -133,7 +153,26 @@ ERROR_STRING = [ERROR]
 WARN_STRING  = [WARNING]
 COM_STRING   = Compiling
 
-VALGRIND = valgrind --track-origins=yes --leak-check=full --show-leak-kinds=definite
+REQUEST = 'read -p "Enter a commit message:	" pwd && echo $$pwd'
+COMMIT_MESSAGE ?= $(shell bash -c $(REQUEST))
+
+ifeq ($(f), no)
+CFLAGS +=
+VALGRIND =
+else ifeq ($(f), n)
+CFLAGS =
+VALGRIND =
+else ifeq ($(f), f)
+CFLAGS +=  -fsanitize=address,undefined -g3
+VALGRIND =
+else ifeq ($(f), v)
+CFLAGS += -g3
+SHOW_LEAK = --show-leak-kinds=definite
+VALGRIND = valgrind --track-origins=yes --leak-check=full $(SHOW_LEAK)
+else ifeq ($(f), h)
+CFLAGS = $(DFLAGS)
+VALGRIND =
+endif
 
 define run_and_test
 printf "%b" "$(COM_COLOR)$(COM_STRING) $(OBJ_COLOR)$(@F)$(NO_COLOR)\r"; \
@@ -167,8 +206,13 @@ endef
 ##						##
 ##########################
 
+<<<<<<< HEAD
 all :		
 			make -j $(NAME)
+=======
+all :		auteur $(DIR_OBJ)
+			@make -j $(NAME)
+>>>>>>> 4e112b6466b38819140de2371c0c206fc0933243
 
 $(NAME):	$(OBJS)
 			@$(call run_and_test, ar -rcs $(NAME) $(OBJS))
@@ -196,20 +240,21 @@ re : fclean all
 ##############################################################################
 ##############################################################################
 
+auteur :
+		@echo $(login) > auteur
+
+$(DIR_OBJ) :
+		mkdir -p $(DIR_OBJ)
+
 t	:	all
 		$(CC) $(CFLAGS) -I$(HEAD_DIR) $(NAME) main.c -o $(TESTEUR)
-		./$(TESTEUR) "$(MSG)"
-
-tv	:	all
-		$(CC) $(CFLAGS) -I$(HEAD_DIR) $(NAME) main.c -o $(TESTEUR)
-		$(VALGRIND) ./$(TESTEUR) "$(MSG)"
+		$(VALGRIND) ./$(TESTEUR) "$(ARG)"
 
 git :
 		@git add -A
 		@git status
-		git commit -am "$(MSG)"
+		@git commit -am "$(COMMIT_MESSAGE)"
 		@git push
-
 
 file :	object_ready
 		@rm -rf $(mk_d) $(mk_s) $(mk_p)
@@ -228,13 +273,6 @@ object_ready :
 				@mv -f $(DIR_OBJ)$(MASTER)/* $(DIR_OBJ)
 				@rm -rf $(DIR_OBJ)$(MASTER)
 				@echo "\$(YELLOW)objects paths\$(END)\\t\\thas been \$(GREEN)\\t\\t  created\$(END)"
-
-check :
-		bash /Users/ldevelle/42/TESTS/42FileChecker/42FileChecker.sh
-
-ehco :
-		@echo "$(OS)"
-		@echo "$(UNAME)"
 
 FORCE:
 

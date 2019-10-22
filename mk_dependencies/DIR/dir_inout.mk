@@ -14,7 +14,6 @@ DIR += 	srcs/inout/write/string/ \
 	srcs/inout/write/fd/ \
 	srcs/inout/write/char/ \
 	srcs/inout/read/ \
-	srcs/inout/read/ \
 	srcs/inout/converters/ \
 	srcs/inout/converters/ \
 	srcs/inout/converters/ \
@@ -24,4 +23,5 @@ DIR += 	srcs/inout/write/string/ \
 	srcs/inout/converters/ \
 	srcs/inout/converters/ \
 	srcs/inout/converters/ \
-	srcs/inout/converters/ 
+	srcs/inout/converters/ \
+	srcs/inout/read/ 

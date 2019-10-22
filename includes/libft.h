@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gtaja <gtaja@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 11:15:02 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/10/15 15:41:55 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/10/22 13:43:00 by gtaja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,11 +41,11 @@
 # define SIZE_HTABLE	5000
 
 # ifndef P_MALLOC
-#  define P_MALLOC nalloc
+#  define P_MALLOC malloc
 # endif
 
 # ifndef NREE
-#  define NREE 1
+#  define NREE 0
 # endif
 # ifndef PROGRESS
 #  define PROGRESS 1

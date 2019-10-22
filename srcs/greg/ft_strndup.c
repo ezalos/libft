@@ -6,7 +6,7 @@
 /*   By: gtaja <gtaja@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/24 21:58:57 by gtaja             #+#    #+#             */
-/*   Updated: 2019/10/01 17:20:31 by gtaja            ###   ########.fr       */
+/*   Updated: 2019/10/22 15:37:49 by gtaja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strndup(char *str, size_t n)
 {
-	size_t		i;
+	size_t	i;
 	char	*result;
 
 	i = 0;

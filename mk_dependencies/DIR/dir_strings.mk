@@ -26,15 +26,15 @@ DIR += 	srcs/strings/transform/ \
 	srcs/strings/duplicate/ \
 	srcs/strings/duplicate/ \
 	srcs/strings/duplicate/ \
+	srcs/strings/copy/ \
+	srcs/strings/copy/ \
+	srcs/strings/copy/ \
+	srcs/strings/copy/ \
+	srcs/strings/copy/ \
+	srcs/strings/compare/ \
+	srcs/strings/compare/ \
+	srcs/strings/compare/ \
+	srcs/strings/compare/ \
 	srcs/strings/duplicate/ \
-	srcs/strings/copy/ \
-	srcs/strings/copy/ \
-	srcs/strings/copy/ \
-	srcs/strings/copy/ \
-	srcs/strings/copy/ \
-	srcs/strings/compare/ \
-	srcs/strings/compare/ \
-	srcs/strings/compare/ \
-	srcs/strings/compare/ \
 	srcs/strings/search/ \
 	srcs/strings/duplicate/ 

@@ -20,7 +20,7 @@ SRC += 	vct_strjoin.c \
 	vct_chr.c \
 	vct_cat.c \
 	vct_bzero.c \
-	vct_apply.c \
 	vct_addstr_at.c \
 	vct_addchar_at.c \
-	vct_addchar.c 
+	vct_addchar.c \
+	vct_apply.c 

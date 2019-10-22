@@ -14,14 +14,12 @@ SRC += 	ft_tabiter.c \
 	ft_tab_delete_row_len.c \
 	ft_tab_delete_row.c \
 	ft_tabnew_rectangle.c \
-	ft_tabnew_ptr.c \
 	ft_tabnew_dir.c \
 	ft_tab_square_it.c \
 	ft_tabloop_it.c \
 	ft_tabadd_start.c \
 	ft_tabadd_here.c \
 	ft_tabadd_end.c \
-	ft_tabadd.c \
 	ft_tab_cutone.c \
 	ft_tab_cut_loop.c \
 	ft_tab_connect_structs.c \
@@ -34,10 +32,12 @@ SRC += 	ft_tabiter.c \
 	ft_lstdelone.c \
 	ft_lstdel.c \
 	ft_lst_free.c \
-	ft_lstnew_ptr.c \
 	ft_lstnew.c \
 	ft_lstcutone.c \
 	ft_lstadd_start.c \
 	ft_lstadd_here.c \
 	ft_lstadd_end.c \
-	ft_lstadd.c 
+	ft_lstadd.c \
+	ft_tabnew_ptr.c \
+	ft_tabadd.c \
+	ft_lstnew_ptr.c 

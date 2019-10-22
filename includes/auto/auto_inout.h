@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   auto_inout.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gtaja <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: ldevelle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/01 17:20:34 by gtaja             #+#    #+#             */
-/*   Updated: 2019/10/01 17:20:34 by gtaja            ###   ########.fr       */
+/*   Created: 2019/10/22 09:25:59 by ldevelle          #+#    #+#             */
+/*   Updated: 2019/10/22 09:25:59 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ int			get_line(t_list *gnl, char **line);
 int			get_next_line(const int fd, char **line);
 int			update_gnl_struct(t_gnl *gnl, char **line);
 int			get_line_2(t_gnl *gnl, char **line);
+int			create_struct_for_fd(int fd, char **line, t_list *tmp);
 int			ft_gnl(const int fd, char **line);
 void		ft_putchar(char c);
 void		ft_putchar_fd(char c, int fd);

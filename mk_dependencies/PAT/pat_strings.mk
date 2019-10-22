@@ -24,7 +24,6 @@ PAT += 	srcs/strings/transform/ft_strmapi.c \
 	srcs/strings/duplicate/ft_strtrim.c \
 	srcs/strings/duplicate/ft_strsub.c \
 	srcs/strings/duplicate/ft_strsplit.c \
-	srcs/strings/duplicate/ft_strrealloc.c \
 	srcs/strings/duplicate/ft_strjoin_multi.c \
 	srcs/strings/duplicate/ft_strjoin.c \
 	srcs/strings/copy/ft_strncpy.c \
@@ -36,5 +35,6 @@ PAT += 	srcs/strings/transform/ft_strmapi.c \
 	srcs/strings/compare/ft_strncmp.c \
 	srcs/strings/compare/ft_strequ.c \
 	srcs/strings/compare/ft_strcmp.c \
+	srcs/strings/duplicate/ft_strrealloc.c \
 	srcs/strings/search/ft_strchr.c \
 	srcs/strings/duplicate/ft_strdup.c 

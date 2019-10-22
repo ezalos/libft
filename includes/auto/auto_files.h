@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   auto_files.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gtaja <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: ldevelle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/01 17:20:35 by gtaja             #+#    #+#             */
-/*   Updated: 2019/10/01 17:20:35 by gtaja            ###   ########.fr       */
+/*   Created: 2019/10/22 09:25:59 by ldevelle          #+#    #+#             */
+/*   Updated: 2019/10/22 09:25:59 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 void		ft_add_to_file(char *name, char *data);
 int			ft_create_new_file(char *str);
+size_t		ft_get_file(char *path, char **file);
 ssize_t		ft_get_size_file(char *str);
 int			ft_get_tab_from_file(char *str, int **tab, int lines);
 char		*ft_read_file(int fd, int *size);

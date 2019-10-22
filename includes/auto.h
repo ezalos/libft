@@ -3,16 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   auto.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gtaja <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: ldevelle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/01 17:20:36 by gtaja             #+#    #+#             */
-/*   Updated: 2019/10/01 17:20:36 by gtaja            ###   ########.fr       */
+/*   Created: 2019/10/22 09:26:00 by ldevelle          #+#    #+#             */
+/*   Updated: 2019/10/22 09:26:00 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef AUTO_H
 # define AUTO_H
 
+# include "auto/auto_.h"
 # include "auto/auto_big.h"
 # include "auto/auto_data_base.h"
 # include "auto/auto_files.h"

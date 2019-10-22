@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   auto_big.h                                         :+:      :+:    :+:   */
+/*   auto_.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldevelle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/22 02:51:29 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/10/22 02:51:29 by ldevelle         ###   ########.fr       */
+/*   Created: 2019/10/22 02:51:30 by ldevelle          #+#    #+#             */
+/*   Updated: 2019/10/22 02:51:30 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef AUTO_BIG_H
-# define AUTO_BIG_H
+#ifndef AUTO__H
+# define AUTO__H
 
-int			ft_printf(const char *format, ...);
-char		*ft_strrev(char *str, size_t size);
+void		ft_wesh(void);
 
 #endif

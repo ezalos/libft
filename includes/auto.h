@@ -5,14 +5,15 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldevelle <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/22 01:07:01 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/10/22 01:07:01 by ldevelle         ###   ########.fr       */
+/*   Created: 2019/10/22 02:51:31 by ldevelle          #+#    #+#             */
+/*   Updated: 2019/10/22 02:51:31 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef AUTO_H
 # define AUTO_H
 
+# include "auto/auto_.h"
 # include "auto/auto_big.h"
 # include "auto/auto_data_base.h"
 # include "auto/auto_files.h"

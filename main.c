@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/07 13:36:45 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/10/22 00:59:50 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/10/22 03:35:16 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ int		main(int ac, char **av)
 		return (0);
 	// add = 0xfff4;
 	// pc_access(pc, add, idx_mod);
-	ft_printf("%r%s\n", ft_str_rgbcolor(0, 500, 100, 150));
+	ft_printf("LOUIS\n");
 	(void)av;
 	return (0);
 }

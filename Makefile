@@ -6,7 +6,7 @@
 #    By: gtaja <gtaja@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/12 15:04:16 by ldevelle          #+#    #+#              #
-#    Updated: 2019/10/22 16:03:37 by gtaja            ###   ########.fr        #
+#    Updated: 2019/10/30 16:42:34 by gtaja            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -203,7 +203,7 @@ endef
 ##########################
 
 all :		auteur $(DIR_OBJ)
-			@make -j $(NAME)
+			@make $(NAME)
 
 $(NAME):	$(OBJS)
 			@$(call run_and_test, ar -rcs $(NAME) $(OBJS))

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strappend.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gtaja <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: gtaja <gtaja@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/29 18:45:45 by gtaja             #+#    #+#             */
-/*   Updated: 2019/01/29 18:59:54 by gtaja            ###   ########.fr       */
+/*   Updated: 2019/10/30 16:18:29 by gtaja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,6 @@ int		ft_strappend(char **base, char *more)
 		return (0);
 	ft_strcpy(*base, tmp);
 	ft_strcat(*base, more);
-	free(tmp);
+	ft_memdel((void**)&tmp);
 	return (1);
 }

@@ -6,7 +6,7 @@
 /*   By: gtaja <gtaja@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/24 21:58:57 by gtaja             #+#    #+#             */
-/*   Updated: 2019/10/22 15:37:49 by gtaja            ###   ########.fr       */
+/*   Updated: 2019/10/30 16:17:13 by gtaja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strndup(char *str, size_t n)
 	char	*result;
 
 	i = 0;
-	result = malloc((n + 1) * sizeof(char));
+	result = ft_memalloc((n + 1) * sizeof(char));
 	while (str[i] != '\0' && i < n)
 	{
 		result[i] = str[i];

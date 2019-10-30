@@ -6,7 +6,7 @@
 /*   By: gtaja <gtaja@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/23 18:06:54 by gtaja             #+#    #+#             */
-/*   Updated: 2019/10/10 14:38:32 by gtaja            ###   ########.fr       */
+/*   Updated: 2019/10/30 16:19:23 by gtaja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static char	*split_buffer(char *result, char *buffer, int len)
 		buffer[0] = '\0';
 	if (len <= 0 && result[0] == '\0')
 	{
-		free(result);
+		ft_memdel((void**)&result);
 		return (NULL);
 	}
 	else

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   structures.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gtaja <gtaja@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/07 11:12:47 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/10/22 09:26:18 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/11/01 15:28:53 by gtaja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ typedef struct		s_progress
 	intmax_t		written;
 }					t_progress;
 
-typedef struct			s_printfesse
+typedef struct		s_printfesse
 {
 	char				exist;
 	char				background;
@@ -69,9 +69,9 @@ typedef struct			s_printfesse
 	char				*rand_str;
 	int					rand_nb;
 
-}						t_printfesse;
+}					t_printfesse;
 
-typedef struct			s_arg
+typedef struct		s_arg
 {
 	int					zero_exist;
 	char				type;
@@ -86,9 +86,9 @@ typedef struct			s_arg
 	int					modifier_h;
 	int					modifier_l;
 	int					modifier_ll;
-}						t_arg;
+}					t_arg;
 
-typedef struct			s_printf
+typedef struct		s_printf
 {
 	t_list				*lst_to_print;
 	const char			*format;
@@ -103,6 +103,6 @@ typedef struct			s_printf
 	char				invisible;
 	t_arg				arg[1];
 	t_printfesse		bonus[1];
-}						t_printf;
+}					t_printf;
 
 #endif

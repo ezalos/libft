@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_read_file.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gtaja <gtaja@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/13 23:30:39 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/11/01 15:30:31 by gtaja            ###   ########.fr       */
+/*   Updated: 2019/11/01 19:00:05 by ldevelle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,8 @@ char		*ft_read_file(int fd, int *size)
 		if (!(dest = ft_strrealloc(dest, *size + 1)))
 			return (NULL);
 		dest = ft_memmove(dest + (*size - ret), buff, ret);
+		if (*size >= 100000)
+			break ;
 		ft_bzero(buff, BUFF_READ + 1);
 	}
 	return (dest);

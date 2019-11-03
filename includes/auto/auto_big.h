@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   auto_big.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gtaja <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: gtaja <gtaja@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/03 07:40:17 by gtaja             #+#    #+#             */
-/*   Updated: 2019/11/03 07:40:17 by gtaja            ###   ########.fr       */
+/*   Updated: 2019/11/03 15:32:54 by gtaja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ int			type_s(t_printf *print, char **str);
 int			ajust_flags(t_printf *print, char **str);
 int			color_reset(t_printf *print, const char **f, char *str);
 int			color_get_rgb(t_printf *print, const char **f, char *str);
-int			color_nb_with_prand_color(t_printf *print, const char **f, char *str);
+int			color_nb_with_prand_color(t_printf *print, const char **f,
+		char *str);
 int			color_rand_color_based_int_str(t_printf *print, const char **f,
 		char *str);
 int			color_gestion(t_printf *print, const char **f);
@@ -29,8 +30,10 @@ void		add_type(const char **f, t_printf *print);
 void		check_arg(t_printf *print, const char **f);
 void		check_flags(const char c, t_arg *arg);
 int			get_value_of_star_or_nb(t_printf *print, const char **f, int *tmp);
-char		*get_value_of_star_or_str(t_printf *print, const char **f, char **tmp);
-void		check_min_or_pre2(t_printf *print, const char **f, int *tmp, int pres);
+char		*get_value_of_star_or_str(t_printf *print, const char **f,
+	char **tmp);
+void		check_min_or_pre2(t_printf *print, const char **f, int *tmp,
+	int pres);
 void		check_minimum_width_or_precision(t_printf *print, const char **f);
 int			paste_format_in_printf(t_printf *print);
 int			we_just_found_a_percent(t_printf *print);
@@ -61,7 +64,8 @@ void		reajust_p(char *str);
 int			type_p(char **str, t_printf *print);
 char		*s_to_bin(unsigned char *str, int length);
 char		*ft_strrev(char *str, size_t size);
-char		*print_string_to_binary(unsigned char *converter, size_t size_thing);
+char		*print_string_to_binary(unsigned char *converter,
+	size_t size_thing);
 int			print_binary(t_printf *print, void *bin);
 int			print_character(t_printf *print, char str);
 int			float_exception(t_printf *print, double ldb);

@@ -6,7 +6,7 @@
 /*   By: gtaja <gtaja@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/24 18:06:47 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/11/03 07:40:09 by gtaja            ###   ########.fr       */
+/*   Updated: 2019/11/03 15:34:15 by gtaja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,6 @@ int			ft_printf(const char *format, ...)
 			output_string(&print);
 			r_val = (int)print.size_all;
 		}
-
 	}
 	ft_clean_garbage();
 	*(switch_garbage()) = FALSE;

@@ -6,7 +6,7 @@
 /*   By: gtaja <gtaja@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/03 07:34:16 by gtaja             #+#    #+#             */
-/*   Updated: 2019/11/03 07:36:06 by gtaja            ###   ########.fr       */
+/*   Updated: 2019/11/03 07:55:03 by gtaja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void		*malloco(size_t size_content)
 {
 	if ((*switch_garbage()) == TRUE)
-		return (malloc(size_content));
-	else
 		return (nalloc(size_content));
+	else
+		return (malloc(size_content));
 }

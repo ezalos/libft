@@ -1,17 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   auto_.h                                            :+:      :+:    :+:   */
+/*   ft_malloco.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gtaja <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: gtaja <gtaja@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/03 07:40:18 by gtaja             #+#    #+#             */
-/*   Updated: 2019/11/03 07:40:18 by gtaja            ###   ########.fr       */
+/*   Created: 2019/11/03 07:34:16 by gtaja             #+#    #+#             */
+/*   Updated: 2019/11/03 07:36:06 by gtaja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef AUTO__H
-# define AUTO__H
+#include "libft.h"
 
-
-#endif
+void		*malloco(size_t size_content)
+{
+	if ((*switch_garbage()) == TRUE)
+		return (malloc(size_content));
+	else
+		return (nalloc(size_content));
+}

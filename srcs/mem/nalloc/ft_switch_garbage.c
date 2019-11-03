@@ -1,17 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   auto_.h                                            :+:      :+:    :+:   */
+/*   ft_switch_garbage.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gtaja <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: gtaja <gtaja@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/03 07:40:18 by gtaja             #+#    #+#             */
-/*   Updated: 2019/11/03 07:40:18 by gtaja            ###   ########.fr       */
+/*   Created: 2019/11/03 07:30:15 by gtaja             #+#    #+#             */
+/*   Updated: 2019/11/03 07:31:46 by gtaja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef AUTO__H
-# define AUTO__H
+#include "libft.h"
 
+int		*switch_garbage(void)
+{
+	static int	on_off = NREE;
 
-#endif
+	return(&on_off);
+}

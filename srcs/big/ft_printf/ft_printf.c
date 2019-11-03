@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gtaja <gtaja@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/24 18:06:47 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/09/14 18:20:41 by ldevelle         ###   ########.fr       */
+/*   Updated: 2019/11/03 07:40:09 by gtaja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,20 +54,27 @@ int			ft_printf(const char *format, ...)
 	t_printf			print;
 	int					r_val;
 
-	if (!(init_struct(&print, format)))
-		return (-1);
-	va_start(print.ap, format);
-	print.i = 0;
-	while (print.format[print.i])
+	*(switch_garbage()) = TRUE;
+	r_val = -1;
+	if (init_struct(&print, format))
 	{
-		if (ft_char_srch(print.format[print.i], "%"))
-			we_just_found_a_percent(&print);
-		if (print.format[print.i] != '%' && print.format[print.i])
-			print.i++;
+		va_start(print.ap, format);
+		print.i = 0;
+		while (print.format[print.i])
+		{
+			if (ft_char_srch(print.format[print.i], "%"))
+				we_just_found_a_percent(&print);
+			if (print.format[print.i] != '%' && print.format[print.i])
+				print.i++;
+		}
+		if ((paste_format_in_printf(&print)))
+		{
+			output_string(&print);
+			r_val = (int)print.size_all;
+		}
+
 	}
-	if (!(paste_format_in_printf(&print)))
-		return (-1);
-	output_string(&print);
-	r_val = (int)print.size_all;
+	ft_clean_garbage();
+	*(switch_garbage()) = FALSE;
 	return (r_val);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   auto_mem.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldevelle <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: gtaja <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/22 09:25:59 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/10/22 09:25:59 by ldevelle         ###   ########.fr       */
+/*   Created: 2019/11/03 07:40:18 by gtaja             #+#    #+#             */
+/*   Updated: 2019/11/03 07:40:18 by gtaja            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,9 @@ void		ft_burn_garbage(char *str);
 void		ft_clean_garbage(void);
 void		*cnalloc(const void *content, size_t size_content);
 void		**ft_garbage_collector(void);
+void		*malloco(size_t size_content);
 void		*nalloc(size_t size_content);
+int			*switch_garbage(void);
 void		*ft_memchr(const void *s, int c, size_t n);
 int			ft_memcmp(const void *s1, const void *s2, size_t n);
 void		ft_bzero(void *s, size_t n);

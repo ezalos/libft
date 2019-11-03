@@ -1,8 +1,12 @@
-PAT += 	srcs/big/ft_printf/type_unsigned_integer.c \
+PAT += 	srcs/big/time/time_exe.c \
+	srcs/big/time/print_time.c \
+	srcs/big/time/extra_func.c \
+	srcs/big/ft_printf/type_unsigned_integer.c \
 	srcs/big/ft_printf/type_string.c \
 	srcs/big/ft_printf/type_pointer.c \
 	srcs/big/ft_printf/type_integer.c \
 	srcs/big/ft_printf/type_float2.c \
+	srcs/big/ft_printf/type_float.c \
 	srcs/big/ft_printf/type_character.c \
 	srcs/big/ft_printf/type_binary.c \
 	srcs/big/ft_printf/tools_flag2.c \
@@ -20,8 +24,4 @@ PAT += 	srcs/big/ft_printf/type_unsigned_integer.c \
 	srcs/big/ft_printf/bonus_gestion.c \
 	srcs/big/ft_printf/bonus_color.c \
 	srcs/big/ft_printf/ajust_flags.c \
-	srcs/big/ft_printf/ft_printf.c \
-	srcs/big/ft_printf/type_float.c \
-	srcs/big/time/time_exe.c \
-	srcs/big/time/print_time.c \
-	srcs/big/time/extra_func.c 
+	srcs/big/ft_printf/ft_printf.c 

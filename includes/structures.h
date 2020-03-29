@@ -6,7 +6,7 @@
 /*   By: gtaja <gtaja@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/07 11:12:47 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/11/01 15:28:53 by gtaja            ###   ########.fr       */
+/*   Updated: 2020/03/29 15:23:02 by ezalos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,11 @@ typedef	struct		s_btree
 	struct s_btree	*child[2];
 }					t_btree;
 
-# define DIR 4
+# define DIRECTION_TAB 4
 
 typedef	struct		s_tab
 {
-	struct s_tab	*dir[DIR];
+	struct s_tab	*dir[DIRECTION_TAB];
 	void			*content;
 	size_t			content_size;
 }					t_tab;

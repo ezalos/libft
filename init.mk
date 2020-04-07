@@ -6,7 +6,7 @@
 #    By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/12 15:04:16 by ldevelle          #+#    #+#              #
-#    Updated: 2020/03/29 15:25:55 by ezalos           ###   ########.fr        #
+#    Updated: 2020/04/07 13:11:52 by ezalos           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,7 +59,6 @@ HEAD_DIR 				= 	./includes/
 HEADERS					=	$(AUTO_HEAD)\
 							head.h
 
-HEADERS_DIRECTORIES 	=	-I./$(HEAD_DIR)\
-							-I./$(LIB_DIR)/includes
+HEADERS_DIRECTORIES 	=	-I./$(HEAD_DIR)
 
 # HEAD_PATH	=	$(HEAD_DIR)/$(HEAD)

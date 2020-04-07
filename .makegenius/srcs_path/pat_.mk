@@ -1,7 +1,4 @@
-PAT += 	srcs/big/ft_printf/get_str_str.c \
-	srcs/big/ft_printf/get_str_int.c \
-	srcs/big/ft_printf/get_str_float.c \
-	srcs/big/ft_printf/get_str_char.c \
+PAT += 	srcs/big/ft_printf/get_str_char.c \
 	srcs/big/ft_printf/get_printf.c \
 	srcs/big/ft_printf/ft_printf.c \
 	srcs/big/ft_printf/check_arg.c \
@@ -9,6 +6,28 @@ PAT += 	srcs/big/ft_printf/get_str_str.c \
 	srcs/big/ft_printf/bonus_gestion.c \
 	srcs/big/ft_printf/bonus_color.c \
 	srcs/big/ft_printf/ajust_flags.c \
+	srcs/mem/nalloc/ft_burn_garbage.c \
+	srcs/mem/malloc/ft_strnew.c \
+	srcs/mem/malloc/ft_memalloc.c \
+	srcs/mem/del/ft_strdel_multi.c \
+	srcs/mem/del/ft_strdel.c \
+	srcs/mem/del/ft_memdel.c \
+	srcs/mem/del/ft_free_with_nalloc.c \
+	srcs/mem/del/ft_del.c \
+	srcs/mem/copy/ft_memmove.c \
+	srcs/mem/copy/ft_memcpy.c \
+	srcs/mem/copy/ft_memccpy.c \
+	srcs/maths/suites/ft_nprime.c \
+	srcs/maths/suites/ft_fibonacci.c \
+	srcs/maths/sort/ft_squick_sort.c \
+	srcs/maths/sort/ft_quick_sort.c \
+	srcs/maths/round/ft_round_upper.c \
+	srcs/maths/round/ft_round.c \
+	srcs/maths/round/ft_rfpart.c \
+	srcs/maths/round/ft_ipart.c \
+	srcs/maths/round/ft_fpart.c \
+	srcs/maths/random/seed/ft_seed_time.c \
+	srcs/maths/random/seed/ft_seed_string.c \
 	srcs/maths/random/seed/ft_seed_gnl.c \
 	srcs/maths/random/seed/ft_seed_adress.c \
 	srcs/maths/random/ft_simple_random.c \
@@ -81,6 +100,57 @@ PAT += 	srcs/big/ft_printf/get_str_str.c \
 	srcs/big/ft_printf/parsing.c \
 	srcs/big/ft_printf/output.c \
 	srcs/big/ft_printf/init.c \
+	srcs/big/ft_printf/get_str_str.c \
+	srcs/big/ft_printf/get_str_int.c \
+	srcs/big/ft_printf/get_str_float.c \
+	srcs/vector/vct_newstr.c \
+	srcs/vector/vct_new.c \
+	srcs/vector/vct_len.c \
+	srcs/vector/vct_joinfree.c \
+	srcs/vector/vct_join.c \
+	srcs/vector/vct_increase_scale.c \
+	srcs/vector/vct_getstr.c \
+	srcs/vector/vct_getchar_at.c \
+	srcs/vector/vct_fill_before.c \
+	srcs/vector/vct_fill_after.c \
+	srcs/vector/vct_dup.c \
+	srcs/vector/vct_del.c \
+	srcs/vector/vct_chr_str.c \
+	srcs/vector/vct_chr.c \
+	srcs/vector/vct_cat.c \
+	srcs/vector/vct_bzero.c \
+	srcs/vector/vct_apply.c \
+	srcs/vector/vct_addstr_at.c \
+	srcs/vector/vct_addchar.c \
+	srcs/vector/vct_addchar_at.c \
+	srcs/terminal/other/ft_wait_pls.c \
+	srcs/terminal/other/ft_progress.c \
+	srcs/terminal/other/ft_press_any_key.c \
+	srcs/terminal/cursor/ft_place_cursor.c \
+	srcs/terminal/color/ft_str_rgbcolor.c \
+	srcs/terminal/color/ft_rgb_color.c \
+	srcs/terminal/color/ft_rgb_bcolor.c \
+	srcs/terminal/color/ft_putstr_color.c \
+	srcs/terminal/color/ft_print_address_color.c \
+	srcs/structures/tab/transform/ft_tabiter.c \
+	srcs/structures/tab/print/ft_tab_print_one_elmnt.c \
+	srcs/structures/tab/print/ft_tab_print_dir.c \
+	srcs/structures/tab/move/ft_tab_reach_end.c \
+	srcs/structures/tab/move/ft_tab_dirth.c \
+	srcs/structures/tab/move/ft_tab_access.c \
+	srcs/structures/tab/len/ft_tabloop_lendir.c \
+	srcs/structures/tab/len/ft_tab_lendir.c \
+	srcs/structures/tab/ft_is/ft_tabloop_itis.c \
+	srcs/structures/tab/dir/ft_tab_dir_reverse.c \
+	srcs/structures/tab/dir/ft_tab_dir_rclock.c \
+	srcs/structures/tab/dir/ft_tab_dir_nclock.c \
+	srcs/structures/tab/dir/ft_tab_dir_clock.c \
+	srcs/structures/tab/del/ft_tab_delete_row_len.c \
+	srcs/structures/tab/del/ft_tab_delete_row.c \
+	srcs/structures/tab/create/ft_tab_square_it.c \
+	srcs/structures/tab/create/ft_tabnew_rectangle.c \
+	srcs/structures/tab/create/ft_tabnew_ptr.c \
+	srcs/structures/tab/create/ft_tabnew_dir.c \
 	srcs/structures/tab/connect/ft_tabloop_it.c \
 	srcs/structures/tab/connect/ft_tab_cutone.c \
 	srcs/structures/tab/connect/ft_tab_cut_loop.c \
@@ -156,79 +226,9 @@ PAT += 	srcs/big/ft_printf/get_str_str.c \
 	srcs/mem/nalloc/ft_garbage_collector.c \
 	srcs/mem/nalloc/ft_cnalloc.c \
 	srcs/mem/nalloc/ft_clean_garbage.c \
-	srcs/mem/nalloc/ft_burn_garbage.c \
-	srcs/mem/malloc/ft_strnew.c \
-	srcs/mem/malloc/ft_memalloc.c \
-	srcs/mem/del/ft_strdel_multi.c \
-	srcs/mem/del/ft_strdel.c \
-	srcs/mem/del/ft_memdel.c \
-	srcs/mem/del/ft_free_with_nalloc.c \
-	srcs/mem/del/ft_del.c \
-	srcs/mem/copy/ft_memmove.c \
-	srcs/mem/copy/ft_memcpy.c \
-	srcs/mem/copy/ft_memccpy.c \
-	srcs/maths/suites/ft_nprime.c \
-	srcs/maths/suites/ft_fibonacci.c \
-	srcs/maths/sort/ft_squick_sort.c \
-	srcs/maths/sort/ft_quick_sort.c \
-	srcs/maths/round/ft_round_upper.c \
-	srcs/maths/round/ft_round.c \
-	srcs/maths/round/ft_rfpart.c \
-	srcs/maths/round/ft_ipart.c \
-	srcs/maths/round/ft_fpart.c \
-	srcs/maths/random/seed/ft_seed_time.c \
-	srcs/maths/random/seed/ft_seed_string.c \
 	srcs/vector/vct_strjoin.c \
 	srcs/vector/vct_replace_char.c \
 	srcs/vector/vct_replace_char_at.c \
 	srcs/vector/vct_pushstr.c \
 	srcs/vector/vct_pop_from.c \
-	srcs/vector/vct_pop.c \
-	srcs/vector/vct_newstr.c \
-	srcs/vector/vct_new.c \
-	srcs/vector/vct_len.c \
-	srcs/vector/vct_joinfree.c \
-	srcs/vector/vct_join.c \
-	srcs/vector/vct_increase_scale.c \
-	srcs/vector/vct_getstr.c \
-	srcs/vector/vct_getchar_at.c \
-	srcs/vector/vct_fill_before.c \
-	srcs/vector/vct_fill_after.c \
-	srcs/vector/vct_dup.c \
-	srcs/vector/vct_del.c \
-	srcs/vector/vct_chr_str.c \
-	srcs/vector/vct_chr.c \
-	srcs/vector/vct_cat.c \
-	srcs/vector/vct_bzero.c \
-	srcs/vector/vct_apply.c \
-	srcs/vector/vct_addstr_at.c \
-	srcs/vector/vct_addchar.c \
-	srcs/vector/vct_addchar_at.c \
-	srcs/terminal/other/ft_wait_pls.c \
-	srcs/terminal/other/ft_progress.c \
-	srcs/terminal/other/ft_press_any_key.c \
-	srcs/terminal/cursor/ft_place_cursor.c \
-	srcs/terminal/color/ft_str_rgbcolor.c \
-	srcs/terminal/color/ft_rgb_color.c \
-	srcs/terminal/color/ft_rgb_bcolor.c \
-	srcs/terminal/color/ft_putstr_color.c \
-	srcs/terminal/color/ft_print_address_color.c \
-	srcs/structures/tab/transform/ft_tabiter.c \
-	srcs/structures/tab/print/ft_tab_print_one_elmnt.c \
-	srcs/structures/tab/print/ft_tab_print_dir.c \
-	srcs/structures/tab/move/ft_tab_reach_end.c \
-	srcs/structures/tab/move/ft_tab_dirth.c \
-	srcs/structures/tab/move/ft_tab_access.c \
-	srcs/structures/tab/len/ft_tabloop_lendir.c \
-	srcs/structures/tab/len/ft_tab_lendir.c \
-	srcs/structures/tab/ft_is/ft_tabloop_itis.c \
-	srcs/structures/tab/dir/ft_tab_dir_reverse.c \
-	srcs/structures/tab/dir/ft_tab_dir_rclock.c \
-	srcs/structures/tab/dir/ft_tab_dir_nclock.c \
-	srcs/structures/tab/dir/ft_tab_dir_clock.c \
-	srcs/structures/tab/del/ft_tab_delete_row_len.c \
-	srcs/structures/tab/del/ft_tab_delete_row.c \
-	srcs/structures/tab/create/ft_tab_square_it.c \
-	srcs/structures/tab/create/ft_tabnew_rectangle.c \
-	srcs/structures/tab/create/ft_tabnew_ptr.c \
-	srcs/structures/tab/create/ft_tabnew_dir.c 
+	srcs/vector/vct_pop.c 

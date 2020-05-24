@@ -6,7 +6,7 @@
 #    By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/12 15:04:16 by ldevelle          #+#    #+#              #
-#    Updated: 2020/03/29 15:27:49 by ezalos           ###   ########.fr        #
+#    Updated: 2020/05/24 12:14:29 by ezalos           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -174,6 +174,7 @@ endef
 ##						##
 ##########################
 
+DIR_PREP = $(shell find $(MASTER) -type d -exec echo {} \; | sed 's~$(MASTER)~$(DIR_OBJ)~g')
 all :	$(modules) $(NAME) auteur $(DIR_OBJ)
 
 ifeq ($(LIB_PRJCT),y)
@@ -185,7 +186,7 @@ $(NAME):	$(LIB) $(OBJS) $(HEAD_DIR)
 endif
 
 $(DIR_OBJ)%.o:$(MASTER)%.c $(HEAD) Makefile
-	mkdir -p $(DIR_OBJ)
+	mkdir -p $(DIR_PREP)
 	$(call run_and_test, $(CC) $(CFLAGS) $(HEADERS_DIRECTORIES) -o $@ -c $<)
 
 $(LIB): FORCE
@@ -211,7 +212,7 @@ auteur : Makefile
 		echo $(login) > auteur
 
 $(DIR_OBJ) :
-		mkdir -p $(DIR_OBJ)
+	mkdir -p $(DIR_PREP)
 
 ##########################
 ##						##
@@ -286,7 +287,6 @@ sources :	object_ready
 		$(update_dep)
 		echo "\$(YELLOW)automatic sources\$(END)\\thas been \$(GREEN)\\t\\t  created\$(END)"
 
-DIR_PREP = $(shell find $(MASTER) -type d -exec echo {} \; | sed 's~$(MASTER)~$(DIR_OBJ)~g')
 object_ready :	$(DIR_OBJ)
 		rm -rf $(DIR_OBJ)/*
 		mkdir -p $(DIR_PREP)

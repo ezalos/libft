@@ -6,12 +6,12 @@
 #    By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/12 15:04:16 by ldevelle          #+#    #+#              #
-#    Updated: 2020/04/07 13:11:52 by ezalos           ###   ########.fr        #
+#    Updated: 2020/05/24 12:38:21 by ezalos           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #It will be the name of your executable
-NAME 					=	libft
+NAME 					=	libft.a
 
 TESTEUR					=	test
 

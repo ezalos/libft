@@ -119,7 +119,6 @@ PAT += 	srcs/big/ft_printf/get_str_char.c \
 	srcs/vector/vct_chr.c \
 	srcs/vector/vct_cat.c \
 	srcs/vector/vct_bzero.c \
-	srcs/vector/vct_apply.c \
 	srcs/vector/vct_addstr_at.c \
 	srcs/vector/vct_addchar.c \
 	srcs/vector/vct_addchar_at.c \

@@ -6,7 +6,7 @@
 /*   By: amartino <amartino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/27 15:25:09 by amartino          #+#    #+#             */
-/*   Updated: 2019/09/30 13:48:54 by ldevelle         ###   ########.fr       */
+/*   Updated: 2020/05/24 11:46:15 by ezalos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -126,7 +126,10 @@ int8_t			vct_replace_char(t_vector *vector, char c, char replace);
 **  	APPLY	    **
 **********************
 */
-int				vct_apply(t_vector *vector, enum e_apply type);
+
+/*
+** int				vct_apply(t_vector *vector, enum e_apply type);
+*/
 
 /*
 **********************

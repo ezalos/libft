@@ -6,13 +6,14 @@
 /*   By: gtaja <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/03 07:40:18 by gtaja             #+#    #+#             */
-/*   Updated: 2019/11/03 07:40:18 by gtaja            ###   ########.fr       */
+/*   Updated: 2020/05/24 11:46:44 by ezalos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef AUTO_H
 # define AUTO_H
 
+# include "auto/auto_libft_.h"
 # include "auto/auto_.h"
 # include "auto/auto_big.h"
 # include "auto/auto_data_base.h"

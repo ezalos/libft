@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gtaja <gtaja@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 11:15:02 by ldevelle          #+#    #+#             */
-/*   Updated: 2019/11/03 07:42:35 by gtaja            ###   ########.fr       */
+/*   Updated: 2020/06/28 14:04:13 by ezalos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@
 # include "./terminal_defines.h"
 # include "./vector.h"
 # include "./define.h"
+# include "./parse.h"
+# include "./tree.h"
 
 # ifndef ILLEGAL
 #  include <time.h>

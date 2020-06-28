@@ -1,33 +1,4 @@
-PAT += 	srcs/maths/random/seed/ft_seed_string.c \
-	srcs/maths/random/seed/ft_seed_gnl.c \
-	srcs/maths/random/seed/ft_seed_adress.c \
-	srcs/maths/random/ft_simple_random.c \
-	srcs/maths/random/ft_random.c \
-	srcs/maths/random/ft_rand.c \
-	srcs/maths/operators/ft_sum_to_nb.c \
-	srcs/maths/operators/ft_power.c \
-	srcs/maths/operators/ft_nb_in_range.c \
-	srcs/maths/operators/ft_fsqrt.c \
-	srcs/maths/operators/ft_factorial.c \
-	srcs/maths/operators/ft_abs.c \
-	srcs/inout/write/string/ft_putstr.c \
-	srcs/inout/write/string/ft_putnstr.c \
-	srcs/inout/write/string/ft_putendl.c \
-	srcs/inout/write/spacing/ft_puttab_len.c \
-	srcs/inout/write/spacing/ft_puttab.c \
-	srcs/inout/write/return/ft_putstr_rnull.c \
-	srcs/inout/write/return/ft_putstr_r0_fd.c \
-	srcs/inout/write/return/ft_putstr_r0.c \
-	srcs/inout/write/nb/ft_putnbr.c \
-	srcs/inout/write/nb/ft_putbnbr_str.c \
-	srcs/inout/write/fd/ft_putstr_fd.c \
-	srcs/inout/write/fd/ft_putnbr_fd.c \
-	srcs/inout/write/fd/ft_putendl_fd.c \
-	srcs/inout/write/fd/ft_putchar_fd.c \
-	srcs/inout/write/char/ft_putchar.c \
-	srcs/inout/read/ft_gnl.c \
-	srcs/inout/read/ft_get_next_line.c \
-	srcs/inout/converters/ft_u_nb_to_a.c \
+PAT += 	srcs/inout/converters/ft_u_nb_to_a.c \
 	srcs/inout/converters/ft_u_nb_len.c \
 	srcs/inout/converters/ft_patoi.c \
 	srcs/inout/converters/ft_nb_to_a.c \
@@ -82,14 +53,67 @@ PAT += 	srcs/maths/random/seed/ft_seed_string.c \
 	srcs/big/ft_printf/bonus_gestion.c \
 	srcs/big/ft_printf/bonus_color.c \
 	srcs/big/ft_printf/ajust_flags.c \
-	srcs/terminal/other/ft_press_any_key.c \
-	srcs/terminal/cursor/ft_place_cursor.c \
-	srcs/terminal/color/ft_str_rgbcolor.c \
-	srcs/terminal/color/ft_rgb_color.c \
-	srcs/terminal/color/ft_rgb_bcolor.c \
-	srcs/terminal/color/ft_putstr_color.c \
-	srcs/terminal/color/ft_print_address_color.c \
-	srcs/structures/tab/transform/ft_tabiter.c \
+	srcs/mem/transform/ft_swap.c \
+	srcs/mem/transform/ft_memset.c \
+	srcs/mem/transform/ft_bzero.c \
+	srcs/mem/search/ft_memcmp.c \
+	srcs/mem/search/ft_memchr.c \
+	srcs/mem/nalloc/ft_switch_garbage.c \
+	srcs/mem/nalloc/ft_nalloc.c \
+	srcs/mem/nalloc/ft_malloco.c \
+	srcs/mem/nalloc/ft_garbage_collector.c \
+	srcs/mem/nalloc/ft_cnalloc.c \
+	srcs/mem/nalloc/ft_clean_garbage.c \
+	srcs/mem/nalloc/ft_burn_garbage.c \
+	srcs/mem/malloc/ft_strnew.c \
+	srcs/mem/malloc/ft_memalloc.c \
+	srcs/mem/del/ft_strdel_multi.c \
+	srcs/mem/del/ft_strdel.c \
+	srcs/mem/del/ft_memdel.c \
+	srcs/mem/del/ft_free_with_nalloc.c \
+	srcs/mem/del/ft_del.c \
+	srcs/mem/copy/ft_memmove.c \
+	srcs/mem/copy/ft_memcpy.c \
+	srcs/mem/copy/ft_memccpy.c \
+	srcs/maths/suites/ft_nprime.c \
+	srcs/maths/suites/ft_fibonacci.c \
+	srcs/maths/sort/ft_squick_sort.c \
+	srcs/maths/sort/ft_quick_sort.c \
+	srcs/maths/round/ft_round_upper.c \
+	srcs/maths/round/ft_round.c \
+	srcs/maths/round/ft_rfpart.c \
+	srcs/maths/round/ft_ipart.c \
+	srcs/maths/round/ft_fpart.c \
+	srcs/maths/random/seed/ft_seed_time.c \
+	srcs/maths/random/seed/ft_seed_string.c \
+	srcs/maths/random/seed/ft_seed_gnl.c \
+	srcs/maths/random/seed/ft_seed_adress.c \
+	srcs/maths/random/ft_simple_random.c \
+	srcs/maths/random/ft_random.c \
+	srcs/maths/random/ft_rand.c \
+	srcs/maths/operators/ft_sum_to_nb.c \
+	srcs/maths/operators/ft_power.c \
+	srcs/maths/operators/ft_nb_in_range.c \
+	srcs/maths/operators/ft_fsqrt.c \
+	srcs/maths/operators/ft_factorial.c \
+	srcs/maths/operators/ft_abs.c \
+	srcs/inout/write/string/ft_putstr.c \
+	srcs/inout/write/string/ft_putnstr.c \
+	srcs/inout/write/string/ft_putendl.c \
+	srcs/inout/write/spacing/ft_puttab_len.c \
+	srcs/inout/write/spacing/ft_puttab.c \
+	srcs/inout/write/return/ft_putstr_rnull.c \
+	srcs/inout/write/return/ft_putstr_r0_fd.c \
+	srcs/inout/write/return/ft_putstr_r0.c \
+	srcs/inout/write/nb/ft_putnbr.c \
+	srcs/inout/write/nb/ft_putbnbr_str.c \
+	srcs/inout/write/fd/ft_putstr_fd.c \
+	srcs/inout/write/fd/ft_putnbr_fd.c \
+	srcs/inout/write/fd/ft_putendl_fd.c \
+	srcs/inout/write/fd/ft_putchar_fd.c \
+	srcs/inout/write/char/ft_putchar.c \
+	srcs/inout/read/ft_gnl.c \
+	srcs/inout/read/ft_get_next_line.c \
 	srcs/structures/tab/print/ft_tab_print_one_elmnt.c \
 	srcs/structures/tab/print/ft_tab_print_dir.c \
 	srcs/structures/tab/move/ft_tab_reach_end.c \
@@ -172,38 +196,6 @@ PAT += 	srcs/maths/random/seed/ft_seed_string.c \
 	srcs/strings/compare/ft_strncmp.c \
 	srcs/strings/compare/ft_strequ.c \
 	srcs/strings/compare/ft_strcmp.c \
-	srcs/mem/transform/ft_swap.c \
-	srcs/mem/transform/ft_memset.c \
-	srcs/mem/transform/ft_bzero.c \
-	srcs/mem/search/ft_memcmp.c \
-	srcs/mem/search/ft_memchr.c \
-	srcs/mem/nalloc/ft_switch_garbage.c \
-	srcs/mem/nalloc/ft_nalloc.c \
-	srcs/mem/nalloc/ft_malloco.c \
-	srcs/mem/nalloc/ft_garbage_collector.c \
-	srcs/mem/nalloc/ft_cnalloc.c \
-	srcs/mem/nalloc/ft_clean_garbage.c \
-	srcs/mem/nalloc/ft_burn_garbage.c \
-	srcs/mem/malloc/ft_strnew.c \
-	srcs/mem/malloc/ft_memalloc.c \
-	srcs/mem/del/ft_strdel_multi.c \
-	srcs/mem/del/ft_strdel.c \
-	srcs/mem/del/ft_memdel.c \
-	srcs/mem/del/ft_free_with_nalloc.c \
-	srcs/mem/del/ft_del.c \
-	srcs/mem/copy/ft_memmove.c \
-	srcs/mem/copy/ft_memcpy.c \
-	srcs/mem/copy/ft_memccpy.c \
-	srcs/maths/suites/ft_nprime.c \
-	srcs/maths/suites/ft_fibonacci.c \
-	srcs/maths/sort/ft_squick_sort.c \
-	srcs/maths/sort/ft_quick_sort.c \
-	srcs/maths/round/ft_round_upper.c \
-	srcs/maths/round/ft_round.c \
-	srcs/maths/round/ft_rfpart.c \
-	srcs/maths/round/ft_ipart.c \
-	srcs/maths/round/ft_fpart.c \
-	srcs/maths/random/seed/ft_seed_time.c \
 	srcs/vector/vct_strjoin.c \
 	srcs/vector/vct_replace_char.c \
 	srcs/vector/vct_replace_char_at.c \
@@ -230,4 +222,15 @@ PAT += 	srcs/maths/random/seed/ft_seed_string.c \
 	srcs/vector/vct_addchar.c \
 	srcs/vector/vct_addchar_at.c \
 	srcs/terminal/other/ft_wait_pls.c \
-	srcs/terminal/other/ft_progress.c 
+	srcs/terminal/other/ft_progress.c \
+	srcs/terminal/other/ft_press_any_key.c \
+	srcs/terminal/cursor/ft_place_cursor.c \
+	srcs/terminal/color/ft_str_rgbcolor.c \
+	srcs/terminal/color/ft_rgb_color.c \
+	srcs/terminal/color/ft_rgb_bcolor.c \
+	srcs/terminal/color/ft_putstr_color.c \
+	srcs/terminal/color/ft_print_address_color.c \
+	srcs/structures/tab/transform/ft_tabiter.c \
+	srcs/big/parse/parse.c \
+	srcs/maths/operators/ft_fabs.c \
+	srcs/structures/rbt/tree.c 

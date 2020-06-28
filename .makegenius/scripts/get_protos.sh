@@ -6,7 +6,7 @@
 #    By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/22 19:02:24 by ldevelle          #+#    #+#              #
-#    Updated: 2020/02/29 18:26:48 by ldevelle         ###   ########.fr        #
+#    Updated: 2020/06/28 23:16:06 by ezalos           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,8 +35,9 @@ prefix=auto_
 yy=_
 suffix=_H
 extension=.h
+anti_dot=$(echo "${4//.}")
 name=$path$prefix$4$yy$1$extension
-spe=$prefix$4$yy$1$suffix
+spe=$prefix$anti_dot$yy$1$suffix
 
 mkdir -p $path
 # rm -rf $name

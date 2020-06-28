@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 11:15:02 by ldevelle          #+#    #+#             */
-/*   Updated: 2020/06/28 14:04:13 by ezalos           ###   ########.fr       */
+/*   Updated: 2020/06/28 23:33:17 by ezalos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@
 #  define ILLEGAL clock()
 # endif
 
-# include "./auto.h"
+# include "./auto_libft.a.h"
 
 # ifndef BUFF_SIZE
 #  define BUFF_SIZE 	65536

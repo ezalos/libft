@@ -5,13 +5,13 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ezalos <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/28 14:06:13 by ezalos            #+#    #+#             */
-/*   Updated: 2020/06/28 14:06:13 by ezalos           ###   ########.fr       */
+/*   Created: 2020/06/28 23:32:38 by ezalos            #+#    #+#             */
+/*   Updated: 2020/06/28 23:32:38 by ezalos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef AUTO_LIBFT.A__H
-# define AUTO_LIBFT.A__H
+#ifndef AUTO_LIBFTA__H
+# define AUTO_LIBFTA__H
 
 double		cl(clock_t t);
 t_time		*list_exchange(t_time **timee);

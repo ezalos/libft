@@ -6,15 +6,16 @@
 #    By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/23 19:04:48 by ldevelle          #+#    #+#              #
-#    Updated: 2020/03/31 19:39:15 by ezalos           ###   ########.fr        #
+#    Updated: 2020/06/28 23:31:55 by ezalos           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 extension=.h
 extension_sec=_H
 file_name=auto_
+anti_dot=$(echo "${2//.}")
 file=$file_name$2$extension
-spe=$file_name$2$extension_sec
+spe=$file_name$anti_dot$extension_sec
 path=$1$file
 
 # rm -rf $path

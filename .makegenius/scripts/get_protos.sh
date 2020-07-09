@@ -6,7 +6,7 @@
 #    By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/22 19:02:24 by ldevelle          #+#    #+#              #
-#    Updated: 2020/06/28 23:16:06 by ezalos           ###   ########.fr        #
+#    Updated: 2020/06/29 16:59:50 by ezalos           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,9 +43,9 @@ mkdir -p $path
 # rm -rf $name
 
 if [ "$(uname)" == "Darwin" ]; then
-	echo "#ifndef \c" > $name
+	echo -n "#ifndef " > $name
 	printf $spe | awk '{ print toupper($1) }' >> $name
-	echo "# define \c" >> $name
+	echo -n "# define " >> $name
 	printf $spe | awk '{ print toupper($1) }' >> $name
 	echo "" >> $name
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then

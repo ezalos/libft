@@ -6,7 +6,7 @@
 /*   By: ezalos <ezalos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 17:29:49 by ezalos            #+#    #+#             */
-/*   Updated: 2020/09/23 17:53:40 by ezalos           ###   ########.fr       */
+/*   Updated: 2020/09/23 17:56:40 by ezalos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -440,9 +440,9 @@ int			tree_inrorder(t_rbt *root, t_rbt_inorder *func)
 
 	if (root != NULL)
 	{
-		value += tree_inorder(root->right, func);
+		value += tree_inrorder(root->right, func);
 		value += func(root);
-		value += tree_inorder(root->left, func);
+		value += tree_inrorder(root->left, func);
 	}
 	return value;
 }

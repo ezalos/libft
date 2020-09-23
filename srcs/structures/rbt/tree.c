@@ -6,7 +6,7 @@
 /*   By: ezalos <ezalos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 17:29:49 by ezalos            #+#    #+#             */
-/*   Updated: 2020/06/28 14:09:45 by ezalos           ###   ########.fr       */
+/*   Updated: 2020/09/23 17:53:40 by ezalos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -432,6 +432,19 @@ void		tree_str(t_rbt *root)
 	}
 	else
 		ft_printf("null");
+}
+
+int			tree_inrorder(t_rbt *root, t_rbt_inorder *func)
+{
+	int		value = 0;
+
+	if (root != NULL)
+	{
+		value += tree_inorder(root->right, func);
+		value += func(root);
+		value += tree_inorder(root->left, func);
+	}
+	return value;
 }
 
 int			tree_inorder(t_rbt *root, t_rbt_inorder *func)

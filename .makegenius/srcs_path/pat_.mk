@@ -1,4 +1,17 @@
-PAT += 	srcs/inout/converters/ft_nb_char_to_int.c \
+PAT += 	srcs/big/ft_printf/ft_printf.c \
+	srcs/big/ft_printf/check_arg.c \
+	srcs/big/ft_printf/check_arg2.c \
+	srcs/big/ft_printf/bonus_gestion.c \
+	srcs/big/ft_printf/bonus_color.c \
+	srcs/big/ft_printf/ajust_flags.c \
+	srcs/inout/read/ft_gnl.c \
+	srcs/inout/read/ft_get_next_line.c \
+	srcs/inout/converters/ft_u_nb_to_a.c \
+	srcs/inout/converters/ft_u_nb_len.c \
+	srcs/inout/converters/ft_patoi.c \
+	srcs/inout/converters/ft_nb_to_a.c \
+	srcs/inout/converters/ft_nb_len.c \
+	srcs/inout/converters/ft_nb_char_to_int.c \
 	srcs/inout/converters/ft_itoa.c \
 	srcs/inout/converters/ft_is_str_bigger_than_int.c \
 	srcs/inout/converters/ft_intlen.c \
@@ -42,35 +55,6 @@ PAT += 	srcs/inout/converters/ft_nb_char_to_int.c \
 	srcs/big/ft_printf/get_str_float.c \
 	srcs/big/ft_printf/get_str_char.c \
 	srcs/big/ft_printf/get_printf.c \
-	srcs/big/ft_printf/ft_printf.c \
-	srcs/big/ft_printf/check_arg.c \
-	srcs/big/ft_printf/check_arg2.c \
-	srcs/big/ft_printf/bonus_gestion.c \
-	srcs/big/ft_printf/bonus_color.c \
-	srcs/big/ft_printf/ajust_flags.c \
-	srcs/strings/ft_is/ft_islower.c \
-	srcs/strings/ft_is/ft_isdigit.c \
-	srcs/strings/ft_is/ft_isascii.c \
-	srcs/strings/ft_is/ft_isalpha.c \
-	srcs/strings/ft_is/ft_isalnum.c \
-	srcs/strings/duplicate/ft_strtrim.c \
-	srcs/strings/duplicate/ft_strsub.c \
-	srcs/strings/duplicate/ft_strsplit.c \
-	srcs/strings/duplicate/ft_strrealloc.c \
-	srcs/strings/duplicate/ft_strjoin_multi.c \
-	srcs/strings/duplicate/ft_strjoin.c \
-	srcs/strings/duplicate/ft_strdup.c \
-	srcs/strings/copy/ft_strncpy.c \
-	srcs/strings/copy/ft_strncat.c \
-	srcs/strings/copy/ft_strlcat.c \
-	srcs/strings/copy/ft_strcpy.c \
-	srcs/strings/copy/ft_strcat.c \
-	srcs/strings/compare/ft_strnequ.c \
-	srcs/strings/compare/ft_strncmp.c \
-	srcs/strings/compare/ft_strequ.c \
-	srcs/strings/compare/ft_strcmp.c \
-	srcs/mem/transform/ft_swap.c \
-	srcs/mem/transform/ft_memset.c \
 	srcs/mem/transform/ft_bzero.c \
 	srcs/mem/search/ft_memcmp.c \
 	srcs/mem/search/ft_memchr.c \
@@ -128,54 +112,6 @@ PAT += 	srcs/inout/converters/ft_nb_char_to_int.c \
 	srcs/inout/write/fd/ft_putendl_fd.c \
 	srcs/inout/write/fd/ft_putchar_fd.c \
 	srcs/inout/write/char/ft_putchar.c \
-	srcs/inout/read/ft_gnl.c \
-	srcs/inout/read/ft_get_next_line.c \
-	srcs/inout/converters/ft_u_nb_to_a.c \
-	srcs/inout/converters/ft_u_nb_len.c \
-	srcs/inout/converters/ft_patoi.c \
-	srcs/inout/converters/ft_nb_to_a.c \
-	srcs/inout/converters/ft_nb_len.c \
-	srcs/vector/vct_strjoin.c \
-	srcs/vector/vct_replace_char.c \
-	srcs/vector/vct_replace_char_at.c \
-	srcs/vector/vct_pushstr.c \
-	srcs/vector/vct_pop_from.c \
-	srcs/vector/vct_pop.c \
-	srcs/vector/vct_newstr.c \
-	srcs/vector/vct_new.c \
-	srcs/vector/vct_len.c \
-	srcs/vector/vct_joinfree.c \
-	srcs/vector/vct_join.c \
-	srcs/vector/vct_increase_scale.c \
-	srcs/vector/vct_getstr.c \
-	srcs/vector/vct_getchar_at.c \
-	srcs/vector/vct_fill_before.c \
-	srcs/vector/vct_fill_after.c \
-	srcs/vector/vct_dup.c \
-	srcs/vector/vct_del.c \
-	srcs/vector/vct_chr_str.c \
-	srcs/vector/vct_chr.c \
-	srcs/vector/vct_cat.c \
-	srcs/vector/vct_bzero.c \
-	srcs/vector/vct_addstr_at.c \
-	srcs/vector/vct_addchar.c \
-	srcs/vector/vct_addchar_at.c \
-	srcs/terminal/other/ft_wait_pls.c \
-	srcs/terminal/other/ft_progress.c \
-	srcs/terminal/other/ft_press_any_key.c \
-	srcs/terminal/cursor/ft_place_cursor.c \
-	srcs/terminal/color/ft_str_rgbcolor.c \
-	srcs/terminal/color/ft_rgb_color.c \
-	srcs/terminal/color/ft_rgb_bcolor.c \
-	srcs/terminal/color/ft_putstr_color.c \
-	srcs/terminal/color/ft_print_address_color.c \
-	srcs/structures/tab/transform/ft_tabiter.c \
-	srcs/structures/tab/print/ft_tab_print_one_elmnt.c \
-	srcs/structures/tab/print/ft_tab_print_dir.c \
-	srcs/structures/tab/move/ft_tab_reach_end.c \
-	srcs/structures/tab/move/ft_tab_dirth.c \
-	srcs/structures/tab/move/ft_tab_access.c \
-	srcs/structures/tab/len/ft_tabloop_lendir.c \
 	srcs/structures/tab/len/ft_tab_lendir.c \
 	srcs/structures/tab/ft_is/ft_tabloop_itis.c \
 	srcs/structures/tab/dir/ft_tab_dir_reverse.c \
@@ -231,6 +167,70 @@ PAT += 	srcs/inout/converters/ft_nb_char_to_int.c \
 	srcs/strings/ft_is/ft_tolower.c \
 	srcs/strings/ft_is/ft_isupper.c \
 	srcs/strings/ft_is/ft_isprint.c \
-	srcs/structures/rbt/tree.c \
+	srcs/strings/ft_is/ft_islower.c \
+	srcs/strings/ft_is/ft_isdigit.c \
+	srcs/strings/ft_is/ft_isascii.c \
+	srcs/strings/ft_is/ft_isalpha.c \
+	srcs/strings/ft_is/ft_isalnum.c \
+	srcs/strings/duplicate/ft_strtrim.c \
+	srcs/strings/duplicate/ft_strsub.c \
+	srcs/strings/duplicate/ft_strsplit.c \
+	srcs/strings/duplicate/ft_strrealloc.c \
+	srcs/strings/duplicate/ft_strjoin_multi.c \
+	srcs/strings/duplicate/ft_strjoin.c \
+	srcs/strings/duplicate/ft_strdup.c \
+	srcs/strings/copy/ft_strncpy.c \
+	srcs/strings/copy/ft_strncat.c \
+	srcs/strings/copy/ft_strlcat.c \
+	srcs/strings/copy/ft_strcpy.c \
+	srcs/strings/copy/ft_strcat.c \
+	srcs/strings/compare/ft_strnequ.c \
+	srcs/strings/compare/ft_strncmp.c \
+	srcs/strings/compare/ft_strequ.c \
+	srcs/strings/compare/ft_strcmp.c \
+	srcs/mem/transform/ft_swap.c \
+	srcs/mem/transform/ft_memset.c \
+	srcs/vector/vct_strjoin.c \
+	srcs/vector/vct_replace_char.c \
+	srcs/vector/vct_replace_char_at.c \
+	srcs/vector/vct_pushstr.c \
+	srcs/vector/vct_pop_from.c \
+	srcs/vector/vct_pop.c \
+	srcs/vector/vct_newstr.c \
+	srcs/vector/vct_new.c \
+	srcs/vector/vct_len.c \
+	srcs/vector/vct_joinfree.c \
+	srcs/vector/vct_join.c \
+	srcs/vector/vct_increase_scale.c \
+	srcs/vector/vct_getstr.c \
+	srcs/vector/vct_getchar_at.c \
+	srcs/vector/vct_fill_before.c \
+	srcs/vector/vct_fill_after.c \
+	srcs/vector/vct_dup.c \
+	srcs/vector/vct_del.c \
+	srcs/vector/vct_chr_str.c \
+	srcs/vector/vct_chr.c \
+	srcs/vector/vct_cat.c \
+	srcs/vector/vct_bzero.c \
+	srcs/vector/vct_addstr_at.c \
+	srcs/vector/vct_addchar.c \
+	srcs/vector/vct_addchar_at.c \
+	srcs/terminal/other/ft_wait_pls.c \
+	srcs/terminal/other/ft_progress.c \
+	srcs/terminal/other/ft_press_any_key.c \
+	srcs/terminal/cursor/ft_place_cursor.c \
+	srcs/terminal/color/ft_str_rgbcolor.c \
+	srcs/terminal/color/ft_rgb_color.c \
+	srcs/terminal/color/ft_rgb_bcolor.c \
+	srcs/terminal/color/ft_putstr_color.c \
+	srcs/terminal/color/ft_print_address_color.c \
+	srcs/structures/tab/transform/ft_tabiter.c \
+	srcs/structures/tab/print/ft_tab_print_one_elmnt.c \
+	srcs/structures/tab/print/ft_tab_print_dir.c \
+	srcs/structures/tab/move/ft_tab_reach_end.c \
+	srcs/structures/tab/move/ft_tab_dirth.c \
+	srcs/structures/tab/move/ft_tab_access.c \
+	srcs/structures/tab/len/ft_tabloop_lendir.c \
 	srcs/maths/operators/ft_fabs.c \
-	srcs/big/parse/parse.c 
+	srcs/big/parse/parse.c \
+	srcs/structures/rbt/tree.c 

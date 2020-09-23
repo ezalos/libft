@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ezalos <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/28 23:32:38 by ezalos            #+#    #+#             */
-/*   Updated: 2020/06/28 23:32:38 by ezalos           ###   ########.fr       */
+/*   Created: 2020/09/23 17:53:51 by ezalos            #+#    #+#             */
+/*   Updated: 2020/09/23 17:53:51 by ezalos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -279,6 +279,7 @@ void		tree_insert_repair(t_rbt *n);
 t_rbt		*tree_insert(t_rbt *root, void* content, int key);
 t_rbt		*tree_insert_func(t_rbt *root, void* content, t_rbt_compare *func);
 void		tree_str(t_rbt *root);
+int		tree_inrorder(t_rbt *root, t_rbt_inorder *func);
 int		tree_inorder(t_rbt *root, t_rbt_inorder *func);
 int		print_node_info(t_rbt *root);
 void		tree_simple_print(t_rbt *root);

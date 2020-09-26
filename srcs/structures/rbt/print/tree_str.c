@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   auto_libft.a.h                                     :+:      :+:    :+:   */
+/*   tree_str.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ezalos <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: ezalos <ezalos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/26 21:05:12 by ezalos            #+#    #+#             */
-/*   Updated: 2020/09/26 21:05:12 by ezalos           ###   ########.fr       */
+/*   Created: 2020/09/26 21:03:38 by ezalos            #+#    #+#             */
+/*   Updated: 2020/09/26 21:03:48 by ezalos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef AUTO_LIBFTA_H
-# define AUTO_LIBFTA_H
+#include "head.h"
 
-# include "auto/auto_libft.a_.h"
-
-#endif
+void		tree_str(t_rbt *root)
+{
+	if (root != NULL)
+	{
+		if (root->color == RED)
+			ft_printf("R%~{255;150;150}%d%~{}", root->key);
+		else
+			ft_printf("B%~{150;150;255}%d%~{}", root->key);
+	}
+	else
+		ft_printf("null");
+}

@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   auto_libft.a.h                                     :+:      :+:    :+:   */
+/*   tree_simple_print.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ezalos <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: ezalos <ezalos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/26 21:05:12 by ezalos            #+#    #+#             */
-/*   Updated: 2020/09/26 21:05:12 by ezalos           ###   ########.fr       */
+/*   Created: 2020/09/26 21:04:20 by ezalos            #+#    #+#             */
+/*   Updated: 2020/09/26 21:04:27 by ezalos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef AUTO_LIBFTA_H
-# define AUTO_LIBFTA_H
+#include "head.h"
 
-# include "auto/auto_libft.a_.h"
-
-#endif
+void	tree_simple_print(t_rbt *root)
+{
+	tree_inorder(root, &print_node_info);
+}

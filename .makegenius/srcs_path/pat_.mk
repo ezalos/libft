@@ -233,4 +233,17 @@ PAT += 	srcs/big/ft_printf/ft_printf.c \
 	srcs/structures/tab/len/ft_tabloop_lendir.c \
 	srcs/maths/operators/ft_fabs.c \
 	srcs/big/parse/parse.c \
-	srcs/structures/rbt/tree.c 
+	srcs/structures/rbt/tree_new_node.c \
+	srcs/structures/rbt/tree_genealogy.c \
+	srcs/structures/rbt/tree_rotations.c \
+	srcs/structures/rbt/tree_recoloring.c \
+	srcs/structures/rbt/insert/tree_insert_case.c \
+	srcs/structures/rbt/insert/tree_insert_repair.c \
+	srcs/structures/rbt/insert/tree_insert_recurse.c \
+	srcs/structures/rbt/insert/tree_insert.c \
+	srcs/structures/rbt/print/tree_print.c \
+	srcs/structures/rbt/map/tree_inorder.c \
+	srcs/structures/rbt/map/tree_inrorder.c \
+	srcs/structures/rbt/print/tree_str.c \
+	srcs/structures/rbt/print/tree_simple_print.c \
+	srcs/structures/rbt/print/print_node_info.c 

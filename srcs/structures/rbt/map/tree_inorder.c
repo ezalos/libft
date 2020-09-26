@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   auto_libft.a.h                                     :+:      :+:    :+:   */
+/*   tree_inorder.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ezalos <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: ezalos <ezalos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/26 21:05:12 by ezalos            #+#    #+#             */
-/*   Updated: 2020/09/26 21:05:12 by ezalos           ###   ########.fr       */
+/*   Created: 2020/09/26 21:00:17 by ezalos            #+#    #+#             */
+/*   Updated: 2020/09/26 21:00:44 by ezalos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef AUTO_LIBFTA_H
-# define AUTO_LIBFTA_H
+#include "head.h"
 
-# include "auto/auto_libft.a_.h"
+int			tree_inorder(t_rbt *root, t_rbt_inorder *func)
+{
+	int		value = 0;
 
-#endif
+	if (root != NULL)
+	{
+		value += tree_inorder(root->left, func);
+		value += func(root);
+		value += tree_inorder(root->right, func);
+	}
+	return value;
+}

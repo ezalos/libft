@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ezalos <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/28 12:03:33 by ezalos            #+#    #+#             */
-/*   Updated: 2020/09/28 12:03:33 by ezalos           ###   ########.fr       */
+/*   Created: 2020/09/28 17:22:30 by ezalos            #+#    #+#             */
+/*   Updated: 2020/09/28 17:22:30 by ezalos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -297,6 +297,7 @@ size_t		ft_lst_free(t_list **delete_me);
 void		ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void		ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+t_list		*ft_lstcut(t_list **alst, int indx);
 t_list		*ft_lst_reach_end(t_list *alst);
 t_list		*ft_lstfind_th(t_list *lst, size_t umpteenth);
 void		ft_lstcutone(t_list **alst, void (*del)(void *, size_t));

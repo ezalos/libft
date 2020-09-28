@@ -246,4 +246,5 @@ PAT += 	srcs/big/ft_printf/ft_printf.c \
 	srcs/structures/rbt/print/tree_simple_print.c \
 	srcs/structures/rbt/print/print_node_info.c \
 	srcs/structures/rbt/map/tree_inrorder.c \
-	srcs/structures/rbt/map/tree_inorder.c 
+	srcs/structures/rbt/map/tree_inorder.c \
+	srcs/structures/list/move/ft_lstcut.c 

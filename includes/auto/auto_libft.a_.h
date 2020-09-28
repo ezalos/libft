@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ezalos <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/26 21:05:12 by ezalos            #+#    #+#             */
-/*   Updated: 2020/09/26 21:05:12 by ezalos           ###   ########.fr       */
+/*   Created: 2020/09/28 12:03:33 by ezalos            #+#    #+#             */
+/*   Updated: 2020/09/28 12:03:33 by ezalos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -277,7 +277,11 @@ t_rbt		*tree_root(t_rbt *node);
 t_rbt		*tree_sibling(t_rbt *node);
 t_rbt		*tree_uncle(t_rbt *node);
 int		tree_inorder(t_rbt *root, t_rbt_inorder *func);
+void		*tree_inorder_ptr(t_rbt *root, t_rbt_inorder_ptr *func);
+long long		tree_inorder_long_long(t_rbt *root,
+		t_rbt_inorder_long_long *func);
 int		tree_inrorder(t_rbt *root, t_rbt_inorder *func);
+void		*tree_inrorder_ptr(t_rbt *root, t_rbt_inorder_ptr *func);
 void		tree_str(t_rbt *root);
 int		print_node_info(t_rbt *root);
 void		padding_before(t_rbt *node, size_t space);

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ezalos <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/28 17:22:30 by ezalos            #+#    #+#             */
-/*   Updated: 2020/09/28 17:22:30 by ezalos           ###   ########.fr       */
+/*   Created: 2020/09/30 10:54:03 by ezalos            #+#    #+#             */
+/*   Updated: 2020/09/30 10:54:03 by ezalos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,6 +94,7 @@ t_argument		*parse_get_arg(char *name, int empty);
 t_argument		*parse_get(char *name);
 int		parse_args_save(int arg_place, t_argument *argument, int arg_type);
 int		parse_args(int ac, char **av);
+void		parse_free(void);
 int		parse_usage(void);
 char		*ft_strndup(char *str, size_t n);
 int		gnl(int fd, char **line);
@@ -282,6 +283,7 @@ long long		tree_inorder_long_long(t_rbt *root,
 		t_rbt_inorder_long_long *func);
 int		tree_inrorder(t_rbt *root, t_rbt_inorder *func);
 void		*tree_inrorder_ptr(t_rbt *root, t_rbt_inorder_ptr *func);
+void		tree_free(t_rbt *root, t_rbt_free_content *func);
 void		tree_str(t_rbt *root);
 int		print_node_info(t_rbt *root);
 void		padding_before(t_rbt *node, size_t space);

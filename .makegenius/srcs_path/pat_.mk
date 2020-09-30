@@ -232,7 +232,6 @@ PAT += 	srcs/big/ft_printf/ft_printf.c \
 	srcs/structures/tab/move/ft_tab_access.c \
 	srcs/structures/tab/len/ft_tabloop_lendir.c \
 	srcs/maths/operators/ft_fabs.c \
-	srcs/big/parse/parse.c \
 	srcs/structures/rbt/tree_new_node.c \
 	srcs/structures/rbt/tree_genealogy.c \
 	srcs/structures/rbt/tree_rotations.c \
@@ -247,4 +246,6 @@ PAT += 	srcs/big/ft_printf/ft_printf.c \
 	srcs/structures/rbt/print/print_node_info.c \
 	srcs/structures/rbt/map/tree_inrorder.c \
 	srcs/structures/rbt/map/tree_inorder.c \
-	srcs/structures/list/move/ft_lstcut.c 
+	srcs/structures/list/move/ft_lstcut.c \
+	srcs/structures/rbt/tree_free.c \
+	srcs/big/parse/parse.c 

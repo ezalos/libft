@@ -1,18 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdel.c                                        :+:      :+:    :+:   */
+/*   tree_free.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ezalos <ezalos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/12 11:18:40 by ldevelle          #+#    #+#             */
-/*   Updated: 2020/09/30 10:58:22 by ezalos           ###   ########.fr       */
+/*   Created: 2020/09/30 10:28:05 by ezalos            #+#    #+#             */
+/*   Updated: 2020/09/30 10:40:44 by ezalos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "head.h"
 
-void			ft_strdel(char **as)
+void				tree_free(t_rbt *root, t_rbt_free_content *func)
 {
-	ft_memdel((void**)as);
+	if (root != NULL)
+	{
+		tree_free(root->left, func);
+		func(&root->content);
+		tree_free(root->right, func);
+		ft_memdel((void**)&root);
+	}
 }

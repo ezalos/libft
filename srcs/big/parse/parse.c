@@ -6,7 +6,7 @@
 /*   By: ezalos <ezalos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/08 13:22:18 by ezalos            #+#    #+#             */
-/*   Updated: 2020/06/28 14:02:12 by ezalos           ###   ########.fr       */
+/*   Updated: 2020/09/30 10:53:43 by ezalos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -213,6 +213,14 @@ int		parse_args(int ac, char **av)
 		}
 	}
 	return (SUCCESS);
+}
+
+void		parse_free(void)
+{
+	t_parse		*arg;
+
+	arg = parse_mem();
+	ft_memdel((void**)&arg->use);
 }
 
 int		parse_usage(void)

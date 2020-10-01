@@ -6,7 +6,7 @@
 /*   By: ezalos <ezalos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/08 19:57:06 by ezalos            #+#    #+#             */
-/*   Updated: 2020/06/28 13:40:35 by ezalos           ###   ########.fr       */
+/*   Updated: 2020/09/30 15:41:34 by ezalos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ typedef	struct	s_argument
 	int			len;
 	int			position;
 	int			arg_nb;
-
+	int			arg_place;
 	char		**raw;
 	//should be in the order they have been found
 	//			from 0 elems to ac elems

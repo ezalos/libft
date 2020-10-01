@@ -68,7 +68,6 @@ PAT += 	srcs/big/ft_printf/ft_printf.c \
 	srcs/mem/malloc/ft_strnew.c \
 	srcs/mem/malloc/ft_memalloc.c \
 	srcs/mem/del/ft_strdel_multi.c \
-	srcs/mem/del/ft_strdel.c \
 	srcs/mem/del/ft_memdel.c \
 	srcs/mem/del/ft_free_with_nalloc.c \
 	srcs/mem/del/ft_del.c \
@@ -248,4 +247,6 @@ PAT += 	srcs/big/ft_printf/ft_printf.c \
 	srcs/structures/rbt/map/tree_inorder.c \
 	srcs/structures/list/move/ft_lstcut.c \
 	srcs/structures/rbt/tree_free.c \
-	srcs/big/parse/parse.c 
+	srcs/big/parse/parse.c \
+	srcs/mem/del/ft_strdel.c \
+	srcs/structures/rbt/remove/tree_remove.c 

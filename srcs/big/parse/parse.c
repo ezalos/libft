@@ -6,7 +6,7 @@
 /*   By: ezalos <ezalos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/08 13:22:18 by ezalos            #+#    #+#             */
-/*   Updated: 2020/09/30 10:53:43 by ezalos           ###   ########.fr       */
+/*   Updated: 2020/09/30 15:50:33 by ezalos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -146,6 +146,7 @@ int		parse_args_save(int arg_place, t_argument *argument, int arg_type)
 	argument->raw = &arg->av[arg_place];
 	argument->len = arg->ac - arg_place;
 	argument->len = 1;
+	argument->arg_place = arg_place;
 	arg->use[arg_place] = arg_type;
 	return (1);
 }
@@ -203,7 +204,7 @@ int		parse_args(int ac, char **av)
 			//need to be saved in the right argument
 			if (arg->def->raw == NULL)
 				parse_args_save(i, arg->def, ARG_ARGUMENT);
-			else
+			else if (0)
 			{
 				ft_printf("Error: '%s'\n", av[i]);
 				ft_printf("       '%s' is already the default argument\n", arg->def->raw[0]);

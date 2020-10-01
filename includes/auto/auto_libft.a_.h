@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ezalos <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/30 10:54:03 by ezalos            #+#    #+#             */
-/*   Updated: 2020/09/30 10:54:03 by ezalos           ###   ########.fr       */
+/*   Created: 2020/09/30 14:38:27 by ezalos            #+#    #+#             */
+/*   Updated: 2020/09/30 14:38:27 by ezalos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -270,6 +270,14 @@ void		tree_insert_case_1(t_rbt *n);
 void		tree_insert_case_2(t_rbt *n);
 void		tree_insert_case_3(t_rbt *n);
 void		tree_insert_case_4(t_rbt *n);
+void tree_replace_node(t_rbt *node, t_rbt *child);
+void tree_delete_one_child(t_rbt *node, t_rbt_free_content *func);
+void tree_delete_case_1(t_rbt *node);
+void tree_delete_case_2(t_rbt *node);
+void tree_delete_case_3(t_rbt *node);
+void tree_delete_case_4(t_rbt *node);
+void		tree_delete_case_5(t_rbt *node);
+void		tree_delete_case_6(t_rbt *node);
 void		tree_rot_left(t_rbt *node);
 void		tree_rot_right(t_rbt *node);
 t_rbt		*tree_parent(t_rbt *node);

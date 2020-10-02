@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   auto_libft.a.h                                     :+:      :+:    :+:   */
+/*   parse_args_save.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ezalos <ezalos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/02 12:25:15 by ezalos            #+#    #+#             */
-/*   Updated: 2020/10/02 12:35:42 by ezalos           ###   ########.fr       */
+/*   Created: 2020/10/02 11:55:50 by ezalos            #+#    #+#             */
+/*   Updated: 2020/10/02 11:55:53 by ezalos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef AUTO_LIBFT_A_H
-# define AUTO_LIBFT_A_H
+#include "libft.h"
 
-# include "auto/auto_libft.a_.h"
+int		parse_args_save(int arg_place, t_argument *argument, int arg_type)
+{
+	t_parse	*arg;
 
-#endif
+	arg = parse_mem();
+	argument->raw = &arg->av[arg_place];
+	argument->len = arg->ac - arg_place;
+	argument->len = 1;
+	argument->arg_place = arg_place;
+	arg->use[arg_place] = arg_type;
+	return (1);
+}

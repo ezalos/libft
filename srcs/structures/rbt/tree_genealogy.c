@@ -6,7 +6,7 @@
 /*   By: ezalos <ezalos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/26 20:42:58 by ezalos            #+#    #+#             */
-/*   Updated: 2020/09/26 20:42:59 by ezalos           ###   ########.fr       */
+/*   Updated: 2020/10/02 11:27:02 by ezalos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ t_rbt		*tree_root(t_rbt *node)
 	}
 	return (node);
 }
-
 
 t_rbt		*tree_sibling(t_rbt *node)
 {

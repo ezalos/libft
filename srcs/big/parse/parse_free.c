@@ -1,18 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   auto_libft.a.h                                     :+:      :+:    :+:   */
+/*   parse_free.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ezalos <ezalos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/02 12:25:15 by ezalos            #+#    #+#             */
-/*   Updated: 2020/10/02 12:35:42 by ezalos           ###   ########.fr       */
+/*   Created: 2020/10/02 11:54:40 by ezalos            #+#    #+#             */
+/*   Updated: 2020/10/02 11:54:46 by ezalos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef AUTO_LIBFT_A_H
-# define AUTO_LIBFT_A_H
+#include "libft.h"
 
-# include "auto/auto_libft.a_.h"
+void		parse_free(void)
+{
+	t_parse		*arg;
 
-#endif
+	arg = parse_mem();
+	ft_memdel((void**)&arg->use);
+}

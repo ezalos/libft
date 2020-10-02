@@ -1,18 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   auto_libft.a.h                                     :+:      :+:    :+:   */
+/*   tree_remove_case_2.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ezalos <ezalos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/02 12:25:15 by ezalos            #+#    #+#             */
-/*   Updated: 2020/10/02 12:35:42 by ezalos           ###   ########.fr       */
+/*   Created: 2020/10/02 11:37:36 by ezalos            #+#    #+#             */
+/*   Updated: 2020/10/02 11:38:16 by ezalos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef AUTO_LIBFT_A_H
-# define AUTO_LIBFT_A_H
+#include "head.h"
 
-# include "auto/auto_libft.a_.h"
+void		tree_delete_case_6(t_rbt *node)
+{
+	t_rbt	*sibling;
 
-#endif
+	sibling = tree_sibling(node);
+	sibling->color = node->parent->color;
+	node->parent->color = BLACK;
+	if (node == node->parent->left)
+	{
+		sibling->right->color = BLACK;
+		tree_rot_left(node->parent);
+	}
+	else
+	{
+		sibling->left->color = BLACK;
+		tree_rot_right(node->parent);
+	}
+}

@@ -6,7 +6,7 @@
 /*   By: ldevelle <ldevelle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 11:15:02 by ldevelle          #+#    #+#             */
-/*   Updated: 2020/06/28 23:33:17 by ezalos           ###   ########.fr       */
+/*   Updated: 2020/10/02 12:37:18 by ezalos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,9 @@
 #  include <time.h>
 #  define ILLEGAL clock()
 # endif
+/*
+** # define ILLEGAL (intmax_t)&rando
+*/
 
 # include "./auto_libft.a.h"
 
@@ -58,12 +61,10 @@
 # endif
 
 # define DEBUG_FUNC		ft_printf("%s\n", __func__)
-# define DEBUG_INT(ret)	ft_printf("%s: %d\n", __func__, ret)
-# define DEBUG_COLOR	ft_printf("%~{?}%s\n", __func__)
-
 /*
-** # define ILLEGAL (intmax_t)&rando
+** # define DEBUG_INT(ret)	ft_printf("%s: %d\n", __func__, ret)
 */
+# define DEBUG_COLOR	ft_printf("%~{?}%s\n", __func__)
 
 # ifndef OPEN_MAX
 #  define OPEN_MAX 100

@@ -6,7 +6,7 @@
 /*   By: ezalos <ezalos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/26 20:44:09 by ezalos            #+#    #+#             */
-/*   Updated: 2020/09/26 20:44:15 by ezalos           ###   ########.fr       */
+/*   Updated: 2020/10/02 11:22:56 by ezalos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ void		tree_recoloring(t_rbt *node)
 		{
 			node->parent->color = BLACK;
 			tree_uncle(node)->color = BLACK;
-
 		}
 	}
 }

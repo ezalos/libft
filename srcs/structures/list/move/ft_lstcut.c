@@ -6,11 +6,11 @@
 /*   By: ezalos <ezalos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/28 16:41:18 by ezalos            #+#    #+#             */
-/*   Updated: 2020/09/28 16:41:45 by ezalos           ###   ########.fr       */
+/*   Updated: 2020/10/02 11:49:45 by ezalos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "head.h"
+#include "head.h"
 
 t_list			*ft_lstcut(t_list **alst, int indx)
 {
@@ -27,13 +27,10 @@ t_list			*ft_lstcut(t_list **alst, int indx)
 		to_cut->next = NULL;
 		return (to_cut);
 	}
-	if (search->next == NULL
-		&& indx == -1)
+	if (search->next == NULL && indx == -1)
 		return (search);
-	while (search != NULL
-		&& search->next != NULL
-		&& search->next->next != NULL
-		&& (i + 1 < indx|| indx == -1))
+	while (search != NULL && search->next != NULL
+	&& search->next->next != NULL && (i + 1 < indx || indx == -1))
 	{
 		search = search->next;
 		i++;

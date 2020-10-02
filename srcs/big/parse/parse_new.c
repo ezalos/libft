@@ -1,18 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   auto_libft.a.h                                     :+:      :+:    :+:   */
+/*   parse_new.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ezalos <ezalos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/02 12:25:15 by ezalos            #+#    #+#             */
-/*   Updated: 2020/10/02 12:35:42 by ezalos           ###   ########.fr       */
+/*   Created: 2020/10/02 11:52:58 by ezalos            #+#    #+#             */
+/*   Updated: 2020/10/02 11:53:01 by ezalos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef AUTO_LIBFT_A_H
-# define AUTO_LIBFT_A_H
+#include "libft.h"
 
-# include "auto/auto_libft.a_.h"
+t_parse	*parse_new(char *name, char *help)
+{
+	t_parse	*arg;
 
-#endif
+	arg = parse_mem();
+	ft_bzero(arg, sizeof(t_parse));
+	arg->name = name;
+	arg->help = help;
+	parse_add_option('h', "help", "Display usage");
+	return (arg);
+}

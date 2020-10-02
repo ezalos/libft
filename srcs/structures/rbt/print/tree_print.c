@@ -6,7 +6,7 @@
 /*   By: ezalos <ezalos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/26 20:59:37 by ezalos            #+#    #+#             */
-/*   Updated: 2020/09/26 20:59:38 by ezalos           ###   ########.fr       */
+/*   Updated: 2020/10/02 11:27:43 by ezalos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 
 void	padding_before(t_rbt *node, size_t space)
 {
-	t_rbt	*parent;
-	size_t 		i;
+	t_rbt		*parent;
+	size_t		i;
 
 	i = 0;
 	parent = tree_parent(node);
@@ -32,7 +32,7 @@ void	padding_before(t_rbt *node, size_t space)
 
 void	padding_after(t_rbt *node)
 {
-	size_t 		i;
+	size_t		i;
 	size_t		padding;
 
 	if (node->left != NULL || node->right != NULL)
@@ -54,8 +54,9 @@ void	padding_after(t_rbt *node)
 
 void	tree_print_elem(t_rbt *node)
 {
-	void	*content = (node->content);
+	void	*content;
 
+	content = (node->content);
 	if (node->color == RED)
 		printf("\033[31m");
 	else
@@ -63,20 +64,15 @@ void	tree_print_elem(t_rbt *node)
 	printf("%p \033[00m", content);
 }
 
-
 void	tree_print(t_rbt *node, size_t deep)
 {
 	if (node == NULL)
 	{
-		//padding_before(node, (deep * NB_OF_SPACE));
-		//printf("\033[34mx \033[00m");
 		return ;
 	}
 	tree_print(node->right, deep + 1);
-
 	padding_before(node, (deep * NB_OF_SPACE));
 	tree_print_elem(node);
 	padding_after(node);
-
 	tree_print(node->left, deep + 1);
 }

@@ -6,7 +6,7 @@
 /*   By: ezalos <ezalos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/26 20:53:58 by ezalos            #+#    #+#             */
-/*   Updated: 2020/09/26 20:55:41 by ezalos           ###   ########.fr       */
+/*   Updated: 2020/10/02 11:34:56 by ezalos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,8 @@ void		tree_insert_case_1(t_rbt *n)
 
 void		tree_insert_case_2(t_rbt *n)
 {
-	// Do nothing since tree is still valid.
 	(void)n;
-	return;
+	return ;
 }
 
 void		tree_insert_case_3(t_rbt *n)
@@ -34,9 +33,11 @@ void		tree_insert_case_3(t_rbt *n)
 
 void		tree_insert_case_4(t_rbt *n)
 {
-	t_rbt *p = tree_parent(n);
-	t_rbt *g = tree_grand_parent(n);
+	t_rbt	*p;
+	t_rbt	*g;
 
+	p = tree_parent(n);
+	g = tree_grand_parent(n);
 	if (n == p->right && p == g->left)
 	{
 		tree_rot_left(p);
@@ -47,7 +48,6 @@ void		tree_insert_case_4(t_rbt *n)
 		tree_rot_right(p);
 		n = n->right;
 	}
-
 	p = tree_parent(n);
 	g = tree_grand_parent(n);
 	if (n == p->left)

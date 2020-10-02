@@ -231,22 +231,32 @@ PAT += 	srcs/big/ft_printf/ft_printf.c \
 	srcs/structures/tab/move/ft_tab_access.c \
 	srcs/structures/tab/len/ft_tabloop_lendir.c \
 	srcs/maths/operators/ft_fabs.c \
-	srcs/structures/rbt/tree_new_node.c \
-	srcs/structures/rbt/tree_genealogy.c \
-	srcs/structures/rbt/tree_rotations.c \
-	srcs/structures/rbt/tree_recoloring.c \
-	srcs/structures/rbt/insert/tree_insert_case.c \
 	srcs/structures/rbt/insert/tree_insert_repair.c \
-	srcs/structures/rbt/insert/tree_insert_recurse.c \
-	srcs/structures/rbt/insert/tree_insert.c \
-	srcs/structures/rbt/print/tree_print.c \
 	srcs/structures/rbt/print/tree_str.c \
 	srcs/structures/rbt/print/tree_simple_print.c \
 	srcs/structures/rbt/print/print_node_info.c \
+	srcs/structures/rbt/tree_free.c \
+	srcs/mem/del/ft_strdel.c \
+	srcs/structures/rbt/tree_recoloring.c \
+	srcs/structures/rbt/tree_new_node.c \
+	srcs/structures/rbt/tree_genealogy.c \
+	srcs/structures/rbt/print/tree_print.c \
 	srcs/structures/rbt/map/tree_inrorder.c \
 	srcs/structures/rbt/map/tree_inorder.c \
+	srcs/structures/rbt/insert/tree_insert_recurse.c \
+	srcs/structures/rbt/insert/tree_insert.c \
+	srcs/structures/rbt/insert/tree_insert_case.c \
+	srcs/structures/rbt/remove/tree_remove.c \
+	srcs/structures/rbt/remove/tree_remove_case_1.c \
+	srcs/structures/rbt/remove/tree_remove_case_2.c \
+	srcs/structures/rbt/tree_rotations.c \
 	srcs/structures/list/move/ft_lstcut.c \
-	srcs/structures/rbt/tree_free.c \
-	srcs/big/parse/parse.c \
-	srcs/mem/del/ft_strdel.c \
-	srcs/structures/rbt/remove/tree_remove.c 
+	srcs/big/parse/parse_mem.c \
+	srcs/big/parse/parse_print.c \
+	srcs/big/parse/parse_add.c \
+	srcs/big/parse/parse_new.c \
+	srcs/big/parse/parse_get.c \
+	srcs/big/parse/parse_free.c \
+	srcs/big/parse/parse_args_save.c \
+	srcs/big/parse/parse_usage.c \
+	srcs/big/parse/parse_args.c 

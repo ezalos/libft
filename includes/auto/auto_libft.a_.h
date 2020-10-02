@@ -6,7 +6,7 @@
 /*   By: ezalos <ezalos@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/02 12:25:15 by ezalos            #+#    #+#             */
-/*   Updated: 2020/10/02 16:23:17 by ezalos           ###   ########.fr       */
+/*   Updated: 2020/10/02 17:00:36 by ezalos           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -310,6 +310,8 @@ void		tree_delete_one_child(t_rbt *node, t_rbt_free_content *func);
 void		tree_free(t_rbt *root, t_rbt_free_content *func);
 t_rbt		*tree_grand_parent(t_rbt *node);
 int			tree_inorder(t_rbt *root, t_rbt_inorder *func);
+long long	tree_inorder_long_long(t_rbt *root,
+			t_rbt_inorder_long_long *func);
 void		*tree_inorder_ptr(t_rbt *root, t_rbt_inorder_ptr *func);
 int			tree_inrorder(t_rbt *root, t_rbt_inorder *func);
 void		*tree_inrorder_ptr(t_rbt *root, t_rbt_inorder_ptr *func);
@@ -343,13 +345,20 @@ int			type_oux(t_printf *print, char **str);
 int			type_p(char **str, t_printf *print);
 int			type_s(t_printf *print, char **str);
 int			update_gnl_struct(t_gnl *gnl, char **line);
+int8_t		vct_addchar(t_vector *vector, char c);
+int8_t		vct_addchar_at(t_vector *vector, char c, size_t index);
+int8_t		vct_addstr_at(t_vector *vector, char *str, size_t index);
 void		vct_bzero(t_vector *vector);
+int8_t		vct_cat(t_vector *dest, t_vector *src);
 ssize_t		vct_chr(t_vector *vector, char c);
 ssize_t		vct_chr_str(t_vector *vector, char *find);
 void		vct_del(t_vector **vector);
 t_vector	*vct_dup(t_vector *vector);
+int8_t		vct_fill_after(t_vector *vector, char c, size_t size);
+int8_t		vct_fill_before(t_vector *vector, char c, size_t size);
 char		vct_getchar_at(t_vector *vector, size_t index);
 char		*vct_getstr(t_vector *vector);
+int8_t		vct_increase_scale(t_vector *vector, size_t scale);
 t_vector	*vct_join(t_vector *dest, t_vector *src);
 t_vector	*vct_join_free(t_vector **dest, t_vector **src,
 			int first_or_second_or_both);
@@ -358,7 +367,10 @@ t_vector	*vct_new(size_t size);
 t_vector	*vct_newstr(char *str);
 void		vct_pop(t_vector *vector, size_t len);
 void		vct_pop_from(t_vector *vector, size_t len, size_t index);
+int8_t		vct_pushstr(t_vector *vector, char *str);
+int8_t		vct_replace_char(t_vector *vector, char c, char replace);
 void		vct_replace_char_at(t_vector *vector, char c, size_t index);
+int8_t		vct_strjoin(t_vector *vector, char *str);
 int			we_just_found_a_percent(t_printf *print);
 void		write_0(t_printf *print, char **str);
 
